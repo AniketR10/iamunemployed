@@ -8,7 +8,6 @@ def run_all_scrapers():
     scrapers = [
         "googlenews.py",
         "healthcareittoday.py",
-        "startuptalky.py",
         "techcrunch.py",
         "theaiinsider.py",
         "thesassnews.py",

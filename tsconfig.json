@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
+    "target": "es2018",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -21,6 +21,11 @@
     "paths": {
       "@/*": ["./*"]
     }
+  }, 
+  "ts-node": {
+      "compilerOptions": {
+        "module": "commonjs"
+      }
   },
   "include": [
     "next-env.d.ts",

@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 from pathlib import Path
 import file_saver
 
-env_path = Path(__file__).resolve().parent.parent / ".env"
+env_path = Path(__file__).resolve().parent.parent.parent / ".env"
 load_dotenv(env_path)
 
 api_key = os.getenv("X_RAPIDAPI_KEY")
@@ -16,7 +16,7 @@ json_data = []
 conn = http.client.HTTPSConnection("twitter154.p.rapidapi.com")
 
 headers = {
-    'x-rapidapi-key': os.getenv("X_RAPIDAPI_KEY"),
+    'x-rapidapi-key': api_key,
     'x-rapidapi-host': "twitter154.p.rapidapi.com"
 }
 
@@ -56,5 +56,3 @@ if tweets:
     file_saver.save_common_data("Twitter (StartupReport)", tweets)
 else:
     print(f"No tweets found for {start_date}.")
-
-print(tweets)
