@@ -3,7 +3,7 @@ import { spawn } from "child_process";
 import dotenv from 'dotenv'
 import path, { resolve } from "path";
 import { supabaseAdmin } from "./supabaseAdmin";
-import { link } from "fs";
+import { fillData } from "./fillData";
 
 
 dotenv.config({path: path.resolve(__dirname, '../../.env')});
@@ -93,5 +93,7 @@ async function runScripts(scriptName: string) {
     for (const script of scraper_list){
         await runScripts(script);
     }
+    console.log("\n Scrapers finished. Now ai will fil the remaining details...");
+    await fillData();
     console.log("pipeline completed!")
 })();
