@@ -1,60 +1,52 @@
-import { supabase } from "../lib/supabase";
+import Navbar from '../components/Navbar';
+import { ArrowRight, Database, Zap, Globe } from 'lucide-react';
+import Link from 'next/link';
 
-// Force dynamic rendering so it checks for new data on refresh
-// Or use ISR (revalidate) if you prefer caching
-export const revalidate = 3600; // 1 hour
-
-export default async function Home() {
-  // Fetch data matching your new schema
-  const { data: startups, error } = await supabase
-    .from('startups')
-    .select('*')
-    .order('announced_date', { ascending: false });
-
-  if (error) {
-    console.error("Error fetching:", error);
-    return <div>Error loading data.</div>;
-  }
-
+export default function Home() {
   return (
-    <main className="max-w-5xl mx-auto p-8 font-sans">
-      <h1 className="text-4xl font-extrabold mb-8 tracking-tight">
-        🦄 Startup Funding Tracker
-      </h1>
+    <div className="min-h-screen bg-[#F8F3E7] font-sans text-gray-900">
+      <Navbar />
       
-      <div className="grid gap-4">
-        {startups?.map((startup) => (
-          <div 
-            key={startup.id} 
-            className="border p-6 rounded-lg shadow-sm hover:shadow-md transition bg-white flex justify-between items-center"
-          >
-            <div>
-              <h2 className="text-xl font-bold text-gray-900">
-                {startup.name}
-              </h2>
-              <p className="text-sm text-gray-500 mt-1">
-                {startup.funding_round} • {startup.announced_date}
-              </p>
+      <main className="container mx-auto px-4 py-20 text-center">
+        <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight text-gray-900">
+          THE ULTIMATE <br/>
+          <span className="text-[#FF5A5F]">DEV TOOLKIT</span>
+        </h1>
+        
+        <p className="text-lg md:text-xl font-medium text-gray-700 mb-12 max-w-2xl mx-auto leading-relaxed">
+          One platform to rule them all. Access our massive database of startups, 
+          track YC companies, and find real-time developer jobs from Reddit.
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {/* Feature Card 1 */}
+          <Link href="/startups" className="group p-8 border-2 border-gray-900 rounded-lg bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all">
+            <div className="w-12 h-12 bg-blue-100 border-2 border-gray-900 rounded-md flex items-center justify-center mb-4 mx-auto group-hover:bg-blue-200 transition">
+              <Database size={24} className="text-gray-900" />
             </div>
-            
-            <div className="text-right">
-              <div className="text-2xl font-bold text-green-600">
-                {/* Format number to currency if it exists */}
-                {startup.funding_amount 
-                  ? `$${(Number(startup.funding_amount) / 1000000).toFixed(1)}M`
-                  : 'Undisclosed'}
-              </div>
-              <a 
-                href={startup.source_url} 
-                target="_blank" 
-                className="text-xs text-blue-500 hover:underline mt-1 block"
-              >
-                Read Source &rarr;
-              </a>
+            <h3 className="text-xl font-black mb-2">Startup DB</h3>
+            <p className="text-sm font-medium text-gray-600">Access enriched data on thousands of startups including funding and founders.</p>
+          </Link>
+
+          {/* Feature Card 2 */}
+          <Link href="/yc" className="group p-8 border-2 border-gray-900 rounded-lg bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all">
+            <div className="w-12 h-12 bg-orange-100 border-2 border-gray-900 rounded-md flex items-center justify-center mb-4 mx-auto group-hover:bg-orange-200 transition">
+              <Globe size={24} className="text-gray-900" />
             </div>
-          </div>
-        ))}
-      </div>
-    </main>
+            <h3 className="text-xl font-black mb-2">YC Directory</h3>
+            <p className="text-sm font-medium text-gray-600">Browse the complete YC catalog with direct social links to founders.</p>
+          </Link>
+
+          {/* Feature Card 3 */}
+          <Link href="/reddit" className="group p-8 border-2 border-gray-900 rounded-lg bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all">
+            <div className="w-12 h-12 bg-red-100 border-2 border-gray-900 rounded-md flex items-center justify-center mb-4 mx-auto group-hover:bg-red-200 transition">
+              <Zap size={24} className="text-gray-900" />
+            </div>
+            <h3 className="text-xl font-black mb-2">Reddit Live</h3>
+            <p className="text-sm font-medium text-gray-600">Real-time feed of job postings from r/forhire, r/remotejobs and more.</p>
+          </Link>
+        </div>
+      </main>
+    </div>
   );
 }
