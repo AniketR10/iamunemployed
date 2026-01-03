@@ -3,7 +3,7 @@ import { spawn } from "child_process";
 import dotenv from 'dotenv'
 import path, { resolve } from "path";
 import { supabaseAdmin } from "./supabaseAdmin";
-import { fillData } from "./fillData";
+import { fillData } from "./fillUrl";
 
 
 dotenv.config({path: path.resolve(__dirname, '../../.env')});
@@ -11,7 +11,6 @@ dotenv.config({path: path.resolve(__dirname, '../../.env')});
 const SCRAPERS = path.resolve(__dirname, '../../scripts/scrapers')
 
 const scraper_list = [
-  "googlenews.py",
   "healthcareittoday.py",
   "techcrunch.py",
   "theaiinsider.py",
