@@ -20,19 +20,19 @@ async function extractFounderDetails(title: string, url: string) {
                         Analyze the following startup news metadata to identify the founders.
 
                         HEADLINE: "${title}"
-                        SOURCE URL: "${url}"
+                        WEBSITE URL: "${url}"
 
                         ### TASK:
                         1. Identify the **Founders** of the startup mentioned.
-                        2. Predict or extract their **LinkedIn** and **Twitter/X** profiles based on common patterns or public knowledge.
+                        2. Get their **LinkedIn** and **Twitter/X** profiles based on public knowledge or search the internet.
 
                         ### RETURN FORMAT (JSON ONLY):
                         {
                             "founder_socials": [
                                 { 
                                     "name": "Full Name", 
-                                    "linkedin": "https://linkedin.com/in/username (or null)", 
-                                    "twitter": "https://x.com/username (or null)" 
+                                    "linkedin": linkedin url", 
+                                    "twitter": "x userid url" 
                                 }
                             ]
                         }
@@ -57,7 +57,7 @@ export async function fillFounders() {
 
     const { data: rows, error } = await supabaseAdmin
         .from('startups')
-        .select('id, name, source_url')
+        .select('id, name, company_name, website')
         .is('founder_socials', null)
         .not('source_url', 'is', null)
         .order('created_at', { ascending: false })
@@ -76,12 +76,12 @@ export async function fillFounders() {
     console.log(`🔍 Found ${rows.length} startups to enrich.`);
 
     for (const row of rows) {
-        console.log(`Analyzing: ${row.name}`);
+        console.log(`Analyzing: ${row.company_name || row.name}`);
         
-        const details = await extractFounderDetails(row.name, row.source_url);
+        const details = await extractFounderDetails(row.company_name || row.name, row.website);
 
         if (!details || !details.founder_socials || details.founder_socials.length === 0) {
-            console.log(`  No founders found for ${row.name}. Skipping.`);
+            console.log(`  No founders found for ${row.company_name}. Skipping.`);
             continue;
         }
 

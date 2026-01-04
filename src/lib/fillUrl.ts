@@ -34,12 +34,12 @@ async function extractDetails(title: string, url: string) {
                             SOURCE URL: "${url}"
 
                             ### EXTRACT THE FOLLOWING DETAILS ABOUT THAT STARTUP FROM THE URL:
-                            1. **Target Entity**: Identify the startup receiving funding.
+                            1. **Target Entity**: Identify the name of the startup receiving funding.
                             2. **Website**: Predict the official domain (e.g. "Stripe" -> "https://stripe.com").
 
                             Return JSON format:
                             {
-                            "name": "string"
+                            "company_name": "string"
                             "website": "string or null",
                             }`,
                     }
@@ -93,9 +93,8 @@ export async function fillData(){
         const {error: updateError} = await supabaseAdmin
             .from('startups')
             .update({
+                company_name: details.company_name,
                 website: details.website,
-                funding_amount: details.funding_amount,
-                funding_round: details.funding_round,
             })
             .eq('id', row.id);
 

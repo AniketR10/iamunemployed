@@ -65,7 +65,7 @@ async function runScripts(scriptName: string) {
                 })),
                 {
                     onConflict: 'name, announced_date, source',
-                    ignoreDuplicates: false
+                    ignoreDuplicates: false,
                 });
 
                 if (error) {

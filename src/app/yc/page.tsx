@@ -6,8 +6,7 @@ import {
   MapPin, Filter, X, Loader2, ChevronDown, Globe, ExternalLink, 
   Calendar, TrendingUp, Check, Search, Users 
 } from 'lucide-react';
-
-const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!);
+import { supabase } from '@/src/lib/supabase';
 
 const PAGE_SIZE = 100;
 
