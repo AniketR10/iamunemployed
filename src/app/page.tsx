@@ -1,13 +1,14 @@
 import Navbar from '../components/Navbar';
 import { ArrowRight, Database, Zap, Globe } from 'lucide-react';
 import Link from 'next/link';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#F8F3E7] font-sans text-gray-900">
+    <div className="min-h-screen bg-[#F8F3E7] font-sans text-gray-900 flex flex-col">
       <Navbar />
       
-      <main className="container mx-auto px-4 py-20 text-center">
+      <main className="container mx-auto px-4 py-20 text-center grow">
         <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight text-gray-900">
           THE ULTIMATE <br/>
           <span className="text-[#FF5A5F]">DEV TOOLKIT</span>
@@ -19,8 +20,8 @@ export default function Home() {
         </p>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {/* Feature Card 1 */}
-          <Link href="/startups" className="group p-8 border-2 border-gray-900 rounded-lg bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all">
+
+          <Link href="/startups" className="group p-8 border-2 border-gray-900 rounded-lg bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all">
             <div className="w-12 h-12 bg-blue-100 border-2 border-gray-900 rounded-md flex items-center justify-center mb-4 mx-auto group-hover:bg-blue-200 transition">
               <Database size={24} className="text-gray-900" />
             </div>
@@ -28,8 +29,7 @@ export default function Home() {
             <p className="text-sm font-medium text-gray-600">Access enriched data on thousands of startups including funding and founders.</p>
           </Link>
 
-          {/* Feature Card 2 */}
-          <Link href="/yc" className="group p-8 border-2 border-gray-900 rounded-lg bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all">
+          <Link href="/yc" className="group p-8 border-2 border-gray-900 rounded-lg bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all">
             <div className="w-12 h-12 bg-orange-100 border-2 border-gray-900 rounded-md flex items-center justify-center mb-4 mx-auto group-hover:bg-orange-200 transition">
               <Globe size={24} className="text-gray-900" />
             </div>
@@ -37,8 +37,7 @@ export default function Home() {
             <p className="text-sm font-medium text-gray-600">Browse the complete YC catalog with direct social links to founders.</p>
           </Link>
 
-          {/* Feature Card 3 */}
-          <Link href="/reddit" className="group p-8 border-2 border-gray-900 rounded-lg bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all">
+          <Link href="/reddit" className="group p-8 border-2 border-gray-900 rounded-lg bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all">
             <div className="w-12 h-12 bg-red-100 border-2 border-gray-900 rounded-md flex items-center justify-center mb-4 mx-auto group-hover:bg-red-200 transition">
               <Zap size={24} className="text-gray-900" />
             </div>
@@ -47,6 +46,7 @@ export default function Home() {
           </Link>
         </div>
       </main>
+      <Footer/>
     </div>
   );
 }

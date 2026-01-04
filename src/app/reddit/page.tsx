@@ -4,6 +4,7 @@ import { createClient } from '@supabase/supabase-js';
 import Navbar from '@/src/components/Navbar';
 import { Zap, Clock } from 'lucide-react';
 import { supabase } from '@/src/lib/supabase';
+import Footer from '@/src/components/Footer';
 
 export default function RedditPage() {
   const [posts, setPosts] = useState<any[]>([]);
@@ -22,9 +23,9 @@ export default function RedditPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#F8F3E7] font-sans text-gray-900 text-sm">
+    <div className="min-h-screen bg-[#F8F3E7] font-sans text-gray-900 text-sm flex flex-col">
       <Navbar />
-      <div className="container mx-auto px-4 py-10 max-w-3xl">
+      <div className="container mx-auto px-4 py-10 max-w-3xl grow">
         <div className="flex justify-between items-center border-b-2 border-gray-900 pb-4 mb-8">
             <h1 className="text-3xl font-black">Reddit Live Feed</h1>
             <div className="flex items-center gap-2 px-3 py-1 bg-green-100 border-2 border-gray-900 rounded-full">
@@ -38,7 +39,7 @@ export default function RedditPage() {
 
         <div className="space-y-4">
           {posts.map((post) => (
-            <div key={post.id} className="p-4 border-2 border-gray-900 rounded-lg bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all animate-in fade-in slide-in-from-top-4 duration-300">
+            <div key={post.id} className="p-4 border-2 border-gray-900 rounded-lg bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-px hover:translate-y-px hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all animate-in fade-in slide-in-from-top-4 duration-300">
               <div className="flex justify-between items-start gap-4">
                 <div>
                    <span className="text-xs font-black text-[#FF5A5F] uppercase mb-1 block tracking-wider">
@@ -63,6 +64,7 @@ export default function RedditPage() {
           ))}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

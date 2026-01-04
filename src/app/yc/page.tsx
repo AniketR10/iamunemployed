@@ -7,6 +7,7 @@ import {
   Calendar, TrendingUp, Check, Search, Users 
 } from 'lucide-react';
 import { supabase } from '@/src/lib/supabase';
+import Footer from '@/src/components/Footer';
 
 const PAGE_SIZE = 100;
 
@@ -219,10 +220,10 @@ export default function YCPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F3E7] font-sans text-gray-900 text-sm">
+    <div className="min-h-screen bg-[#F8F3E7] font-sans text-gray-900 text-sm flex flex-col">
       <Navbar />
       
-      <div className="container mx-auto px-6 py-8 max-w-350">
+      <div className="container mx-auto px-6 py-8 max-w-350 grow">
         <div className="flex flex-col md:flex-row gap-10">
           
           <div className="flex-1 order-2 md:order-1">
@@ -274,7 +275,7 @@ export default function YCPage() {
                         
                         {item.founder_socials && item.founder_socials.length > 0 && (
                         <div className="mb-5">
-                            <span className="text-[11px] uppercase font-black text-gray-400 mb-2 block tracking-wider flex items-center gap-1">
+                            <span className="text-[11px] uppercase font-black text-gray-400 mb-2 tracking-wider flex items-center gap-1">
                               <Users size={12} /> Founders
                             </span>
                             <div className="flex flex-wrap gap-2">
@@ -366,6 +367,7 @@ export default function YCPage() {
           </aside>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

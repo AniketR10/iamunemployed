@@ -29,6 +29,7 @@ export default function Navbar() {
              </span>
            </span>
         </Link>
+        <Link href="/contact" className={isActive('/contact')}>Contact Us</Link>
       </div>
 
       <div className="flex items-center space-x-4">
