@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar';
 import { ArrowRight, Database, Zap, Globe } from 'lucide-react';
 import Link from 'next/link';
 import Footer from '../components/Footer';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -11,8 +12,17 @@ export default function Home() {
       <main className="container mx-auto px-4 py-10 text-center grow">
         
         <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tight text-gray-900">
-          I AM <br />
-          <span className="text-[#FF5A5F]">UNEMPLOYED!</span>
+           I AM{" "}
+              <Image
+                src="/icon.png"
+                alt="emoji"
+                width={48}
+                height={48}
+                className="inline-block align-middle mx-2 mb-2"
+              />
+              <br />
+          <span className="text-[#FF5A5F]">UNEMPLOYED!
+          </span>
         </h1>
         
         <p className="text-lg md:text-xl font-medium text-gray-700 mb-12 max-w-2xl mx-auto leading-relaxed">
