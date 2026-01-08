@@ -18,6 +18,14 @@ const scraper_list = [
   "twitter.py",
 ]
 
+function cleanTitle(title: string) {
+    return title
+        .replace(/https?:\/\/\S+/g, '')
+        .replace(/#\w+/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+}
+
 async function runScripts(scriptName: string) {
     return new Promise<void>((resolve, reject) => {
         console.log(`running ${scriptName}`);
@@ -58,7 +66,7 @@ async function runScripts(scriptName: string) {
                 const {error} = await supabaseAdmin
                 .from('startups')
                 .upsert(articles.map((a: any) => ({
-                    name: a.title,
+                    name: cleanTitle(a.title),
                     source_url: a.link,
                     announced_date: a.date,
                     source: a.source

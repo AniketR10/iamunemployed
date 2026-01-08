@@ -11,6 +11,7 @@ def scrape_tc_startups():
     ]
 
     save_articles = []
+    seen_links = set()
     
     today = date.today()
     prev_days = 1
@@ -30,16 +31,21 @@ def scrape_tc_startups():
             if article_date == start_date:
                 link = entry.link
 
+                if link in seen_links:
+                    continue
+
                 title = entry.title
                 ## clean_title = re.sub('<[^<]+?>', '', title).strip()
                 clean_title = html.unescape(title)
-                keywords = ["raised", "raises", "secures", "lands", "series"]
+                keywords = ["raised", "raises", "secures", "lands", "series", "funding", "announces", "secured", 
+                            "backs", "announced", "closes", "closed"]
                 if any(word in clean_title.lower() for word in keywords):
                     save_articles.append({
                         'title': clean_title,
                         'link': link,
                         'date': str(article_date)
                     })
+                    seen_links.add(link)
                     print(f"title: {clean_title}")
                     print(f"link: {link}")
                     print("-"*50)

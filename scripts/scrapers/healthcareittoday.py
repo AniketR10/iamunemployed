@@ -22,6 +22,7 @@ def scrape():
 
     cnt =0
     file_save = []
+    seen_links = set()
 
     for entry in feed.entries:
         if hasattr(entry, 'published_parsed'):
@@ -33,6 +34,9 @@ def scrape():
                 title = entry.title
                 link = entry.link
 
+                if link in seen_links:
+                    continue
+
                 print(f"title: {title}")
                 print(f"link: {link}")
                 cnt+=1
@@ -42,6 +46,7 @@ def scrape():
                     'link': link,
                     'date': str(article_date)
                 })
+                seen_links.add(link)
             
     if cnt > 0:
         print(f"{cnt} articles found for today")

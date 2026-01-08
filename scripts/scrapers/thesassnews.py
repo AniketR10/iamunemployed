@@ -11,6 +11,7 @@ def scrape_saas_news_pagination():
     prev_days = 1
     start_date = today - timedelta(days=prev_days)
     file_save = []
+    seen_links = set()
 
     
     print(f" starting Multi-Page Scraper...")
@@ -46,6 +47,9 @@ def scrape_saas_news_pagination():
                 relative_link = snippet.get('href')
                 full_link = f"{base_url}{relative_link}" if relative_link.startswith("/") else relative_link
                 
+                if full_link in seen_links:
+                    continue
+
                 header_tag = snippet.find("h2")
                 title = header_tag.get_text(strip=True) if header_tag else "No Title"
                 
@@ -72,6 +76,7 @@ def scrape_saas_news_pagination():
                                 "link": full_link,
                                 "date": str(start_date)
                             })
+                            seen_links.add(full_link)
                             total_found += 1
                         
                         elif article_date < start_date:

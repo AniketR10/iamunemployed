@@ -20,7 +20,7 @@ headers = {
     'x-rapidapi-host': "twitter154.p.rapidapi.com"
 }
 
-conn.request("GET", "/user/tweets?username=StartupReport&limit=1&include_replies=false&include_pinned=false", headers=headers)
+conn.request("GET", "/user/tweets?username=StartupReport&limit=3&include_replies=false&include_pinned=false", headers=headers)
 
 res = conn.getresponse()
 data = res.read()

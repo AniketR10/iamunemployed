@@ -2,9 +2,7 @@ name: Daily Script Runner
 
 on:
     schedule:
-
         - cron: '0 0 * * *'
-
     workflow_dispatch: 
 
 jobs: 
@@ -21,12 +19,20 @@ jobs:
                 node-version: '20'
                 cache: 'npm'
 
-             - name: Install Dependencies
+             - name: Setup Python
+               uses: actions/setup-python@v4
+               with:
+                 python-version: '3.9'
+
+             - name: Install Python Dependencies
+               run: |
+                 pip install feedparser beautifulsoup4 python-dotenv requests supabase praw
+
+             - name: Install Node Dependencies
                run: npm ci
 
              - name: Run All Scripts
                env:
-
                 NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
                 SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
                 SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
@@ -40,7 +46,6 @@ jobs:
                 REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
                 REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
                 REDDIT_USER_AGENT: ${{ secrets.REDDIT_USER_AGENT }}
-
                 X_RAPIDAPI_KEY: ${{ secrets.X_RAPIDAPI_KEY }}
                
                run: npx tsx src/lib/runScripts.ts
