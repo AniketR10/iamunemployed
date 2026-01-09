@@ -3,8 +3,26 @@ import { ArrowRight, Database, Zap, Globe } from 'lucide-react';
 import Link from 'next/link';
 import Footer from '../components/Footer';
 import Image from 'next/image';
+import { cookies } from 'next/headers';
+import { createServerClient } from '@supabase/ssr';
 
-export default function Home() {
+export default async function Home() {
+  const cookieStore = await cookies();
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        getAll() {
+          return cookieStore.getAll();
+        }
+      }
+    }
+  )
+
+  const {data: {user}} = await supabase.auth.getUser();
+  const getStartedLink = user ? "/startups" : "/auth";
+
   return (
     <div className="min-h-screen bg-[#F8F3E7] font-sans text-gray-900 flex flex-col">
       <Navbar />
@@ -35,7 +53,7 @@ export default function Home() {
         </p>
 
         <div className="mb-24 relative inline-block">
-          <Link href="/auth">
+          <Link href={getStartedLink}>
             <button className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-black text-white transition-all duration-200 bg-gray-900 border-2 border-gray-900 rounded-lg hover:bg-[#00A86B] hover:text-white hover:border-gray-900 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.75 hover:translate-y-0.75">
               <span>Get Started</span>
               <ArrowRight className="ml-2 w-6 h-6 transition-transform group-hover:translate-x-1" />

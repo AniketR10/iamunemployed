@@ -59,11 +59,12 @@ export default function StartupsPage() {
       <Navbar />
       
       <div className="container mx-auto px-4 py-8 max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="mb-8 lg:ml-[8.33%] lg:w-[58.33%]">
+            <h1 className="text-3xl font-black border-b-4 border-gray-900 pb-4">Startup Database</h1>
+        </div>
+        <div className="flex flex-col-reverse lg:grid grid-cols-1 lg:grid-cols-12 gap-8 lg:items-start">
           <div className="lg:col-start-2 lg:col-span-7 space-y-6">
             
-            <h1 className="text-3xl font-black border-b-4 border-gray-900 pb-4">Startup Database</h1>
-
             {filteredStartups.length === 0 && (
               <div className="p-8 text-center text-gray-500 font-bold border-2 border-dashed border-gray-300 rounded-lg">
                 No startups match your filters.

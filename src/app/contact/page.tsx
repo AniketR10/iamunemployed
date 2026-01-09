@@ -67,7 +67,7 @@ export default function ContactPage() {
                 The fastest way to fix a bug or add a feature is to contribute directly to the codebase.
               </p>
               <a 
-                href="https://github.com/AniketR10/funding-to-job"
+                href="https://github.com/AniketR10/iamunemployed"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 font-black text-xs uppercase tracking-wider bg-white/10 hover:bg-white/20 transition p-2 rounded w-fit text-white"

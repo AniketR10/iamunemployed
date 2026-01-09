@@ -71,7 +71,7 @@ export default function RedditPage() {
     <div className="min-h-screen bg-[#F8F3E7] font-sans text-gray-900 text-sm flex flex-col">
       <Navbar />
       
-      <div className="container mx-auto px-4 py-10 max-w-5xl grow">
+      <div className="container mx-auto px-4 py-10 max-w-5xl grow">        
         <div className="flex justify-between items-center border-b-2 border-gray-900 pb-4 mb-8">
             <h1 className="text-3xl font-black">Reddit Live Feed</h1>
             <div className="flex items-center gap-2 px-3 py-1 bg-green-100 border-2 border-gray-900 rounded-full">
@@ -83,9 +83,9 @@ export default function RedditPage() {
             </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="flex flex-col-reverse md:grid md:grid-cols-4 gap-8 md:items-start">
           
-          <div className="md:col-span-3 space-y-4">
+          <div className="w-full md:col-span-3 space-y-4">
             {isLoading ? (
                <div className="p-12 flex justify-center text-gray-500">
                   <Loader2 className="animate-spin" size={32} />
@@ -150,8 +150,9 @@ export default function RedditPage() {
             )}
           </div>
 
-          <div className="md:col-span-1">
-             <div className="sticky top-4 space-y-6">
+          <div className="w-full md:col-span-1">
+             <div className="md:sticky md:top-4 space-y-6">
+                
                 <div className="bg-white border-2 border-gray-900 rounded-lg p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                     <div className="flex items-center gap-2 mb-3 border-b-2 border-gray-100 pb-2">
                         <Calendar size={16} />

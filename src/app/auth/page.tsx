@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Navbar from '@/src/components/Navbar';
 import Footer from '@/src/components/Footer';
@@ -18,6 +18,17 @@ export default function AuthPage() {
     email: '',
     password: '',
   });
+
+  useEffect(() => {
+    const handlePageShow = (() => {
+        setLoading(false)
+    });
+    window.addEventListener('pageshow', handlePageShow);
+
+    return () => {
+      window.removeEventListener('pageshow', handlePageShow);
+    }
+  },[])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -86,7 +97,7 @@ export default function AuthPage() {
               {isSignUp ? 'Join the' : 'Welcome'} <span className="text-[#FF5A5F]">{isSignUp ? 'Club' : 'Back'}</span>
             </h1>
             <p className="text-lg font-medium text-gray-600">
-              {isSignUp ? 'Create an account to get started.' : 'Sign in to get back to begging.'}
+              {isSignUp ? 'Create an account to get started.' : 'Sign in to get back to begging!'}
             </p>
           </div>
 
