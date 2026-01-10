@@ -11,7 +11,7 @@ const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 async function extractFounderDetails(title: string, url: string) {
     try {
         const completion = await groq.chat.completions.create({
-            model: "moonshotai/kimi-k2-instruct", // or "llama3-70b-8192" for better reasoning
+            model: process.env.LLM_MODEL || "",
             messages: [
                 {
                     role: "system",

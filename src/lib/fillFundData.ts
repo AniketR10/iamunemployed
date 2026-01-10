@@ -10,7 +10,7 @@ const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 async function extractFundingDetails(title: string, url: string) {
     try {
         const completion = await groq.chat.completions.create({
-            model: "moonshotai/kimi-k2-instruct",
+            model: process.env.LLM_MODEL || "",
             messages: [
                 {
                     role: "system",

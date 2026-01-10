@@ -16,15 +16,15 @@ const openai = new OpenAI({
      baseURL: "https://openrouter.ai/api/v1",
      apiKey: process.env.OPENROUTER_API_KEY,
     defaultHeaders: {
-        "HTTP-Referer": "http://localhost:3000", 
-        "X-Title": "GetTheFounder",
+        "HTTP-Referer": "https://www.iamunemployed.xyz/", 
+        "X-Title": "iamunemployed",
     },
 });
 
 async function extractDetails(title: string, url: string) {
         try {
             const completion = await groq.chat.completions.create({
-                model: "moonshotai/kimi-k2-instruct",
+                model: process.env.LLM_MODEL || "",
                 messages: [
                     {
                         role: "system",

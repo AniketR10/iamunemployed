@@ -10,6 +10,14 @@ export default function StartupsPage() {
   const [dateFilter, setDateFilter] = useState('all');
   const [roundFilter, setRoundFilter] = useState('all');
 
+  const getHost = (url: string) => {
+    try {
+      return new URL(url).hostname;
+    } catch(e) {
+      return url;
+    }
+  }
+
   useEffect(() => {
     supabase.from('startups').select('*').order('announced_date', {ascending: false}).limit(100).then(({ data }) => {
       if (data) setStartups(data);
@@ -85,7 +93,7 @@ export default function StartupsPage() {
                       
                       <div className="flex flex-col gap-1.5">
                         <a href={startup.website} target="_blank" className="text-sm font-bold text-blue-600 hover:underline flex items-center gap-1.5 w-fit">
-                          {startup.website ? new URL(startup.website).hostname : 'No Website'} <ExternalLink size={12} />
+                          {startup.website ? getHost(startup.website) : 'No Website'} <ExternalLink size={12} />
                         </a>
 
                         <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 font-bold">
