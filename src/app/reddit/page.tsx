@@ -15,6 +15,34 @@ export default function RedditPage() {
   
   const visibleCountRef = useRef(20);
 
+  const formatTimeAgo = (dateString: string) => {
+    if (!dateString) return '';
+    const safeDateString = dateString.endsWith('Z') ? dateString : `${dateString}Z`;
+    
+    const date = new Date(safeDateString);
+    const now = new Date();
+    const seconds = Math.floor((now.getTime() - date.getTime()) / 1000);
+
+    if (seconds < 0) return 'Just now';
+
+    const interval = Math.floor(seconds / 31536000);
+    if (interval >= 1) return interval + "y ago";
+
+    const months = Math.floor(seconds / 2592000);
+    if (months >= 1) return months + "mo ago";
+
+    const days = Math.floor(seconds / 86400);
+    if (days >= 1) return days + "d ago";
+
+    const hours = Math.floor(seconds / 3600);
+    if (hours >= 1) return hours + "h ago";
+
+    const minutes = Math.floor(seconds / 60);
+    if (minutes >= 1) return minutes + "m ago";
+
+    return "Just now";
+  };
+
   const fetchPosts = async (isLoadMore = false) => {
     if (!isLoadMore) setIsLoading(true);
     
@@ -109,19 +137,14 @@ export default function RedditPage() {
                             </div>
 
                             <div className="min-w-fit flex items-center text-xs font-bold text-gray-500 bg-gray-100 px-2 py-1 border-2 border-gray-900 rounded shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]">
-                            <Clock size={12} className="mr-1" />
-                            {new Date(post.timestamp).toLocaleString([], {
-                                month: 'short',
-                                day: 'numeric',
-                                hour: '2-digit',
-                                minute:'2-digit'
-                            })}
+                              <Clock size={12} className="mr-1" />
+                              {formatTimeAgo(post.timestamp)}
                             </div>
                         </div>
                         
                         <div className="mt-3 flex justify-end">
                             <a href={post.url} target="_blank" rel="noopener noreferrer" className="bg-gray-900 text-white px-4 py-2 text-xs font-bold rounded border-2 border-gray-900 hover:bg-gray-700 transition flex items-center gap-2">
-                            Apply on Reddit <Zap size={12} className="text-yellow-400" />
+                            See on Reddit <Zap size={12} className="text-yellow-400" />
                             </a>
                         </div>
                         </div>

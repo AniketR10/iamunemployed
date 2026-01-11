@@ -32,12 +32,17 @@ def run_job_scraper():
         if not any(k in submission.title.lower() for k in keywords):
             continue
 
+        raw_url = submission.url
+
+        if not raw_url.startswith("https://www.reddit.com"):
+            continue
+
 
         data_payload = {
             "timestamp": datetime.fromtimestamp(submission.created_utc).isoformat(),
             "subreddit": submission.subreddit.display_name,
             "title": submission.title.replace("\n", " ").strip(),
-            "url": submission.url
+            "url": raw_url
         }
 
         try:
