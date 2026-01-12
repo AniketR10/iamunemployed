@@ -20,14 +20,38 @@ reddit = praw.Reddit(
 )
 
 subreddits = ["jobs", "forhire", "RemoteJobs", "startup", "Entrepreneur", "WebDeveloperJobs", "DeveloperJobs", "StartupIndia"]
-keywords = ["hiring", "internship", "opening", "remote", "job alert"]
 subreddit = reddit.subreddit("+".join(subreddits))
+
+keywords = ["hiring", "internship", "opening", "remote", "job alert"]
+exclude = {
+    "hiring": ["for hire", "looking for work"],
+    "internship": ["looking for", "for hire", "seeking for"],
+    "remote": ["for hire"],
+    "opening": ["for hire"],
+
+}
+
+def validate_post(title):
+    title_lower = title.lower()
+
+    if not any(k in title_lower for k in keywords):
+        return False
+
+    for trigger_word, forbidden_phases in exclude.items():
+        if trigger_word in title_lower:
+            if any(bad_phrase in title_lower for bad_phrase in forbidden_phases):
+                return False
+            
+    return True
 
 def run_job_scraper():
     print(f"Fetching latest posts from: {subreddits}")
     
 
     for submission in subreddit.new(limit=100):
+
+        if not validate_post(submission.title):
+            continue
         
         if not any(k in submission.title.lower() for k in keywords):
             continue
