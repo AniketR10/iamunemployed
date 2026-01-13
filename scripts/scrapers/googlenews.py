@@ -12,7 +12,7 @@ def scrape_google_news():
 
     today = date.today()
 
-    prev_days = 1
+    prev_days = 0
     start_date = today - timedelta(days=prev_days)
 
     print(f"showing news from: {start_date} to {today}\n")

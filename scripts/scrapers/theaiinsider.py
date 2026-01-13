@@ -13,7 +13,7 @@ def scrape_func():
      today = date.today()
      file_save = []
      seen_links = set()
-     prev_days = 1
+     prev_days = 0
      start_date = today - timedelta(days=prev_days)
      print(f"scraping the rss from {url}")
 

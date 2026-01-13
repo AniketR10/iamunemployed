@@ -27,7 +27,7 @@ data = res.read()
 json_data = json.loads(data)
 
 today = datetime.now(timezone.utc).date()
-prev_days = 1
+prev_days = 0
 start_date = today - timedelta(days=prev_days)
 
 

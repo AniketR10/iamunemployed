@@ -14,7 +14,7 @@ def scrape_tc_startups():
     seen_links = set()
     
     today = date.today()
-    prev_days = 1
+    prev_days = 0
     start_date = today - timedelta(days=prev_days)
     print(f"fetching articles...")
 

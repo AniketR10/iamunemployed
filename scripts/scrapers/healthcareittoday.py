@@ -7,7 +7,7 @@ def scrape():
 
     today = date.today()
 
-    prev_days = 1
+    prev_days = 0
     start_date = today - timedelta(days=prev_days)
 
     print(f"connecting to rss of {url}...")

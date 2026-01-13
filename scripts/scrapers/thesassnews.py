@@ -8,7 +8,7 @@ import file_saver
 def scrape_saas_news_pagination():
     base_url = "https://www.thesaasnews.com"
     today = date.today()
-    prev_days = 1
+    prev_days = 0
     start_date = today - timedelta(days=prev_days)
     file_save = []
     seen_links = set()
