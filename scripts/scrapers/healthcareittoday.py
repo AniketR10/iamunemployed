@@ -7,7 +7,7 @@ def scrape():
 
     today = date.today()
 
-    prev_days = 0
+    prev_days = 1
     start_date = today - timedelta(days=prev_days)
 
     print(f"connecting to rss of {url}...")
@@ -29,7 +29,7 @@ def scrape():
             p = entry.published_parsed
             article_date = date(p.tm_year, p.tm_mon, p.tm_mday)
 
-            if article_date == start_date:
+            if article_date == start_date or article_date == today:
 
                 title = entry.title
                 link = entry.link

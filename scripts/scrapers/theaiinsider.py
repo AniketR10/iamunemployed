@@ -13,7 +13,7 @@ def scrape_func():
      today = date.today()
      file_save = []
      seen_links = set()
-     prev_days = 0
+     prev_days = 1
      start_date = today - timedelta(days=prev_days)
      print(f"scraping the rss from {url}")
 
@@ -30,7 +30,7 @@ def scrape_func():
                p = entry.published_parsed
                article_date = date(p.tm_year, p.tm_mon, p.tm_mday)
 
-               if article_date == start_date:
+               if article_date == start_date or article_date == today:
                     
                     title = entry.title
                     link = entry.link

@@ -27,7 +27,7 @@ data = res.read()
 json_data = json.loads(data)
 
 today = datetime.now(timezone.utc).date()
-prev_days = 0
+prev_days = 1
 start_date = today - timedelta(days=prev_days)
 
 
@@ -43,7 +43,7 @@ for tweet in json_data["results"]:
         "%a %b %d %H:%M:%S %z %Y"
     ).date()
 
-    if tweet_date == start_date:
+    if tweet_date == start_date or tweet_date == today:
         tweets.append({
             "date": tweet.get("creation_date"),
 

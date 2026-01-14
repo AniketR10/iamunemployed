@@ -8,7 +8,7 @@ import file_saver
 def scrape_saas_news_pagination():
     base_url = "https://www.thesaasnews.com"
     today = date.today()
-    prev_days = 0
+    prev_days = 1
     start_date = today - timedelta(days=prev_days)
     file_save = []
     seen_links = set()
@@ -66,7 +66,7 @@ def scrape_saas_news_pagination():
                         date_str = date_tag.get_text(strip=True)
                         article_date = parser.parse(date_str).date()
                         
-                        if article_date == start_date:
+                        if article_date == start_date or article_date == today:
                             print(f"    FOUND: {title}")
                             print(f"      Desc: {description[:80]}...")
                             print(f"      Link: {full_link}")

@@ -14,7 +14,7 @@ def scrape_tc_startups():
     seen_links = set()
     
     today = date.today()
-    prev_days = 0
+    prev_days = 1
     start_date = today - timedelta(days=prev_days)
     print(f"fetching articles...")
 
@@ -28,7 +28,7 @@ def scrape_tc_startups():
             p = entry.published_parsed
             article_date = date(p.tm_year, p.tm_mon, p.tm_mday)
 
-            if article_date == start_date:
+            if article_date == start_date or article_date == today:
                 link = entry.link
 
                 if link in seen_links:
