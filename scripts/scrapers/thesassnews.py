@@ -74,7 +74,7 @@ def scrape_saas_news_pagination():
                             file_save.append({
                                 "title": title,
                                 "link": full_link,
-                                "date": str(start_date)
+                                "date": str(article_date)
                             })
                             seen_links.add(full_link)
                             total_found += 1

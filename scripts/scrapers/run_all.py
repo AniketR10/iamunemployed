@@ -12,6 +12,7 @@ def run_all_scrapers():
         "theaiinsider.py",
         "thesassnews.py",
         "twitter.py",
+        "entrackr.py",
     ]
 
     print(f" Found {len(scrapers)} scripts to run.\n")
