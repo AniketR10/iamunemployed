@@ -205,7 +205,7 @@ export default function StartupsPage() {
                     </p>
                   </div>
 
-                  {/* {validFounders.length > 0 && (
+                  {validFounders.length > 0 && (
                     <div className="mt-4 pt-3 border-t-2 border-dashed border-gray-300">
                       <div className="flex items-center gap-2 text-xs font-black text-gray-500 mb-2 uppercase tracking-wider">
                         <Users size={12} /> Founders
@@ -232,7 +232,7 @@ export default function StartupsPage() {
                         ))}
                       </div>
                     </div>
-                  )} */}
+                  )}
                 </div>
               );
             })}
