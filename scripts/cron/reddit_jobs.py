@@ -24,9 +24,9 @@ subreddit = reddit.subreddit("+".join(subreddits))
 
 keywords = ["hiring", "internship", "opening", "remote", "job alert"]
 exclude = {
-    "hiring": ["for hire", "looking for work"],
-    "internship": ["looking for", "for hire", "seeking for"],
-    "remote": ["for hire"],
+    "hiring": ["for hire", "looking for work", "is anyone", "feels",],
+    "internship": ["looking for", "for hire", "seeking for", "seeking", "need"],
+    "remote": ["for hire", "looking for", "need", "seeking", "seeking for"],
     "opening": ["for hire"],
 
 }
