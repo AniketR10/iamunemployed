@@ -1,2 +1,2 @@
-# funding-to-job
-Get the latest info about all the startups that got funding so that you can direcly apply to them for jobs!
+# iamunemployed
+Are you tired of Applying for Jobs and getting Ghosted? Access our latest Funded Startups and their Founders socials and say, "Sir, please give me Job!" Track YC Founders, find real-time jobs posts from Reddit.
