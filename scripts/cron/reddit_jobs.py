@@ -17,7 +17,7 @@ SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_KEY")
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 subreddits = ["jobs", "forhire", "RemoteJobs", "startup", "Entrepreneur", "WebDeveloperJobs", "DeveloperJobs", "StartupIndia"]
-rss_url = f"https://www.reddit.com/r/{'+'.join(subreddits)}/new/.rss?limit=100"
+rss_url = f"https://www.reddit.com/r/{'+'.join(subreddits)}/new/.rss?limit=50"
 
 keywords = ["hiring", "internship", "opening", "remote", "job alert"]
 exclude = {
