@@ -19,15 +19,12 @@ jobs:
           python-version: '3.9'
 
       - name: Install Dependencies
-        run: pip install praw supabase python-dotenv
+        run: pip install feedparser requests supabase python-dotenv
 
       - name: Run Scraper
         env:
 
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
-          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
-          REDDIT_USER_AGENT: ${{ secrets.REDDIT_USER_AGENT }}
         
         run: python scripts/cron/reddit_jobs.py
