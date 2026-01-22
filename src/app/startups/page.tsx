@@ -260,7 +260,7 @@ export default function StartupsPage() {
             )}
           </div>
 
-          <div className="lg:col-span-3 sticky top-4">
+          <div className="lg:col-span-3">
             <div className="p-5 border-2 border-gray-900 rounded-lg bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
               <div className="flex items-center gap-2 mb-4 pb-2 border-b-2 border-gray-100">
                 <Filter size={16} />
