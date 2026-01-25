@@ -17,6 +17,7 @@ const scraper_list = [
   "thesassnews.py",
   "twitter.py",
   "entrackr.py",
+  "techmeme.py",
 ]
 
 function cleanTitle(title: string) {
