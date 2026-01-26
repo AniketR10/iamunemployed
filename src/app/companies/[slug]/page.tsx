@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Company } from '@/src/types/company';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import Navbar from '@/src/components/Navbar';
 
 const tagColors = [
   { bg: '#FF5A5F', text: 'white' }, 
@@ -39,8 +40,9 @@ export default async function CompanyDetailPage({
   }
 
   return (
-    <div className="min-h-screen bg-[#F8F3E7] py-8">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#F8F3E7] font-sans text-gray-900 text-sm flex flex-col">
+        <Navbar/>
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 mb-12">
         
         <Link href="/companies" className="inline-block mb-6 group">
             <button className="text-xs font-black text-gray-900 bg-white border-2 border-gray-900 px-3 py-1.5 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] group-hover:translate-x-0.5 group-hover:translate-y-0.5 group-hover:shadow-none transition-all flex items-center gap-2">
