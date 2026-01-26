@@ -22,6 +22,8 @@
     "openai": "^6.15.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
     "snoostorm": "^1.5.2",
     "snoowrap": "^1.23.0"
   },
