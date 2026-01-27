@@ -1,5 +1,6 @@
 import { promises as fs } from 'fs';
 import path from 'path';
+import { Suspense } from 'react';
 import { Company } from '@/src/types/company';
 import Navbar from '@/src/components/Navbar';
 import CompanyFilter from '@/src/components/CompanyFilter';
@@ -45,7 +46,9 @@ export default async function CompaniesPage() {
           </div>
         </div>
 
-        <CompanyFilter initialCompanies={companies} />
+        <Suspense fallback={<div className="text-center font-bold py-20">Loading filters...</div>}>
+          <CompanyFilter initialCompanies={companies} />
+        </Suspense>
 
       </div>
     </div>
