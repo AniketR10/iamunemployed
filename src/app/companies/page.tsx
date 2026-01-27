@@ -17,9 +17,9 @@ export default async function CompaniesPage() {
   return (
     <div className="min-h-screen bg-[#F8F3E7] font-sans text-gray-900 text-sm flex flex-col">
         <Navbar/>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pb-16">
         
-        <div className="text-center mb-42 relative">
+        <div className="text-center mb-36 relative">
           <div className="inline-block relative">
             <h1 className="text-5xl md:text-6xl font-black text-gray-900 tracking-tighter leading-none relative z-20">
               REMOTE
@@ -28,7 +28,7 @@ export default async function CompaniesPage() {
               </span>
             </h1>
 
-            <div className="absolute -bottom-26 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center w-50">
+            <div className="absolute -bottom-28 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center w-50">
                
                <div className="w-full flex justify-between items-end px-8 z-0">
                    <div className="w-1.5 h-14 bg-gray-900 border-x border-gray-900"></div>
