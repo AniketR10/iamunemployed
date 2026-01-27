@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import {createServerClient} from '@supabase/ssr'
 
 export async function middleware(req: NextRequest) {
-    const protectedPaths = ['/startups', '/yc', '/reddit', '/contact'];
+    const protectedPaths = ['/startups', '/yc', '/reddit', '/contact', '/companies'];
     
     let res = NextResponse.next({
         request: {
