@@ -67,9 +67,9 @@ export default async function CompanyDetailPage({
                     {company.remote_policy.replace('-', ' ')}
                  </span>
 
-                 <span className="px-2.5 py-1 text-xs font-bold bg-white border-2 border-gray-900 text-gray-900 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                 {/* <span className="px-2.5 py-1 text-xs font-bold bg-white border-2 border-gray-900 text-gray-900 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                    👥 {company.company_size}
-                 </span>
+                 </span> */}
               </div>
             </div>
             
@@ -159,8 +159,8 @@ export default async function CompanyDetailPage({
                 <span className="w-2.5 h-2.5 bg-black"></span> Tech Stack
               </h3>
               
-              {company.technologies && company.technologies.length > 0 ? (
-                <div className="flex flex-wrap gap-1.5">
+              {company.technologies && company.technologies.length > 0 && (
+                <div className="flex flex-wrap gap-1.5 mb-4">
                   {company.technologies.map(tech => {
                     const colors = getTagColor(tech);
                     return (
@@ -174,7 +174,19 @@ export default async function CompanyDetailPage({
                     );
                   })}
                 </div>
-              ) : (
+              )}
+
+              {company.company_technologies && (
+                 <div className="prose prose-sm font-bold text-gray-800 border-t-2 border-gray-100 pt-3
+                                 prose-ul:list-disc prose-ul:pl-4 prose-li:mb-1 prose-li:marker:text-gray-900
+                                 prose-p:mb-2 prose-headings:font-black prose-headings:text-xs prose-headings:uppercase">
+                   <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                     {company.company_technologies}
+                   </ReactMarkdown>
+                 </div>
+              )}
+
+              {(!company.technologies || company.technologies.length === 0) && !company.company_technologies && (
                 <p className="text-xs font-bold text-gray-500 italic">No tech stack listed.</p>
               )}
             </div>
