@@ -152,7 +152,7 @@ export default function Navbar() {
             <Link href="/reddit" onClick={() => setIsMobileMenuOpen(false)} className={`font-bold ${isActive('/reddit')} flex items-center gap-2`}>
                 Reddit Live <Zap size={14} className="text-red-500 fill-current" />
             </Link>
-            <Link href="/companies" className={isActive('/companies')}>Remote</Link>  
+            <Link href="/companies" className={`font-bold ${isActive('/companies')}`}>Remote</Link>  
             <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className={`font-bold ${isActive('/contact')}`}>Contact Us</Link>
 
             <hr className="border-gray-200" />
