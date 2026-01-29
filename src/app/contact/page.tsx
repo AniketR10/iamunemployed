@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Navbar from '@/src/components/Navbar';
 import Footer from '@/src/components/Footer';
 import { Github, Send, User, Mail, CheckCircle, Loader2, ExternalLink } from 'lucide-react';
+import AuthGuard from '@/src/components/AuthGuard';
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -145,7 +146,7 @@ export default function ContactPage() {
                       className="w-full p-4 bg-gray-50 border-2 border-gray-900 rounded-lg text-sm font-bold placeholder-gray-400 focus:outline-none focus:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:bg-white transition-all resize-none"
                     ></textarea>
                   </div>
-
+                <AuthGuard>
                   <button
                     type="submit"
                     disabled={loading}
@@ -161,6 +162,7 @@ export default function ContactPage() {
                       </>
                     )}
                   </button>
+                </AuthGuard>
                 </form>
               )}
             </div>
