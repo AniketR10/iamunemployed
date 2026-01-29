@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Company } from "../types/company";
 import Link from "next/link";
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
@@ -31,6 +31,28 @@ export default function CompanyFilter({initialCompanies}: {initialCompanies: Com
     const activeTech = searchParams.get('tech') || 'All';
     const activeSearch = searchParams.get('search') || '';
 
+    const [searchTerm, setSearchTerm] = useState(activeSearch);
+
+    useEffect(() => {
+        setSearchTerm(activeSearch);
+    }, [activeSearch]);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            if(searchTerm !== activeSearch){
+                const params = new URLSearchParams(searchParams.toString());
+                if(searchTerm) {
+                    params.set('search', searchTerm);
+                } else {
+                    params.delete('search');
+                }
+                router.replace(`${pathname}?${params.toString()}`, {scroll: false});
+            }
+        }, 100);
+
+        return () => clearTimeout(timer);
+    }, [searchTerm, router, pathname, searchParams, activeSearch]);
+
     const handleFilter = (type: 'region' | 'tech', value: string) => {
         const params = new URLSearchParams(searchParams.toString());
         
@@ -47,16 +69,16 @@ export default function CompanyFilter({initialCompanies}: {initialCompanies: Com
         router.push(`${pathname}?${params.toString()}`, {scroll: false});
     }
 
-    const handleSearch = (term: string) => {
-        const params = new URLSearchParams(searchParams.toString());
-        if(term) {
-            params.set('search', term);
-        } else {
-            params.delete('search');
-        }
-        router.replace(`${pathname}?${params.toString()}`, {scroll: false});
+    // const handleSearch = (term: string) => {
+    //     const params = new URLSearchParams(searchParams.toString());
+    //     if(term) {
+    //         params.set('search', term);
+    //     } else {
+    //         params.delete('search');
+    //     }
+    //     router.replace(`${pathname}?${params.toString()}`, {scroll: false});
 
-    }
+    // }
 
     const filteredCompanies = initialCompanies.filter((company) => {
         const companyRegion = (company.region || '').toLowerCase();
@@ -107,12 +129,12 @@ export default function CompanyFilter({initialCompanies}: {initialCompanies: Com
                     <input
                         type="text"
                         placeholder="Search companies..."
-                        value={activeSearch}
-                        onChange={(e) => handleSearch(e.target.value)}
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
                         className="block w-full pl-12 pr-12 py-3.5 bg-white border-2 border-gray-900 text-gray-900 font-bold text-lg focus:outline-none shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] focus:translate-x-0.5 focus:translate-y-0.5 focus:shadow-none transition-all"
                     />
                     {activeSearch && (
-                        <button onClick={() => handleSearch('')} className="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-400 hover:text-gray-900">
+                        <button onClick={() => setSearchTerm('')} className="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-400 hover:text-gray-900">
                             <X className="h-6 w-6" strokeWidth={3} />
                         </button>
                     )}
