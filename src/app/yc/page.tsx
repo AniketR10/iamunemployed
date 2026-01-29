@@ -224,14 +224,17 @@ export default function YCPage() {
       <Navbar />
       
       <div className="container mx-auto px-6 py-8 max-w-350 grow">
-        <div className="flex flex-col md:flex-row gap-10">
-          
-          <div className="flex-1 order-2 md:order-1">
-            <div className="flex items-center justify-between mb-6 border-b-2 border-gray-900 pb-3">
-               <h1 className="text-3xl font-black text-[#FF5A5F] tracking-tight">YC Directory</h1>
+          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 md:mb-8 sm:mb-2 border-b-4 border-gray-900 pb-6">
+               <div>
+                 <h1 className="text-3xl font-black text-[#FF5A5F] tracking-tight mb-3">YC Directory</h1>
+                 <p className="text-base font-bold text-gray-600 leading-relaxed max-w-xl">
+                   A comprehensive directory of YC-backed startups. Filter by batch, location, and explore founder profiles directly from the source.
+                 </p>
+               </div>
                <span className="font-bold text-gray-500 bg-white px-2 py-0.5 rounded border border-gray-300 text-xs">{ycList.length} loaded</span>
             </div>
-
+        <div className="flex flex-col md:flex-row gap-10">
+          <div className="flex-1 order-2 md:order-1">
             {loading ? (
                <div className="flex justify-center items-center py-20 text-gray-500">
                   <Loader2 className="animate-spin mr-2" /> Loading...

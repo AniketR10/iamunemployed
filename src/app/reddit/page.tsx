@@ -101,8 +101,13 @@ export default function RedditPage() {
       <Navbar />
       
       <div className="container mx-auto px-4 py-10 max-w-5xl grow">        
-        <div className="flex justify-between items-center border-b-2 border-gray-900 pb-4 mb-8">
-            <h1 className="text-3xl font-black">Reddit Job Posts</h1>
+        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 border-b-2 border-gray-900 pb-4 mb-8">
+           <div>
+                <h1 className="text-3xl font-black mb-2">Reddit Job Posts</h1>
+                <p className="text-base font-bold text-gray-600 max-w-2xl leading-relaxed">
+                    A real-time feed of the latest job posts from active tech communities.
+                </p>
+            </div>
             <div className="flex items-center gap-2 px-3 py-1 bg-green-100 border-2 border-gray-900 rounded-full">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>

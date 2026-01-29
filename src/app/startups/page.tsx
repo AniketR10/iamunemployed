@@ -125,8 +125,11 @@ export default function StartupsPage() {
       <Navbar />
       
       <div className="container mx-auto px-4 py-8 max-w-7xl">
-        <div className="mb-8 lg:ml-[8.33%] lg:w-[58.33%]">
-            <h1 className="text-3xl font-black border-b-4 border-gray-900 pb-4">Startup Database</h1>
+        <div className="mb-8 lg:ml-[8.33%] lg:w-[58.33%] border-b-4 border-gray-900 pb-6">
+            <h1 className="text-3xl font-black mb-3">Startup Database</h1>
+            <p className="text-base font-bold text-gray-600 leading-relaxed">
+                A real-time database of recently funded startups. Track funding rounds, explore new companies and access direct links to founders socials.
+            </p>
         </div>
         
         <div className="flex flex-col-reverse lg:grid grid-cols-1 lg:grid-cols-12 gap-8 lg:items-start">
