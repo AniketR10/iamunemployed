@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import {createServerClient} from '@supabase/ssr'
 
 export async function middleware(req: NextRequest) {
-    const protectedPaths = ['/startups', '/yc', '/reddit', '/contact', '/companies'];
     
     let res = NextResponse.next({
         request: {
@@ -33,15 +32,8 @@ export async function middleware(req: NextRequest) {
 
     const {data} = await supabase.auth.getUser();
 
-    const isProtectedRoute = protectedPaths.some(path => req.nextUrl.pathname.startsWith(path))
 
     const user = data?.user
-
-    if (isProtectedRoute && !user) {
-        const url = req.nextUrl.clone()
-        url.pathname = '/auth'
-        return NextResponse.redirect(url)
-    }
 
     if((req.nextUrl.pathname.startsWith('/auth') || req.nextUrl.pathname.startsWith('/login')) && user){
         const url = req.nextUrl.clone()

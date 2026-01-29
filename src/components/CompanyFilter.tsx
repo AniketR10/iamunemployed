@@ -5,6 +5,7 @@ import { Company } from "../types/company";
 import Link from "next/link";
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
 import { Search, X, AlertCircle } from "lucide-react";
+import AuthGuard from "./AuthGuard";
 
 const tagColors = [
   { bg: '#FF5A5F', text: 'white' },
@@ -171,6 +172,7 @@ export default function CompanyFilter({initialCompanies}: {initialCompanies: Com
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 {filteredCompanies.length > 0 ? (
                     filteredCompanies.map((company) => (
+                        <AuthGuard key={company.id}>
                         <Link href={`/companies/${company.slug}`} key={company.id} className="block group relative">
                             <div className="h-full flex flex-col bg-white border-2 border-gray-900 p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all group-hover:translate-x-1 group-hover:translate-y-1 group-hover:shadow-[2px_2px_0px_0px_#FF5A5F] rounded-sm">
                                 <div className="flex justify-between items-start mb-4">
@@ -192,6 +194,7 @@ export default function CompanyFilter({initialCompanies}: {initialCompanies: Com
                                 </div>
                             </div>
                         </Link>
+                        </AuthGuard>
                     ))
                 ) : (
                     <div className="col-span-full flex flex-col items-center justify-center py-20 opacity-75">                        <p className="text-4xl mb-4">🤷‍♂️</p>
