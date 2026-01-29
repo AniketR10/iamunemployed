@@ -133,7 +133,7 @@ export default function RedditPage() {
                                 r/{post.subreddit}
                             </span>
                             <h3 className="text-base font-bold leading-tight mb-2 transition">
-                                <p>{post.title}</p>
+                                {post.title}
                             </h3>
                             </div>
 

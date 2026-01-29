@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { supabase } from "../lib/supabase";
 import { X, Lock} from "lucide-react";
 import Link from "next/link";
 
 export default function AuthGuard({children}:{children: React.ReactNode}) {
     const [user, setUser] = useState<any>(null);
-    const [showModal, setShowModal] = useState(false);
+    const dialogRef = useRef<HTMLDialogElement>(null);
 
     useEffect(() => {
         const getUser = async () => {
@@ -21,27 +21,34 @@ export default function AuthGuard({children}:{children: React.ReactNode}) {
         if(!user) {
             e.preventDefault();
             e.stopPropagation();
-            setShowModal(true);
+            dialogRef.current?.showModal();
         }
+    };
+
+    const closeModal = (e?: React.MouseEvent) => {
+        e?.stopPropagation();
+        dialogRef.current?.close();
     };
 
     return (
     <>
-      <div onClickCapture={handleInteraction} className="contents">
+      <div onClickCapture={handleInteraction} className="contents cursor-pointer">
         {children}
       </div>
 
-      {showModal && (
-        <div 
-          className="fixed inset-0 z-9999 flex items-center justify-center bg-gray-900/80 backdrop-blur-sm p-4 animate-in fade-in duration-200"
-          onClick={(e) => { e.stopPropagation(); setShowModal(false); }}
-        >
+      <dialog
+        ref={dialogRef}
+        className="m-auto bg-transparent p-0 backdrop:bg-gray-900/80 backdrop:backdrop-blur-sm open:animate-in open:fade-in open:zoom-in-95 duration-200"
+        onClick={(e) => {
+            if (e.target === dialogRef.current) closeModal();
+        }}
+      >
           <div 
             className="bg-[#F8F3E7] border-4 border-gray-900 p-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] max-w-md w-full text-center relative"
             onClick={(e) => e.stopPropagation()}
           >
             <button 
-                onClick={() => setShowModal(false)} 
+                onClick={closeModal} 
                 className="absolute top-4 right-4 text-gray-900 hover:scale-110 transition-transform"
             >
                 <X size={24} strokeWidth={3} />
@@ -54,7 +61,7 @@ export default function AuthGuard({children}:{children: React.ReactNode}) {
             <h2 className="text-3xl font-black mb-3 text-gray-900 leading-none">
               SignIn For Free!
             </h2>
-            <p className="mb-8 font-bold text-gray-600 leading-relaxed">
+            <p className="mb-8 font-bold text-gray-600 text-md leading-relaxed">
               You need to sign in to view company details, apply for jobs, and access founder contacts.
             </p>
             
@@ -65,15 +72,14 @@ export default function AuthGuard({children}:{children: React.ReactNode}) {
                     </button>
                 </Link>
                 <button 
-                    onClick={() => setShowModal(false)}
+                    onClick={closeModal}
                     className="w-full py-3 font-bold text-gray-500 hover:text-gray-900 text-sm uppercase tracking-widest"
                 >
                     Maybe Later
                 </button>
             </div>
           </div>
-        </div>
-      )}
+        </dialog>
     </>
   );
 }
