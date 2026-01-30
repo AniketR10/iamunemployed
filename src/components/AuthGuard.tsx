@@ -1,21 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { supabase } from "../lib/supabase";
+import { useAuth } from "../context/AuthContext";
 import { X, Lock} from "lucide-react";
 import Link from "next/link";
 
 export default function AuthGuard({children}:{children: React.ReactNode}) {
-    const [user, setUser] = useState<any>(null);
+    const {user, loading} = useAuth();
     const dialogRef = useRef<HTMLDialogElement>(null);
-
-    useEffect(() => {
-        const getUser = async () => {
-            const {data} = await supabase.auth.getUser();
-            setUser(data.user)
-        };
-        getUser();
-    },[]);
 
     const handleInteraction = (e: React.MouseEvent) => {
         if(!user) {
@@ -29,6 +21,10 @@ export default function AuthGuard({children}:{children: React.ReactNode}) {
         e?.stopPropagation();
         dialogRef.current?.close();
     };
+
+    if (loading) {
+        return <div className="contents opacity-50 pointer-events-none">{children}</div>;
+    }
 
     return (
     <>
