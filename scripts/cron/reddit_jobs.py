@@ -2,6 +2,7 @@ import feedparser
 import os
 import requests
 import re
+import time
 from datetime import datetime
 from dotenv import load_dotenv
 from pathlib import Path
@@ -16,14 +17,12 @@ SUPABASE_URL = os.getenv("NEXT_PUBLIC_SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_KEY")
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
-subreddits = ["jobs", "forhire", "RemoteJobs", "startup", "Entrepreneur", "WebDeveloperJobs", "DeveloperJobs", "StartupIndia"]
-rss_url = f"https://www.reddit.com/r/{'+'.join(subreddits)}/new/.rss?limit=50"
-
+subreddits = ["jobs", "forhire", "RemoteJobs", "startup", "Entrepreneur", "WebDeveloperJobs", "DeveloperJobs", "StartupIndia", "MLjobs","Indiajobs", "IndiaJobsOpenings"]
 keywords = ["hiring", "internship", "opening", "remote", "job alert"]
 exclude = {
     "hiring": ["for hire", "looking for work", "is anyone", "feels"],
     "internship": ["looking for", "for hire", "seeking for", "seeking", "need"],
-    "remote": ["for hire", "looking for", "need", "seeking", "seeking for"],
+    "remote": ["for hire", "looking for", "need", "seeking", "seeking for", "open to"],
     "opening": ["for hire"],
 }
 
@@ -37,18 +36,27 @@ def validate_post(title):
                 return False
     return True
 
+
+def chunk_list(lst, n):
+    for i in range(0, len(lst), n):
+        yield lst[i:i + n]
+
+
 def run_job_scraper():
-    print(f"Fetching rss feed: {rss_url}")
-    
+  for chunk in chunk_list(subreddits, 5):
+    subreddit_string = '+'.join(chunk)
+    curr_rss = f"https://www.reddit.com/r/{subreddit_string}/new/.rss?limit=50"   
+    print(f"Fetching RSS feed for: {subreddit_string}")
+
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
     try:
-        response = requests.get(rss_url, headers=headers, timeout=20)
+        response = requests.get(curr_rss, headers=headers, timeout=20)
         if response.status_code != 200:
             print(f"error:{response.status_code}")
-            return
+            continue
 
         feed = feedparser.parse(response.content)
         print(f"Found {len(feed.entries)} entries in feed.")
@@ -99,10 +107,12 @@ def run_job_scraper():
             except Exception as db_error:
                 print(f" db Error: {db_error}")
 
+        time.sleep(2)
+
     except Exception as e:
         print(f" Error fetching feed: {e}")
 
-    print("Script finished.")
 
 if __name__ == "__main__":
     run_job_scraper()
+    print("Script finished.")
