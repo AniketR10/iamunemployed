@@ -82,6 +82,17 @@ export async function deleteStartup(id: any) {
 
 }
 
+export async function fetchStartups(offset: number) {
+    const {data} = await supabaseAdmin
+    .from('startups')
+    .select('*')
+    .order('created_at', {ascending: false})
+    .range(offset, offset + 9);
+
+    return data || [];
+
+}
+
 export async function logOut() {
     (await cookies()).delete('admin_session')
     redirect('/admin')
