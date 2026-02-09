@@ -28,6 +28,11 @@ export default function StartupsPage() {
     }
   }
 
+  const getAbsoulteUrl = (url: string) => {
+    if(!url) return '#';
+    return url.startsWith('http') ? url : `https://${url}`;
+  }
+
   const formatDate = (dateString: string) => {
     if (!dateString) return '';
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -162,7 +167,7 @@ export default function StartupsPage() {
                       
                       <div className="flex flex-col gap-1.5">
                        <AuthGuard>
-                        <a href={startup.website} target="_blank" className="text-sm font-bold text-blue-600 hover:underline flex items-center gap-1.5 w-fit">
+                        <a href={getAbsoulteUrl(startup.website)} target="_blank" className="text-sm font-bold text-blue-600 hover:underline flex items-center gap-1.5 w-fit">
                           {startup.website ? getHost(startup.website) : 'No Website'} <ExternalLink size={12} />
                         </a>
                        </AuthGuard>
