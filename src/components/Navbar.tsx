@@ -58,12 +58,15 @@ export default function Navbar() {
                     `https://api.dicebear.com/7.x/avataaars/svg?seed=${user?.email}`;
 
   const StarButton = () => (
-    <Link href="https://github.com/AniketR10/iamunemployed" target="_blank">
-      <button className="w-full md:w-auto flex items-center justify-center gap-2 bg-gray-900 text-white px-5 py-2 rounded font-bold text-xs tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] hover:cursor-pointer transition-all">
+    <a 
+    href="https://github.com/AniketR10/iamunemployed" 
+    target="_blank"
+    rel='noopener noreferrer'
+    className="w-full md:w-auto flex items-center justify-center gap-2 bg-gray-900 text-white px-5 py-2 rounded font-bold text-xs tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] hover:cursor-pointer transition-all"
+    >
         <Github size={16} />
         Star Project
-      </button>
-    </Link>
+    </a>
   );
 
   return (
@@ -177,10 +180,12 @@ export default function Navbar() {
                         </button>
                     </div>
                 ) : (
-                    <Link href="/auth" onClick={() => setIsMobileMenuOpen(false)}>
-                        <button className="w-full bg-white text-gray-900 border-2 border-gray-900 px-5 py-2 rounded font-bold text-xs tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-px active:translate-y-px">
-                            LOGIN / JOIN CLUB
-                        </button>
+                    <Link 
+                    href="/auth" 
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="w-full bg-white text-gray-900 border-2 border-gray-900 px-5 py-2 rounded font-bold text-xs tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-px active:translate-y-px"
+                    >
+                      LOGIN / JOIN CLUB
                     </Link>
                 )}
             </div>

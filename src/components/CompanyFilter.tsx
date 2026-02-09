@@ -173,7 +173,7 @@ export default function CompanyFilter({initialCompanies}: {initialCompanies: Com
                 {filteredCompanies.length > 0 ? (
                     filteredCompanies.map((company) => (
                         <AuthGuard key={company.id}>
-                        <Link href={`/companies/${company.slug}`} key={company.id} className="block group relative">
+                        <Link href={`/companies/${company.slug}`} prefetch={false} className="block group relative">
                             <div className="h-full flex flex-col bg-white border-2 border-gray-900 p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all group-hover:translate-x-1 group-hover:translate-y-1 group-hover:shadow-[2px_2px_0px_0px_#FF5A5F] rounded-sm">
                                 <div className="flex justify-between items-start mb-4">
                                     <h2 className="text-2xl font-black text-gray-900 tracking-tight leading-tight">{company.title}</h2>

@@ -3,11 +3,12 @@
 import { useEffect, useRef, useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { X, Lock} from "lucide-react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function AuthGuard({children}:{children: React.ReactNode}) {
     const {user, loading} = useAuth();
     const dialogRef = useRef<HTMLDialogElement>(null);
+    const router = useRouter();
 
     const handleInteraction = (e: React.MouseEvent) => {
         if(!user) {
@@ -62,11 +63,9 @@ export default function AuthGuard({children}:{children: React.ReactNode}) {
             </p>
             
             <div className="space-y-3">
-                <Link href="/auth">
-                    <button className="w-full py-4 bg-gray-900 text-white font-black uppercase text-lg border-2 border-gray-900 shadow-[3px_3px_0px_0px_#FFC700] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
+                    <button onClick={() => router.push('/auth')} className="w-full py-4 bg-gray-900 text-white font-black uppercase text-lg border-2 border-gray-900 shadow-[3px_3px_0px_0px_#FFC700] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
                     Sign In / Sign Up
                     </button>
-                </Link>
                 <button 
                     onClick={closeModal}
                     className="w-full py-3 font-bold text-gray-500 hover:text-gray-900 text-sm uppercase tracking-widest"
