@@ -5,6 +5,7 @@ import { supabaseAdmin } from "./supabaseAdmin";
 import OpenAI from "openai";
 import Groq from "groq-sdk"
 import { fillFounders } from "./fillFounders";
+import {getDomain} from 'tldts';
 
 dotenv.config({path: path.resolve(__dirname, '../../.env')});
 
@@ -88,22 +89,54 @@ export async function fillData(){
         if(!row.source_url) continue;
 
         const details = await extractDetails(row.name, row.source_url);
-        if(!details) continue;
+        const cleanWebsite = getDomain(details?.website);
+
+        if(!details || !cleanWebsite){
+            console.log("-> ai could not find a valid website, skipping...");
+            continue;
+        }
 
         const {error: updateError} = await supabaseAdmin
             .from('startups')
             .update({
                 company_name: details.company_name,
-                website: details.website,
+                website: cleanWebsite,
             })
             .eq('id', row.id);
 
         if(updateError){
-            console.error(" Update Failed:", updateError.message);
-        } else {
-            console.log(` Updated: ${details.funding_amount || 'N/A'} | ${details.funding_round || 'N/A'}`);
-        }
+           
+            if (updateError.code === '23505') {
+                console.warn(` Duplicate detected:`);
+                
+                const { data: existingRow } = await supabaseAdmin
+                    .from('startups')
+                    .select('id')
+                    .eq('website', cleanWebsite)
+                    .maybeSingle();
 
+                if (existingRow) {
+                    console.log(` Clearing old funding info and merging duplicate`);
+            
+                    await supabaseAdmin
+                        .from('startups')
+                        .update({
+                            funding_amount: null,
+                            funding_round: null,
+                            created_at: new Date().toISOString(), 
+                        })
+                        .eq('id', existingRow.id);
+                }
+
+                await supabaseAdmin.from('startups').delete().eq('id', row.id);
+                console.log(` Temporary row deleted.`);
+
+            } else {
+                console.error(" Update Failed:", updateError.message);
+            }
+        } else {
+            console.log(`   ✅ Success! New Unique Startup Added: ${cleanWebsite}, now filling funding info`);
+        }
         await new Promise(resolve => setTimeout(resolve, 5000));    
     }
     console.log("webiste links filled now filling founders data...")

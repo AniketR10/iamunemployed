@@ -74,8 +74,8 @@ async function runScripts(scriptName: string) {
                     source: a.source
                 })),
                 {
-                    onConflict: 'name, announced_date, source',
-                    ignoreDuplicates: false,
+                    onConflict: 'source_url',
+                    ignoreDuplicates: true,
                 });
 
                 if (error) {
