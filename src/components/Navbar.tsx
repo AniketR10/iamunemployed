@@ -5,11 +5,11 @@ import { usePathname, useRouter } from 'next/navigation';
 import { Bell, LogOut, User, Menu, X, Database, Zap, Globe, Github } from 'lucide-react';
 import { supabase } from '@/src/lib/supabase';
 import { useEffect, useState, useRef } from 'react';
+import { useAuth } from '../context/AuthContext';
 
 export default function Navbar() {
   const pathname = usePathname();
-  const router = useRouter();
-  const [user, setUser] = useState<any>(null);
+  const {user} = useAuth();
   
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -17,35 +17,20 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const getUser = async () => {
-      const { data: { session } } = await supabase.auth.getSession();
-      setUser(session?.user ?? null);
-    };
-    getUser();
-
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      setUser(session?.user ?? null);
-      router.refresh();
-    });
-
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsDropdownOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
-
-    return () => {
-      subscription.unsubscribe();
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [router]);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
     setIsDropdownOpen(false);
     setIsMobileMenuOpen(false);
-    router.refresh();
+    window.location.reload();
   };
 
   const isActive = (path: string) =>
