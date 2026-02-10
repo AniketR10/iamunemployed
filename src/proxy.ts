@@ -30,15 +30,18 @@ export async function proxy(req: NextRequest) {
         }
     )
 
-    const {data} = await supabase.auth.getUser();
 
 
-    const user = data?.user
-
-    if((req.nextUrl.pathname.startsWith('/auth') || req.nextUrl.pathname.startsWith('/login')) && user){
-        const url = req.nextUrl.clone()
-        url.pathname = '/'
-        return NextResponse.redirect(url)
+    if((req.nextUrl.pathname.startsWith('/auth') || req.nextUrl.pathname.startsWith('/login'))){
+        const {data} = await supabase.auth.getUser();
+        const user = data?.user
+        
+        if(user) {
+            const url = req.nextUrl.clone()
+            url.pathname = '/'
+            return NextResponse.redirect(url)
+        }
+       
     }
 
     return res;
