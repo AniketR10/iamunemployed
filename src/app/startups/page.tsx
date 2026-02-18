@@ -133,7 +133,7 @@ export default function StartupsPage() {
         <div className="mb-8 lg:ml-[8.33%] lg:w-[58.33%] border-b-4 border-gray-900 pb-6">
             <h1 className="text-3xl font-black mb-3">Startup Database</h1>
             <p className="text-base font-bold text-gray-600 leading-relaxed">
-                A real-time database of recently funded startups. Track funding rounds, explore new companies and access direct links to founders socials.
+                A real-time database of recently funded startups. Track funding rounds and explore new companies.
             </p>
         </div>
         
@@ -217,13 +217,13 @@ export default function StartupsPage() {
                     </div>
                   </div>
 
-                  {validFounders.length > 0 && (
+                  {/* {validFounders.length > 0 && (
                     <div className="mt-4 pt-3 border-t-2 border-dashed border-gray-300">
                       <div className="flex items-center gap-2 text-xs font-black text-gray-500 mb-2 uppercase tracking-wider">
                         <Users size={12} /> Founders
                       </div>
                       
-                      <div className="flex flex-wrap gap-2">
+                       <div className="flex flex-wrap gap-2">
                         {validFounders.map((founder: any, index: number) => (
                           <div key={index} className="flex items-center gap-2 px-3 py-1.5 bg-[#FFF5EB] border-2 border-gray-900 rounded shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-xs font-bold">
                             <span className="text-gray-900">{founder.name}</span>
@@ -246,9 +246,9 @@ export default function StartupsPage() {
                             </div>
                           </div>
                         ))}
-                      </div>
+                      </div> 
                     </div>
-                  )}
+                  )} */}
                 </div>
               );
             })}
