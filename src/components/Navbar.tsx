@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { Bell, LogOut, User, Menu, X, Database, Zap, Globe, Github } from 'lucide-react';
+import { Bell, LogOut, User, Menu, X, Database, Zap, Globe, Github, ChevronDown } from 'lucide-react';
 import { supabase } from '@/src/lib/supabase';
 import { useEffect, useState, useRef } from 'react';
 import { useAuth } from '../context/AuthContext';
@@ -76,7 +76,42 @@ export default function Navbar() {
                  </span>
                </span>
             </Link>
-            <Link href="/companies" className={isActive('/companies')}>Remote</Link>  
+           <div className="relative group">
+              <button className="flex items-center gap-1 hover:text-[#FF5A5F] transition-colors py-2">
+                Remote
+                <ChevronDown size={16} className="transition-transform duration-200 group-hover:rotate-180" strokeWidth={3} />
+              </button>
+
+              <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-150 bg-white border-2 border-gray-900 rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50 p-5">
+                
+                <div className="grid grid-cols-2 gap-5">
+                  
+                  <Link 
+                    href="/companies" 
+              
+                    className="group/card relative block aspect-video border-4 border-transparent hover:border-[#FF5A5F] rounded-md overflow-hidden bg-gray-100 transition-colors duration-200"
+                  >
+                    <img 
+                      src="/remote-companies.png" 
+                      alt="Remote Companies" 
+                      className="absolute inset-0 w-full h-full object-cover object-top opacity-90 group-hover/card:opacity-100 transition-opacity duration-300" 
+                    />
+                  </Link>
+
+                  <Link 
+                    href="/remote-jobs" 
+                    className="group/card relative block aspect-video border-4 border-transparent hover:border-[#FF5A5F] rounded-md overflow-hidden bg-gray-100 transition-colors duration-200"
+                  >
+                    <img 
+                      src="/jobs-preview.png" 
+                      alt="Live Job Board" 
+                      className="absolute inset-0 w-full h-full object-cover object-top opacity-90 group-hover/card:opacity-100 transition-opacity duration-300" 
+                    />
+                  </Link>
+
+                </div>
+              </div>
+            </div>
             <Link href="/contact" className={isActive('/contact')}>Contact Us</Link>
           </div>
 
