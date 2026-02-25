@@ -1,0 +1,2152 @@
+{
+  "General": [
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/"
+    },
+    {
+      "name": "Indeed",
+      "url": "https://www.indeed.com/"
+    },
+    {
+      "name": "Glassdoor",
+      "url": "https://www.glassdoor.com/"
+    },
+    {
+      "name": "wellfound",
+      "url": "https://wellfound.com/jobs"
+    },
+    {
+      "name": "Levels.fyi",
+      "url": "https://levels.fyi/jobs"
+    },
+    {
+      "name": "X jobs",
+      "url": "https://x.com/jobs"
+    },
+    {
+      "name": "Careerday",
+      "url": "https://careerday.com/"
+    },
+    {
+      "name": "indeed",
+      "url": "https://indeed.com/"
+    },
+    {
+      "name": "glassdoor",
+      "url": "https://glassdoor.com/"
+    },
+    {
+      "name": "naukri",
+      "url": "http://naukri.com/"
+    }
+  ],
+  "AI": [
+    {
+      "name": "AI Jobs",
+      "url": "https://www.moaijobs.com/"
+    },
+    {
+      "name": "AI/ML Jobs",
+      "url": "https://aimljobs.fyi"
+    },
+    {
+      "name": "AI Jobs",
+      "url": "https://ai-jobs.net/"
+    },
+    {
+      "name": "AI Tech Suite",
+      "url": "https://www.aitechsuite.com/jobs"
+    },
+    {
+      "name": "ExploreJobs.ai",
+      "url": "https://explorejobs.ai"
+    },
+    {
+      "name": "AI Jobs",
+      "url": "https://aijobs.app"
+    },
+    {
+      "name": "AI/ML Jobs",
+      "url": "https://www.aimljobs.fyi"
+    },
+    {
+      "name": "AI Jobster",
+      "url": "https://aijobster.work/"
+    }
+  ],
+  "Data": [
+    {
+      "name": "DataJobs.com",
+      "url": "https://datajobs.com/"
+    },
+    {
+      "name": "icrunchdata",
+      "url": "https://icrunchdata.com/"
+    },
+    {
+      "name": "KDnuggets",
+      "url": "https://www.kdnuggets.com/jobs/index.html"
+    },
+    {
+      "name": "Data Yoshi",
+      "url": "https://www.datayoshi.com/"
+    },
+    {
+      "name": "Opendatascience Jobs",
+      "url": "https://jobs.opendatascience.com/"
+    },
+    {
+      "name": "AnalyticsVidhya Jobs",
+      "url": "https://jobsnew.analyticsvidhya.com/jobs/all"
+    },
+    {
+      "name": "StatsJobs",
+      "url": "https://www.statsjobs.com/"
+    },
+    {
+      "name": "Big Cloud",
+      "url": "https://bigcloud.global/find-a-job/"
+    },
+    {
+      "name": "Data Science Jobs Canada",
+      "url": "https://www.datasciencejobscanada.com/"
+    },
+    {
+      "name": "Data Engineering Jobs",
+      "url": "https://dataengjobs.com/"
+    },
+    {
+      "name": "DataScienceJobs",
+      "url": "https://datasciencejobs.com/"
+    },
+    {
+      "name": "Dataaxy",
+      "url": "https://dataaxy.com/"
+    },
+    {
+      "name": "Deep Learning Jobs",
+      "url": "https://www.deeplearningjobs.com/"
+    },
+    {
+      "name": "AiJobsTracker",
+      "url": "https://aijobs.18offers.com/"
+    }
+  ],
+  "Blockchain": [
+    {
+      "name": "Crypto Jobs List",
+      "url": "https://cryptojobslist.com/"
+    },
+    {
+      "name": "CryptoJobs",
+      "url": "https://crypto.jobs/"
+    },
+    {
+      "name": "Blockew",
+      "url": "https://blockew.com/"
+    },
+    {
+      "name": "Cryptocurrency Jobs",
+      "url": "https://cryptocurrencyjobs.co/"
+    },
+    {
+      "name": "JobsInBlockchain",
+      "url": "https://jobsinblockchain.com/"
+    },
+    {
+      "name": "token jobs",
+      "url": "https://tokenjobs.io"
+    },
+    {
+      "name": "Ethereum Job Board",
+      "url": "https://ethereumjobboard.com/"
+    },
+    {
+      "name": "Avalanche Jobs",
+      "url": "https://jobs.avax.network/jobs"
+    },
+    {
+      "name": "Solana Jobs",
+      "url": "https://jobs.solana.com/jobs"
+    },
+    {
+      "name": "Dragonfly Jobs",
+      "url": "https://jobs.dragonfly.xyz/jobs"
+    },
+    {
+      "name": "Remote3",
+      "url": "https://www.remote3.co/remote-web3-jobs"
+    },
+    {
+      "name": "Jobstash",
+      "url": "https://jobstash.xyz/jobs"
+    },
+    {
+      "name": "BeInCrypto Jobs",
+      "url": "https://beincrypto.com/jobs/"
+    },
+    {
+      "name": "Sail on Chain",
+      "url": "https://sailonchain.com/"
+    },
+    {
+      "name": "Blockchain Works",
+      "url": "https://blockchain.works-hub.com/"
+    },
+    {
+      "name": "Web3 Jobs",
+      "url": "https://web3.career"
+    },
+    {
+      "name": "Remote Web3 Jobs",
+      "url": "https://www.remote3.co/"
+    },
+    {
+      "name": "My Web3 Jobs",
+      "url": "https://myweb3jobs.com"
+    },
+    {
+      "name": "Woody3",
+      "url": "https://www.woodyjobs.com"
+    },
+    {
+      "name": "Jobs In Blockchain",
+      "url": "https://jobsinblockchain.com"
+    },
+    {
+      "name": "DeFi Jobs",
+      "url": "https://www.defi.jobs/"
+    },
+    {
+      "name": "SHE256 Job Board",
+      "url": "https://jobs.she256.org/jobs"
+    },
+    {
+      "name": "WEB3board.io",
+      "url": "https://web3board.io/"
+    },
+    {
+      "name": "Pomp Crypto Jobs",
+      "url": "https://pompcryptojobs.com/"
+    },
+    {
+      "name": "Remote3.co",
+      "url": "https://remote3.co/"
+    },
+    {
+      "name": "Indeed",
+      "url": "https://www.indeed.com/q-Web3-l-Remote-jobs.html?vjk=252a26e67661e2c7"
+    },
+    {
+      "name": "Dynamite Jobs",
+      "url": "https://dynamitejobs.com/skill/remote-web3-jobs"
+    },
+    {
+      "name": "Wellfound",
+      "url": "https://wellfound.com/web3"
+    },
+    {
+      "name": "Jobs3.io",
+      "url": "https://jobs3.io/"
+    },
+    {
+      "name": "RemoteOK",
+      "url": "https://remoteok.com/remote-web3-jobs"
+    },
+    {
+      "name": "ConsenSys Jobs",
+      "url": "https://consensys.net/careers/"
+    },
+    {
+      "name": "Blockchain Headhunter",
+      "url": "https://www.blockchainheadhunter.com/jobs"
+    }
+  ],
+  "Design": [
+    {
+      "name": "AIGA",
+      "url": "https://designjobs.aiga.org/"
+    },
+    {
+      "name": "Authentic Jobs",
+      "url": "https://www.authenticjobs.com/"
+    },
+    {
+      "name": "Behance",
+      "url": "https://www.behance.net/joblist"
+    },
+    {
+      "name": "Coroflot",
+      "url": "https://www.coroflot.com/design-jobs"
+    },
+    {
+      "name": "IXDA",
+      "url": "http://ixda.org/jobs/"
+    },
+    {
+      "name": "Dribble",
+      "url": "https://dribbble.com/jobs"
+    },
+    {
+      "name": "Krop",
+      "url": "https://www.krop.com/creative-jobs/"
+    },
+    {
+      "name": "Open Source Design Jobs",
+      "url": "https://opensourcedesign.net/jobs/"
+    },
+    {
+      "name": "UX Jobs Board",
+      "url": "https://www.uxjobsboard.com"
+    },
+    {
+      "name": "Designer Jobs",
+      "url": "https://designerjobs.co/jobs"
+    },
+    {
+      "name": "Design Jobs Board",
+      "url": "https://www.designjobsboard.com/"
+    },
+    {
+      "name": "Design Week Jobs",
+      "url": "https://www.designweek.co.uk/jobs/"
+    },
+    {
+      "name": "If You Could Jobs",
+      "url": "https://ifyoucouldjobs.com/jobs"
+    },
+    {
+      "name": "CreativeMornings",
+      "url": "https://creativemornings.com/jobs"
+    },
+    {
+      "name": "CreativeFuego Jobs",
+      "url": "https://creativefuego.com/jobs"
+    },
+    {
+      "name": "Creativepool",
+      "url": "https://creativepool.com/jobs/"
+    },
+    {
+      "name": "UI & UX Designer Jobs",
+      "url": "https://uiuxdesignerjobs.com/"
+    },
+    {
+      "name": "UI/UX Jobs Board",
+      "url": "https://uiuxjobsboard.com"
+    },
+    {
+      "name": "Authentic Jobs",
+      "url": "https://authenticjobs.com/"
+    },
+    {
+      "name": "UI/UX Jobs Board",
+      "url": "https://uiuxjobsboard.com/"
+    }
+  ],
+  "InfoSec": [
+    {
+      "name": "NinjaJobs",
+      "url": "https://ninjajobs.org/"
+    },
+    {
+      "name": "infosec-jobs",
+      "url": "https://infosec-jobs.com/"
+    },
+    {
+      "name": "CyberSecurityJobsite",
+      "url": "https://www.cybersecurityjobsite.com/jobs/"
+    },
+    {
+      "name": "CareersInfoSecurity",
+      "url": "https://www.careersinfosecurity.com/jobs/"
+    },
+    {
+      "name": "CyberSecurityJobs",
+      "url": "https://www.cybersecurityjobs.net/"
+    },
+    {
+      "name": "YesWeHack",
+      "url": "https://jobs.yeswehack.com/en/"
+    }
+  ],
+  "Programming": [
+    {
+      "name": "Ruby on Rails Jobs",
+      "url": "https://www.ruby-on-rails-jobs.com/"
+    },
+    {
+      "name": "ClojureJobboard",
+      "url": "https://ClojureJobboard.com/"
+    },
+    {
+      "name": "iOS Dev Jobs",
+      "url": "https://iosdevjobs.com/"
+    },
+    {
+      "name": "Elixir Radar",
+      "url": "https://elixir-radar.com/jobs"
+    },
+    {
+      "name": "Elixir Jobs",
+      "url": "https://elixirjobs.net/"
+    },
+    {
+      "name": "findatechjob",
+      "url": "https://findatechjob.dev/"
+    },
+    {
+      "name": "Full-Stack Developer Jobs",
+      "url": "https://fullstackjob.com/"
+    },
+    {
+      "name": "Golangprojects",
+      "url": "https://www.golangprojects.com/"
+    },
+    {
+      "name": "we love golang",
+      "url": "https://www.welovegolang.com/"
+    },
+    {
+      "name": "Golang Forum Jobs",
+      "url": "https://forum.golangbridge.org/c/jobs"
+    },
+    {
+      "name": "Golang Job Board",
+      "url": "https://golangjob.xyz/"
+    },
+    {
+      "name": "Golang Cafe",
+      "url": "https://golang.cafe/"
+    },
+    {
+      "name": "Angular Jobs",
+      "url": "https://angularjobs.com/"
+    },
+    {
+      "name": "Angular Work",
+      "url": "https://angular.work/"
+    },
+    {
+      "name": "Vue.js Jobs",
+      "url": "https://vuejobs.com/"
+    },
+    {
+      "name": "Made with Vue.js Jobs",
+      "url": "https://madewithvuejs.com/jobs"
+    },
+    {
+      "name": "React Job Board",
+      "url": "https://www.reactjobboard.com/"
+    },
+    {
+      "name": "React JS Jobs",
+      "url": "https://reactjsjob.com/"
+    },
+    {
+      "name": "We Work Meteor",
+      "url": "https://www.weworkmeteor.com/"
+    },
+    {
+      "name": "Drupal Jobs",
+      "url": "https://jobs.drupal.org/"
+    },
+    {
+      "name": "WordPress Jobs",
+      "url": "https://jobs.wordpress.net/"
+    },
+    {
+      "name": "LaraJobs",
+      "url": "https://larajobs.com/"
+    },
+    {
+      "name": "pyJobs",
+      "url": "https://www.pyjobs.com/"
+    },
+    {
+      "name": "Python Job Board",
+      "url": "https://www.python.org/jobs/"
+    },
+    {
+      "name": "Python Jobs",
+      "url": "https://pythonjob.xyz/"
+    },
+    {
+      "name": "Pycoder's Jobs",
+      "url": "https://www.pythonjobshq.com/"
+    },
+    {
+      "name": "Django gigs",
+      "url": "https://djangogigs.com/"
+    },
+    {
+      "name": "Django Jobs",
+      "url": "https://djangojobs.net/jobs/"
+    },
+    {
+      "name": "Rust Programming Language Jobs",
+      "url": "http://rust-jobs.com/"
+    },
+    {
+      "name": "JavaScript Jobs",
+      "url": "https://jobs.date-fns.org/"
+    },
+    {
+      "name": "Jobs in JS",
+      "url": "https://jobsinjs.com/"
+    },
+    {
+      "name": "TypeScriptJobs",
+      "url": "https://typescriptjobs.net/"
+    },
+    {
+      "name": "R-users",
+      "url": "https://www.r-users.com/"
+    },
+    {
+      "name": "Jobbsy",
+      "url": "https://jobbsy.dev/"
+    },
+    {
+      "name": "Scala Jobs",
+      "url": "https://scalajobs.com/"
+    },
+    {
+      "name": "QA Jobs",
+      "url": "https://www.qajobs.co/"
+    },
+    {
+      "name": "androidDev.careers",
+      "url": "https://androiddev.careers"
+    },
+    {
+      "name": "GrepJob",
+      "url": "https://grepjob.com/"
+    },
+    {
+      "name": "Software Tech Jobs",
+      "url": "https://softwaretechjobs.com/"
+    },
+    {
+      "name": "EmbeddedJobs",
+      "url": "https://embedded.jobs/"
+    },
+    {
+      "name": "React Native Jobs",
+      "url": "https://reactnative-jobs.com/"
+    },
+    {
+      "name": "Levels.fyi",
+      "url": "https://www.levels.fyi/jobs"
+    },
+    {
+      "name": "FunctionalJobs.dev",
+      "url": "https://functionaljobs.dev/"
+    },
+    {
+      "name": "Functional Works",
+      "url": "https://functional.works-hub.com/"
+    },
+    {
+      "name": "Golang Forum Jobs",
+      "url": "https://forum.golangbridge.org/c/jobs/8"
+    },
+    {
+      "name": "Golang Developer Jobs",
+      "url": "https://golangjob.xyz"
+    },
+    {
+      "name": "Golang Works",
+      "url": "https://golang.works-hub.com/"
+    },
+    {
+      "name": "JavaScript Developer Board",
+      "url": "https://javascriptjob.xyz/"
+    },
+    {
+      "name": "Svelte Jobs",
+      "url": "https://sveltejobs.com/"
+    },
+    {
+      "name": "Javascript Works",
+      "url": "https://javascript.works-hub.com/"
+    },
+    {
+      "name": "JSJobbs",
+      "url": "https://jsjobbs.com/"
+    },
+    {
+      "name": "androiddev.careers",
+      "url": "https://androiddev.careers/"
+    },
+    {
+      "name": "Mobile Career",
+      "url": "https://mobile.career/"
+    },
+    {
+      "name": "The Perl Job Site",
+      "url": "https://jobs.perl.org/"
+    },
+    {
+      "name": "Jobbsy",
+      "url": "https://jobbsy.dev"
+    },
+    {
+      "name": "PyJobs",
+      "url": "https://www.pyjobs.com"
+    },
+    {
+      "name": "Python Developer Jobs",
+      "url": "https://pythonjob.xyz"
+    },
+    {
+      "name": "RubyOnRemote",
+      "url": "https://rubyonremote.com"
+    },
+    {
+      "name": "Rust Jobs",
+      "url": "https://www.rustjobs.com"
+    },
+    {
+      "name": "Rust Jobs",
+      "url": "https://rustjobs.dev"
+    },
+    {
+      "name": "Scala Jobs",
+      "url": "https://scalajobs.com"
+    },
+    {
+      "name": "workwithgo",
+      "url": "https://workwithgo.com"
+    },
+    {
+      "name": "workfeed",
+      "url": "http://workfeed.dev"
+    },
+    {
+      "name": "EuroPython 2020",
+      "url": "https://ep2020.europython.eu/sponsor/job-board/"
+    }
+  ],
+  "Remote": [
+    {
+      "name": "TheRemoteWork",
+      "url": "https://theremotework.co/"
+    },
+    {
+      "name": "hiring.lat",
+      "url": "https://hiring.lat"
+    },
+    {
+      "name": "Real Work From Anywhere",
+      "url": "https://www.realworkfromanywhere.com/"
+    },
+    {
+      "name": "Career Vault",
+      "url": "https://careervault.io/"
+    },
+    {
+      "name": "Jobspresso",
+      "url": "https://jobspresso.co/remote-work/"
+    },
+    {
+      "name": "We Work Remotely",
+      "url": "https://weworkremotely.com/"
+    },
+    {
+      "name": "Workaline",
+      "url": "https://workaline.com/"
+    },
+    {
+      "name": "RemoteYeah",
+      "url": "https://remoteyeah.com/"
+    },
+    {
+      "name": "Remotive",
+      "url": "https://remotive.com/"
+    },
+    {
+      "name": "Remote",
+      "url": "https://remote.com/jobs/all"
+    },
+    {
+      "name": "remote | OK",
+      "url": "https://remoteok.io/"
+    },
+    {
+      "name": "JustRemote",
+      "url": "https://justremote.co/"
+    },
+    {
+      "name": "SkipTheDrive",
+      "url": "https://www.skipthedrive.com/"
+    },
+    {
+      "name": "remote.co",
+      "url": "https://remote.co/remote-jobs/"
+    },
+    {
+      "name": "remote4me.com",
+      "url": "https://remote4me.com/"
+    },
+    {
+      "name": "Working Nomads",
+      "url": "https://www.workingnomads.com/jobs"
+    },
+    {
+      "name": "AwesomeJobs",
+      "url": "https://www.awesomejobs.io/"
+    },
+    {
+      "name": "Remote Python",
+      "url": "https://www.remotepython.com/"
+    },
+    {
+      "name": "Ruby On Remote",
+      "url": "https://rubyonremote.com/"
+    },
+    {
+      "name": "Remote JavaScript Jobs",
+      "url": "https://javascript.jobs/remote"
+    },
+    {
+      "name": "letsworkremotely",
+      "url": "https://www.letsworkremotely.com/remote-jobs/"
+    },
+    {
+      "name": "Workew",
+      "url": "https://workew.com/remote-jobs/"
+    },
+    {
+      "name": "wellpaid.io",
+      "url": "https://wellpaid.io/"
+    },
+    {
+      "name": "NODESK Remote Jobs",
+      "url": "https://nodesk.co/remote-jobs/"
+    },
+    {
+      "name": "FlexJobs",
+      "url": "https://www.flexjobs.com/"
+    },
+    {
+      "name": "remotify",
+      "url": "https://remotify.me/"
+    },
+    {
+      "name": "Remoters",
+      "url": "https://remoters.net/jobs/"
+    },
+    {
+      "name": "Jobmote",
+      "url": "https://jobmote.com/"
+    },
+    {
+      "name": "DailyRemote",
+      "url": "https://dailyremote.com/"
+    },
+    {
+      "name": "Remote Developer Jobs",
+      "url": "https://www.remote-developer-jobs.com/"
+    },
+    {
+      "name": "Meerkad",
+      "url": "https://meerkad.com/"
+    },
+    {
+      "name": "Pangian",
+      "url": "https://pangian.com/remote/job-board/"
+    },
+    {
+      "name": "DynamiteJobs",
+      "url": "https://www.dynamitejobs.com/"
+    },
+    {
+      "name": "FlatWorld",
+      "url": "https://flatworld.co/jobs/"
+    },
+    {
+      "name": "Remote Index",
+      "url": "https://remoteindex.co/"
+    },
+    {
+      "name": "Remote Jobs",
+      "url": "https://backendremotejobs.com/"
+    },
+    {
+      "name": "Devremote",
+      "url": "https://devremote.io/"
+    },
+    {
+      "name": "I love remote",
+      "url": "https://iloveremote.io"
+    },
+    {
+      "name": "RemoteFR",
+      "url": "https://remoteFR.com"
+    },
+    {
+      "name": "RemoteSource",
+      "url": "https://jobs.remotesource.com/jobs"
+    },
+    {
+      "name": "tryremotely",
+      "url": "https://tryremotely.com/remote-jobs"
+    },
+    {
+      "name": "Find My Remote",
+      "url": "https://findmyremote.ai/"
+    },
+    {
+      "name": "Benture",
+      "url": "https://benture.io"
+    },
+    {
+      "name": "Remoseal",
+      "url": "https://www.remoseal.com"
+    },
+    {
+      "name": "Remote100K",
+      "url": "https://remote100k.com/"
+    },
+    {
+      "name": "RemoteRocketship",
+      "url": "https://www.remoterocketship.com/"
+    },
+    {
+      "name": "RemoteScout",
+      "url": "https://remotescout24.com/en"
+    },
+    {
+      "name": "Remote Job Assistant",
+      "url": "https://remotejobassistant.com/"
+    },
+    {
+      "name": "RemoteCorgi",
+      "url": "https://www.remotecorgi.com/"
+    },
+    {
+      "name": "TrulyRemote",
+      "url": "https://trulyremote.co/"
+    },
+    {
+      "name": "RemoteJobsFinder",
+      "url": "https://remotejobsfinder.co/en"
+    },
+    {
+      "name": "GlobalWork",
+      "url": "https://globalwork.ai/en"
+    },
+    {
+      "name": "Better Remote Jobs",
+      "url": "https://betterremotejobs.com/"
+    },
+    {
+      "name": "Werkington",
+      "url": "https://www.werkington.com/"
+    },
+    {
+      "name": "Just Remote",
+      "url": "https://justremote.co/remote-jobs"
+    },
+    {
+      "name": "Dynamite Jobs",
+      "url": "https://dynamitejobs.com/"
+    },
+    {
+      "name": "Teletravail.guru",
+      "url": "https://teletravail.guru/"
+    },
+    {
+      "name": "RemoteFR",
+      "url": "https://remotefr.com/"
+    },
+    {
+      "name": "remoteleaf",
+      "url": "https://remoteleaf.com/"
+    },
+    {
+      "name": "remotemonk",
+      "url": "http://remotemonk.com/"
+    },
+    {
+      "name": "needremote",
+      "url": "https://needremote.com/"
+    },
+    {
+      "name": "remotejobs",
+      "url": "https://remotejobs.world/"
+    },
+    {
+      "name": "remotelypeople",
+      "url": "https://remotelypeople.com/"
+    }
+  ],
+  "Freelancer": [
+    {
+      "name": "Upwork",
+      "url": "https://www.upwork.com"
+    },
+    {
+      "name": "Toptal",
+      "url": "https://www.toptal.com/"
+    },
+    {
+      "name": "Freelancer",
+      "url": "https://www.freelancer.com"
+    },
+    {
+      "name": "Guru",
+      "url": "https://www.guru.com/"
+    },
+    {
+      "name": "People Per Hour",
+      "url": "https://www.peopleperhour.com"
+    },
+    {
+      "name": "Fiverr",
+      "url": "https://www.fiverr.com/"
+    },
+    {
+      "name": "Hubstaff",
+      "url": "https://talent.hubstaff.com/"
+    },
+    {
+      "name": "Outsource",
+      "url": "https://outsource.com"
+    },
+    {
+      "name": "GigGrabbers",
+      "url": "https://www.giggrabbers.com"
+    },
+    {
+      "name": "Techamana",
+      "url": "https://www.techamana.com"
+    },
+    {
+      "name": "YunoJuno",
+      "url": "https://www.yunojuno.com/"
+    },
+    {
+      "name": "Gun.io",
+      "url": "https://www.gun.io/"
+    },
+    {
+      "name": "Freel",
+      "url": "https://www.freel.ca/"
+    }
+  ],
+  "Fashion": [
+    {
+      "name": "Cerulean",
+      "url": "https://ceruleanjobs.com/"
+    },
+    {
+      "name": "Fashion Workie",
+      "url": "https://www.fashionworkie.com/"
+    },
+    {
+      "name": "LuxuryRecruit",
+      "url": "https://www.luxuryrecruit.com/"
+    }
+  ],
+  "Care Services": [
+    {
+      "name": "NannyLane",
+      "url": "https://www.nannylane.com/"
+    },
+    {
+      "name": "Housekeeper.com",
+      "url": "https://housekeeper.com/"
+    },
+    {
+      "name": "ElderCare.com",
+      "url": "https://eldercare.com/"
+    },
+    {
+      "name": "Sitter.com",
+      "url": "https://sitter.com/"
+    },
+    {
+      "name": "PetSitter.com",
+      "url": "https://petsitter.com/"
+    }
+  ],
+  "Other": [
+    {
+      "name": "OkJob",
+      "url": "https://okjob.io/"
+    },
+    {
+      "name": "Job Board Search",
+      "url": "https://jobboardsearch.com/"
+    },
+    {
+      "name": "Monster",
+      "url": "https://www.monster.com/"
+    },
+    {
+      "name": "GitHub Jobs",
+      "url": "https://www.github.careers/careers-home/jobs"
+    },
+    {
+      "name": "Amazon Jobs",
+      "url": "https://www.amazon.jobs/en"
+    },
+    {
+      "name": "HackerNews Jobs",
+      "url": "https://news.ycombinator.com/jobs"
+    },
+    {
+      "name": "Stack Overflow Jobs",
+      "url": "https://stackoverflowjobs.com/"
+    },
+    {
+      "name": "Top Jobs Today",
+      "url": "https://topjobstoday.com"
+    },
+    {
+      "name": "Crunchboard",
+      "url": "https://www.crunchboard.com/"
+    },
+    {
+      "name": "Hacker Noon Jobs",
+      "url": "https://jobs.hackernoon.com/"
+    },
+    {
+      "name": "Jobbatical",
+      "url": "https://jobbatical.com/jobs"
+    },
+    {
+      "name": "PowerToFly",
+      "url": "https://powertofly.com/jobs/"
+    },
+    {
+      "name": "whoishiring.io",
+      "url": "https://whoishiring.io/"
+    },
+    {
+      "name": "SimplyHired",
+      "url": "https://www.simplyhired.com/"
+    },
+    {
+      "name": "CareerBuilder",
+      "url": "https://www.careerbuilder.com"
+    },
+    {
+      "name": "Dice",
+      "url": "https://www.dice.com/"
+    },
+    {
+      "name": "Techstars",
+      "url": "https://jobs.techstars.com/"
+    },
+    {
+      "name": "ZipRecruiter",
+      "url": "https://www.ziprecruiter.com/"
+    },
+    {
+      "name": "Idealist",
+      "url": "https://www.idealist.org/"
+    },
+    {
+      "name": "Aquent",
+      "url": "https://aquent.com/find-work/"
+    },
+    {
+      "name": "HackerX",
+      "url": "https://hackerx.org/jobs/"
+    },
+    {
+      "name": "findwork.dev",
+      "url": "https://findwork.dev/"
+    },
+    {
+      "name": "The Muse",
+      "url": "https://www.themuse.com/jobs"
+    },
+    {
+      "name": "LinkUp",
+      "url": "https://linkup.com/"
+    },
+    {
+      "name": "eComPortal",
+      "url": "https://ecomportal.co"
+    },
+    {
+      "name": "Joblist.app",
+      "url": "https://joblist.app/"
+    },
+    {
+      "name": "Jobs2Careers",
+      "url": "https://www.jobs2careers.com/"
+    },
+    {
+      "name": "JobisJob",
+      "url": "https://www.jobisjob.com/"
+    },
+    {
+      "name": "Joblift",
+      "url": "https://joblift.com/"
+    },
+    {
+      "name": "Adzuna",
+      "url": "https://www.adzuna.com/"
+    },
+    {
+      "name": "TechMeAbroad",
+      "url": "https://techmeabroad.com/"
+    },
+    {
+      "name": "HackerRank Jobs",
+      "url": "https://www.hackerrank.com/jobs/search"
+    },
+    {
+      "name": "Codersrank",
+      "url": "https://jobs.codersrank.io/"
+    },
+    {
+      "name": "ClimateTechList",
+      "url": "https://www.climatetechlist.com/"
+    },
+    {
+      "name": "jobbit subreddit",
+      "url": "https://www.reddit.com/r/forhire/search?q=%28title%3A%22%5Bhiring%5D%22+OR+flair%3AHiring%29+AND+%28subreddit%3Aforhire+OR+subreddit%3Ajobbit+OR+subreddit%3Ajobopenings%29&sort=new&t=all"
+    },
+    {
+      "name": "Jora",
+      "url": "https://www.jora.com/"
+    },
+    {
+      "name": "HNHIRING",
+      "url": "https://hnhiring.com/"
+    },
+    {
+      "name": "nocsok",
+      "url": "https://nocsok.com/"
+    },
+    {
+      "name": "Y Combinator Job Board",
+      "url": "https://ycombinator.monday.vc/"
+    },
+    {
+      "name": "Relocate.me",
+      "url": "https://relocate.me/"
+    },
+    {
+      "name": "PRODUCTHIRE.NET",
+      "url": "https://producthire.net/"
+    },
+    {
+      "name": "#epicjobs",
+      "url": "https://epicjobs.co/"
+    },
+    {
+      "name": "StackShare",
+      "url": "https://stackshare.io/match"
+    },
+    {
+      "name": "Vanhack",
+      "url": "https://vanhack.com/platform/#/jobs"
+    },
+    {
+      "name": "PeopleFirstJobs",
+      "url": "https://peoplefirstjobs.com/"
+    },
+    {
+      "name": "Naukri",
+      "url": "https://www.naukri.com/"
+    },
+    {
+      "name": "CSS-Tricks Jobs",
+      "url": "https://css-tricks.com/jobs/"
+    },
+    {
+      "name": "Smashing Magazine",
+      "url": "https://www.smashingmagazine.com/jobs/"
+    },
+    {
+      "name": "Totaljobs",
+      "url": "https://www.totaljobs.com/"
+    },
+    {
+      "name": "XING",
+      "url": "https://www.xing.com/jobs"
+    },
+    {
+      "name": "The Guardian Jobs",
+      "url": "https://jobs.theguardian.com/jobs/"
+    },
+    {
+      "name": "Jobs in Network",
+      "url": "https://www.jobsinnetwork.com/"
+    },
+    {
+      "name": "snagajob",
+      "url": "https://www.snagajob.com/"
+    },
+    {
+      "name": "Robert Half",
+      "url": "https://www.roberthalf.com/jobs"
+    },
+    {
+      "name": "HigherEdJobs",
+      "url": "https://www.higheredjobs.com/"
+    },
+    {
+      "name": "Mediabistro",
+      "url": "https://www.mediabistro.com/"
+    },
+    {
+      "name": "Joblist",
+      "url": "https://www.joblist.com/"
+    },
+    {
+      "name": "Workatastartup",
+      "url": "https://www.workatastartup.com/job_list"
+    },
+    {
+      "name": "enviro",
+      "url": "https://enviro.work/"
+    },
+    {
+      "name": "f6s",
+      "url": "https://www.f6s.com/jobs"
+    },
+    {
+      "name": "Ladders",
+      "url": "https://www.theladders.com/jobs/search-jobs"
+    },
+    {
+      "name": "Cleverism",
+      "url": "https://www.cleverism.com/jobs"
+    },
+    {
+      "name": "VirtualVocations",
+      "url": "https://www.virtualvocations.com/"
+    },
+    {
+      "name": "Mashable",
+      "url": "https://jobs.mashable.com/"
+    },
+    {
+      "name": "Jobvertise",
+      "url": "http://www.jobvertise.com/"
+    },
+    {
+      "name": "CNCF Job Board",
+      "url": "https://jobs.cncf.io/"
+    },
+    {
+      "name": "KDR Recruitment",
+      "url": "https://www.kdrrecruitment.com/jobs/"
+    },
+    {
+      "name": "Diversify Tech",
+      "url": "https://www.diversifytech.co/job-board/"
+    },
+    {
+      "name": "Hitmarker",
+      "url": "https://hitmarker.net/jobs"
+    },
+    {
+      "name": "Open Jobs in Copenhagen Region",
+      "url": "https://careers.greatercphregion.com/"
+    },
+    {
+      "name": "PRSA Job Center",
+      "url": "https://jobs.prsa.org/"
+    },
+    {
+      "name": "eFinancialCareers",
+      "url": "https://www.efinancialcareers.com/"
+    },
+    {
+      "name": "Uncubed",
+      "url": "https://uncubed.com/jobs"
+    },
+    {
+      "name": "Health eCareers",
+      "url": "https://healthecareers.com/"
+    },
+    {
+      "name": "TechFetch",
+      "url": "https://www.techfetch.com/"
+    },
+    {
+      "name": "DiversityJobs",
+      "url": "https://www.diversityjobs.com/"
+    },
+    {
+      "name": "ClearanceJobs",
+      "url": "https://www.clearancejobs.com/"
+    },
+    {
+      "name": "IT Job Pro",
+      "url": "https://itjobpro.com/"
+    },
+    {
+      "name": "CampaignJobs",
+      "url": "https://jp.campaignlive.co.uk/jobs"
+    },
+    {
+      "name": "Tech Jobs for Good",
+      "url": "https://techjobsforgood.com/"
+    },
+    {
+      "name": "Wait, What Do You Do?",
+      "url": "https://waitwhatdoyoudo.com/"
+    },
+    {
+      "name": "Getwork",
+      "url": "https://getwork.com/"
+    },
+    {
+      "name": "Lensa",
+      "url": "https://lensa.com/"
+    },
+    {
+      "name": "arbeitnow",
+      "url": "https://www.arbeitnow.com"
+    },
+    {
+      "name": "4 day week",
+      "url": "https://4dayweek.io/"
+    },
+    {
+      "name": "Jobgether",
+      "url": "https://jobgether.com"
+    },
+    {
+      "name": "Techloop",
+      "url": "https://jobs.techloop.io/"
+    },
+    {
+      "name": "Himalayas",
+      "url": "https://himalayas.app/jobs"
+    },
+    {
+      "name": "gamesjobsdirect",
+      "url": "https://www.gamesjobsdirect.com/"
+    },
+    {
+      "name": "jobsdb",
+      "url": "https://www.jobsdb.com/"
+    },
+    {
+      "name": "scholarshipdb",
+      "url": "https://scholarshipdb.net/"
+    },
+    {
+      "name": "OpenQuant",
+      "url": "https://openquant.co/"
+    },
+    {
+      "name": "AquariumsHiring",
+      "url": "https://aquariumshiring.com"
+    },
+    {
+      "name": "ZoosHiring",
+      "url": "https://zooshiring.com"
+    },
+    {
+      "name": "Rejobs",
+      "url": "https://rejobs.org/en/"
+    },
+    {
+      "name": "Hidden Jobs",
+      "url": "https://hidden-jobs.com/"
+    },
+    {
+      "name": "HiringCafe",
+      "url": "https://hiring.cafe/"
+    },
+    {
+      "name": "We Are Distributed",
+      "url": "https://wearedistributed.org/jobs"
+    },
+    {
+      "name": "Jobs by Workable",
+      "url": "https://jobs.workable.com/"
+    },
+    {
+      "name": "Engineering Manager Jobs (EngMgrJobs)",
+      "url": "https://engmgrjobs.com"
+    },
+    {
+      "name": "testdevjobs",
+      "url": "https://testdevjobs.com/"
+    },
+    {
+      "name": "Influencer Marketing Society",
+      "url": "https://www.influencermarketingsociety.com/"
+    },
+    {
+      "name": "Christian Tech Jobs",
+      "url": "https://www.christiantechjobs.io/"
+    },
+    {
+      "name": "GreenLever",
+      "url": "https://greenlever.co/"
+    },
+    {
+      "name": "Best PM Jobs",
+      "url": "https://www.bestpmjobs.com/"
+    },
+    {
+      "name": "StarJobs - Personalised Job Search",
+      "url": "https://starjobs.dev"
+    },
+    {
+      "name": "visajobs.xyz",
+      "url": "https://visajobs.xyz/"
+    },
+    {
+      "name": "jobswithgpt",
+      "url": "https://jobswithgpt.com"
+    },
+    {
+      "name": "Jobright",
+      "url": "https://jobright.ai/"
+    },
+    {
+      "name": "JobFound",
+      "url": "https://www.jobfound.org/"
+    },
+    {
+      "name": "Woody",
+      "url": "https://www.woodyjobs.com/"
+    },
+    {
+      "name": "Econ-Jobs",
+      "url": "https://econ-jobs.com/"
+    },
+    {
+      "name": "JobMesh",
+      "url": "https://jobmesh.io/"
+    },
+    {
+      "name": "Built In",
+      "url": "https://builtin.com/"
+    },
+    {
+      "name": "Jobcrawl",
+      "url": "https://jobcrawl.org/"
+    },
+    {
+      "name": "First Wave Jobs",
+      "url": "https://www.firstwavejobs.com/"
+    },
+    {
+      "name": "JobLeads",
+      "url": "https://www.jobleads.com/"
+    },
+    {
+      "name": "carrots",
+      "url": "https://thecarrots.io/jobs"
+    },
+    {
+      "name": "howsitlike",
+      "url": "https://www.howsitlike.com/"
+    },
+    {
+      "name": "nowhiteboards",
+      "url": "https://nowhiteboards.io/"
+    },
+    {
+      "name": "hellnar",
+      "url": "https://hellnar.github.io/openings/Openings.html"
+    },
+    {
+      "name": "workalerts",
+      "url": "https://workalerts.netlify.com/"
+    },
+    {
+      "name": "loopcv",
+      "url": "https://www.loopcv.pro/"
+    },
+    {
+      "name": "levels.fyi",
+      "url": "https://www.levels.fyi/still-hiring/"
+    },
+    {
+      "name": "remotists",
+      "url": "https://remotists.substack.com/"
+    },
+    {
+      "name": "AngelList",
+      "url": "https://angel.co/"
+    },
+    {
+      "name": "findwrk",
+      "url": "https://findwrk.app/"
+    }
+  ],
+  "Entry Level": [
+    {
+      "name": "Entry Level Jobs",
+      "url": "https://www.entryleveljobs.me/"
+    },
+    {
+      "name": "entrylevel",
+      "url": "https://entrylevel.io/"
+    },
+    {
+      "name": "College Recruiter",
+      "url": "https://www.collegerecruiter.com/"
+    },
+    {
+      "name": "Jr.DevJobs",
+      "url": "https://www.jrdevjobs.com/"
+    },
+    {
+      "name": "TalentEgg",
+      "url": "https://talentegg.ca/"
+    },
+    {
+      "name": "ErasmusIntern",
+      "url": "https://erasmusintern.org/traineeships"
+    },
+    {
+      "name": "CareerRookie",
+      "url": "https://www.careerrookie.com/"
+    },
+    {
+      "name": "AfterCollege",
+      "url": "https://www.aftercollege.com/"
+    },
+    {
+      "name": "Newgrad jobs",
+      "url": "https://www.newgrad-jobs.com/"
+    },
+    {
+      "name": "ripplematch",
+      "url": "https://ripplematch.com/discover/"
+    }
+  ],
+  "Startups": [
+    {
+      "name": "Startup Jobs",
+      "url": "https://startup.jobs/"
+    },
+    {
+      "name": "StartUpers",
+      "url": "https://www.startupers.com/"
+    },
+    {
+      "name": "WorkinStartups",
+      "url": "https://workinstartups.com/"
+    },
+    {
+      "name": "The Hub",
+      "url": "https://thehub.io/"
+    },
+    {
+      "name": "Work in biotech",
+      "url": "https://workinbiotech.com/"
+    },
+    {
+      "name": "Startups Gallery",
+      "url": "https://startups.gallery/"
+    },
+    {
+      "name": "devtooljobs",
+      "url": "https://devtooljobs.com/"
+    },
+    {
+      "name": "coolstartupjobs",
+      "url": "https://www.coolstartupjobs.com"
+    }
+  ],
+  "Open Source": [
+    {
+      "name": "Free & Open Source Jobs",
+      "url": "https://www.fossjobs.net/"
+    },
+    {
+      "name": "Fossfox",
+      "url": "https://fossfox.com/"
+    },
+    {
+      "name": "GitJobs",
+      "url": "https://gitjobs.dev"
+    }
+  ],
+  "DevOps": [
+    {
+      "name": "Kube Careers",
+      "url": "https://kube.careers"
+    }
+  ],
+  "Quantum Computing": [
+    {
+      "name": "qubitsok.com",
+      "url": "https://qubitsok.com"
+    }
+  ],
+  "USA": [
+    {
+      "name": "DallasJobs",
+      "url": "https://www.dallasjobs.io/"
+    },
+    {
+      "name": "US Jobs",
+      "url": "https://us.jobs/"
+    },
+    {
+      "name": "Careerjet",
+      "url": "https://www.careerjet.com/"
+    },
+    {
+      "name": "Nexxt",
+      "url": "https://www.nexxt.com/"
+    },
+    {
+      "name": "National Labor Exchange",
+      "url": "https://usnlx.com/"
+    },
+    {
+      "name": "juju",
+      "url": "https://www.juju.com/"
+    },
+    {
+      "name": "Chef Jobs Near.Me",
+      "url": "https://chefjobsnear.me/"
+    },
+    {
+      "name": "Remote Physician Jobs",
+      "url": "https://www.remotephysicianjobs.org/"
+    },
+    {
+      "name": "Library Jobs HQ",
+      "url": "https://www.libraryjobshq.com/"
+    }
+  ],
+  "Australia": [
+    {
+      "name": "SEEK",
+      "url": "https://www.seek.com.au/"
+    },
+    {
+      "name": "CareerOne",
+      "url": "https://www.careerone.com.au/"
+    },
+    {
+      "name": "Jobaroo",
+      "url": "https://www.jobaroo.com/"
+    },
+    {
+      "name": "Headhunted",
+      "url": "https://www.headhunted.com.au/jobs/"
+    },
+    {
+      "name": "Grapevine Jobs",
+      "url": "https://www.grapevinejobs.com.au/"
+    },
+    {
+      "name": "Student Job Board",
+      "url": "https://www.studentjobboard.com.au/"
+    }
+  ],
+  "Canada": [
+    {
+      "name": "Work in Tech",
+      "url": "https://www.workintech.ca/"
+    },
+    {
+      "name": "Jobboom",
+      "url": "https://www.jobboom.com/en/job/"
+    },
+    {
+      "name": "Jobillico",
+      "url": "https://www.jobillico.com/search-jobs"
+    },
+    {
+      "name": "Jobbank",
+      "url": "https://www.jobbank.gc.ca/jobsearch/"
+    },
+    {
+      "name": "Eluta",
+      "url": "https://www.eluta.ca/"
+    },
+    {
+      "name": "CareerBeacon",
+      "url": "https://www.careerbeacon.com/"
+    },
+    {
+      "name": "CanadianNanny.ca",
+      "url": "https://canadiannanny.ca/"
+    },
+    {
+      "name": "MapleStack",
+      "url": "https://maplestack.ca/"
+    }
+  ],
+  "UK": [
+    {
+      "name": "Jobsite",
+      "url": "https://www.jobsite.co.uk/"
+    },
+    {
+      "name": "Job Serve",
+      "url": "https://www.jobserve.com/gb/en/Job-Search/"
+    },
+    {
+      "name": "CWJobs",
+      "url": "https://www.cwjobs.co.uk/"
+    },
+    {
+      "name": "reed",
+      "url": "https://www.reed.co.uk/"
+    },
+    {
+      "name": "CV-Library",
+      "url": "https://www.cv-library.co.uk/"
+    },
+    {
+      "name": "IT Jobs Watch",
+      "url": "https://www.itjobswatch.co.uk/"
+    },
+    {
+      "name": "Gumtree",
+      "url": "https://www.gumtree.com/jobs"
+    },
+    {
+      "name": "Analytics Jobs",
+      "url": "https://www.analyticsjobs.co.uk/"
+    },
+    {
+      "name": "WikiJob",
+      "url": "https://www.wikijob.co.uk/uk/jobs/"
+    },
+    {
+      "name": "DevITjobs UK",
+      "url": "https://devitjobs.uk/"
+    },
+    {
+      "name": "Hunt UK Visa Sponsors",
+      "url": "https://www.huntukvisasponsors.com/"
+    },
+    {
+      "name": "Builtin",
+      "url": "https://builtin.com/"
+    },
+    {
+      "name": "Welcome to the jungle",
+      "url": "https://uk.welcometothejungle.com/"
+    },
+    {
+      "name": "DefiniteJobs",
+      "url": "https://definitejobs.co.uk/find-jobs/"
+    },
+    {
+      "name": "UK Visa Jobs",
+      "url": "https://www.ukvisajobs.com/"
+    }
+  ],
+  "Germany": [
+    {
+      "name": "Jobsuche",
+      "url": "https://www.jobsintown.de/jobsuche/"
+    },
+    {
+      "name": "StepStone",
+      "url": "https://www.stepstone.de/en"
+    },
+    {
+      "name": "jobvector",
+      "url": "https://www.jobvector.de/en/"
+    },
+    {
+      "name": "Jobware",
+      "url": "https://www.jobware.de/"
+    },
+    {
+      "name": "Stellenanzeigen",
+      "url": "https://www.stellenanzeigen.de/"
+    },
+    {
+      "name": "JobScout24",
+      "url": "https://www.jobs.de/"
+    },
+    {
+      "name": "StellenOnline",
+      "url": "https://www.stellenonline.de/"
+    },
+    {
+      "name": "Berlin Startup Jobs",
+      "url": "https://berlinstartupjobs.com/"
+    },
+    {
+      "name": "Jobs in Berlin",
+      "url": "https://www.jobsinberlin.eu/"
+    },
+    {
+      "name": "GermanTech Jobs",
+      "url": "https://germantechjobs.de/"
+    },
+    {
+      "name": "Gigajob",
+      "url": "https://de.gigajob.com/"
+    },
+    {
+      "name": "kimeta",
+      "url": "https://www.kimeta.de/"
+    },
+    {
+      "name": "academics",
+      "url": "https://www.academics.de/"
+    },
+    {
+      "name": "rekruter",
+      "url": "https://www.rekruter.de/"
+    },
+    {
+      "name": "meinestadt",
+      "url": "https://www.meinestadt.de/"
+    },
+    {
+      "name": "karrieresprung",
+      "url": "https://www.karrieresprung.de/"
+    },
+    {
+      "name": "JobJump",
+      "url": "https://jobjump.net/"
+    }
+  ],
+  "Netherlands": [
+    {
+      "name": "Jobs in Amsterdam",
+      "url": "http://www.jobinamsterdam.com/"
+    },
+    {
+      "name": "Together Abroad",
+      "url": "https://www.togetherabroad.nl/jobs.html"
+    },
+    {
+      "name": "Jobs in the Netherlands",
+      "url": "https://www.welcome-to-nl.nl/jobs/"
+    }
+  ],
+  "Denmark": [
+    {
+      "name": "Jobindex",
+      "url": "https://www.jobindex.dk/"
+    },
+    {
+      "name": "It Job Bank",
+      "url": "https://www.it-jobbank.dk/"
+    },
+    {
+      "name": "Jobs in Copenhagen",
+      "url": "https://www.jobsincopenhagen.com/"
+    },
+    {
+      "name": "Open Jobs in Denmark",
+      "url": "https://careers.state-of-denmark.com/"
+    },
+    {
+      "name": "DanishTech",
+      "url": "https://danishtech.co/"
+    }
+  ],
+  "Italy": [
+    {
+      "name": "Jobrapido",
+      "url": "https://it.jobrapido.com/"
+    },
+    {
+      "name": "Experteer",
+      "url": "https://www.experteer.com/"
+    },
+    {
+      "name": "Adecco",
+      "url": "https://www.adecco.it/"
+    },
+    {
+      "name": "Lavoro Digitale Italia",
+      "url": "https://www.lavorodigitaleitalia.it"
+    },
+    {
+      "name": "Experis",
+      "url": "https://www.experis.it/"
+    },
+    {
+      "name": "Infojobs",
+      "url": "https://www.infojobs.it/"
+    },
+    {
+      "name": "Subito",
+      "url": "https://www.subito.it/"
+    },
+    {
+      "name": "Rete Informatica Lavoro",
+      "url": "https://reteinformaticalavoro.it/"
+    },
+    {
+      "name": "Gi Group",
+      "url": "https://www.gigroup.it/"
+    }
+  ],
+  "Poland": [
+    {
+      "name": "Careers in Poland",
+      "url": "https://www.careersinpoland.com/"
+    },
+    {
+      "name": "Crossweb",
+      "url": "https://crossweb.pl/en/job/job-offers/"
+    },
+    {
+      "name": "Bulldogjob",
+      "url": "https://bulldogjob.com/"
+    },
+    {
+      "name": "Just Join IT",
+      "url": "https://justjoin.it/"
+    },
+    {
+      "name": "Jobo",
+      "url": "https://jobo.pl/"
+    }
+  ],
+  "Switzerland": [
+    {
+      "name": "SwissDev Jobs",
+      "url": "https://swissdevjobs.ch/"
+    },
+    {
+      "name": "WeJob.ch",
+      "url": "https://WeJob.ch/"
+    },
+    {
+      "name": "Jobwinner",
+      "url": "https://jobwinner.ch/en/"
+    },
+    {
+      "name": "JobScout24",
+      "url": "https://www.jobscout24.ch/en"
+    }
+  ],
+  "Sweden": [
+    {
+      "name": "Statsskuld.se",
+      "url": "https://statsskuld.se/lediga-jobb"
+    },
+    {
+      "name": "jobbland.se",
+      "url": "https://jobbland.se/lediga-jobb"
+    },
+    {
+      "name": "jobbsafari.se",
+      "url": "https://jobbsafari.se/lediga-jobb"
+    }
+  ],
+  "Europe Other": [
+    {
+      "name": "eurojobs",
+      "url": "https://eurojobs.com/"
+    },
+    {
+      "name": "eurobrussels",
+      "url": "https://www.eurobrussels.com/"
+    },
+    {
+      "name": "Landing.jobs",
+      "url": "https://landing.jobs/"
+    },
+    {
+      "name": "Work in Estonia",
+      "url": "https://workinestonia.com/job/"
+    },
+    {
+      "name": "CV Keskus",
+      "url": "https://www.cvkeskus.ee/"
+    },
+    {
+      "name": "Zalando Jobs",
+      "url": "https://jobs.zalando.com/en/jobs/"
+    },
+    {
+      "name": "Euro Engineer Jobs",
+      "url": "https://www.euroengineerjobs.com/"
+    },
+    {
+      "name": "No Fluff Jobs",
+      "url": "https://nofluffjobs.com/"
+    },
+    {
+      "name": "Duunitori",
+      "url": "https://duunitori.fi/tyopaikat"
+    },
+    {
+      "name": "jobbland.no",
+      "url": "https://jobbland.no/ledige-stillinger"
+    },
+    {
+      "name": "jobbsafari.no",
+      "url": "https://jobbsafari.no/ledige-stillinger"
+    },
+    {
+      "name": "NIJOBS",
+      "url": "https://www.nijobs.com/"
+    },
+    {
+      "name": "Hyper Island",
+      "url": "https://www.hyperisland.com/jobs"
+    },
+    {
+      "name": "zuhausejobs.com",
+      "url": "https://zuhausejobs.com"
+    },
+    {
+      "name": "lovejob",
+      "url": "https://en.lovejob.lt/"
+    },
+    {
+      "name": "Next Level Jobs EU",
+      "url": "https://nextleveljobs.eu/?utm_source=github&utm_medium=referral&utm_campaign=emredurukn-awesome-job-boards"
+    },
+    {
+      "name": "Euro Top Tech Jobs",
+      "url": "https://eurotoptechjobs.com/"
+    },
+    {
+      "name": "Startup Jobs CZ",
+      "url": "https://www.startupjobs.cz/"
+    },
+    {
+      "name": "Jobsportal",
+      "url": "https://www.jobsportal.fi"
+    },
+    {
+      "name": "teletravail.guru",
+      "url": "https://teletravail.guru"
+    }
+  ],
+  "Turkey": [
+    {
+      "name": "Kariyer.net",
+      "url": "https://www.kariyer.net/is-ilanlari/"
+    },
+    {
+      "name": "Yenibiris",
+      "url": "https://www.yenibiris.com/is-ilanlari/"
+    },
+    {
+      "name": "Secretcv",
+      "url": "https://www.secretcv.com/is-ilanlari/"
+    },
+    {
+      "name": "Eleman.net",
+      "url": "https://www.eleman.net/is-ilanlari/"
+    },
+    {
+      "name": "Randstad Türkiye",
+      "url": "https://www.randstad.com.tr/jobs/"
+    },
+    {
+      "name": "Toptalent",
+      "url": "https://toptalent.co/is-ilanlari/"
+    }
+  ],
+  "UAE": [
+    {
+      "name": "Remote Jobs in Dubai",
+      "url": "https://www.remotedxb.com"
+    },
+    {
+      "name": "JobXDubai",
+      "url": "https://jobxdubai.com"
+    },
+    {
+      "name": "Zero Tax Jobs",
+      "url": "https://zerotaxjobs.com/"
+    }
+  ],
+  "Asia": [
+    {
+      "name": "VietnamDevs",
+      "url": "https://vietnamdevs.com"
+    }
+  ],
+  "Latam": [
+    {
+      "name": "Findjobit",
+      "url": "https://findjobit.com/jobs"
+    },
+    {
+      "name": "TacoEmpleos",
+      "url": "https://tacoempleos.com.mx"
+    }
+  ],
+  "Africa": [
+    {
+      "name": "Jobberman Nigeria",
+      "url": "https://jobberman.com"
+    }
+  ],
+  "Cloud": [
+    {
+      "name": "Cloud Careers Hub",
+      "url": "https://cloudcareershub.com/"
+    }
+  ],
+  "eCommerce": [
+    {
+      "name": "eComPortal",
+      "url": "https://www.ecomportal.co/"
+    }
+  ],
+  "Finance": [
+    {
+      "name": "OpenQuant",
+      "url": "https://openquant.co"
+    }
+  ],
+  "Gaming": [
+    {
+      "name": "Work With Indies",
+      "url": "https://www.workwithindies.com"
+    }
+  ],
+  "Tech": [
+    {
+      "name": "EmbeddedJobs",
+      "url": "https://embedded.jobs"
+    },
+    {
+      "name": "foo🦍",
+      "url": "https://foorilla.com"
+    },
+    {
+      "name": "Work in Tech",
+      "url": "https://www1.communitech.ca/jobs"
+    },
+    {
+      "name": "Landing.jobs",
+      "url": "https://landing.jobs/?utm_source=github&utm_medium=referral&utm_content=whfio&utm_campaign=post"
+    },
+    {
+      "name": "DanishTech.co",
+      "url": "https://danishtech.co/?utm_source=github&utm_medium=referral&utm_campaign=tramcar-awesome-job-boards"
+    },
+    {
+      "name": "Next Level Jobs EU",
+      "url": "https://nextleveljobs.eu/?utm_source=github&utm_medium=referral&utm_campaign=tramcar-awesome-job-boards"
+    }
+  ],
+  "Writing": [
+    {
+      "name": "WorkingInContent.com",
+      "url": "https://workingincontent.com/"
+    }
+  ],
+  "Various": [
+    {
+      "name": "WorkInGreen.jobs",
+      "url": "https://workingreen.jobs/"
+    }
+  ]
+}
