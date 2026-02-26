@@ -90,7 +90,7 @@ export default function Navbar() {
                   Remote Companies
                 </Link>
                 <Link 
-                  href="/remote-jobs" 
+                  href="/jobs" 
                   className="px-4 py-3 font-bold text-sm text-gray-700 hover:bg-[#F8F3E7] hover:text-[#FF5A5F] hover:pl-5 transition-all duration-200"
                 >
                   Jobs

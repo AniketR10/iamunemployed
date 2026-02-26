@@ -1,0 +1,294 @@
+"use client";
+
+import { useState, useMemo } from "react";
+import { Search, Globe, Briefcase, ExternalLink, X } from "lucide-react";
+import Navbar from "@/src/components/Navbar"; // IMPORTING YOUR NAVBAR
+import rawJobData from "@/src/data/job_boards.json";
+
+interface JobBoard {
+  name: string;
+  url: string;
+  description?: string;
+}
+
+type CountryNode = Record<string, JobBoard[]>;
+type JobData = {
+  Country?: CountryNode[];
+  [key: string]: JobBoard[] | CountryNode[] | undefined;
+};
+
+export default function JobBoardsPage() {
+  const [activeCategories, setActiveCategories] = useState<string[]>([]);
+  const [mainSearchQuery, setMainSearchQuery] = useState("");
+  const [industrySearch, setIndustrySearch] = useState("");
+  const [locationSearch, setLocationSearch] = useState("");
+
+  const { allBoards, standardCategories, countryCategories } = useMemo(() => {
+    const data = rawJobData as JobData;
+    const boards: (JobBoard & { category: string; isCountry: boolean })[] = [];
+    const stdCats: string[] = [];
+    const countryCats: string[] = [];
+
+    Object.entries(data).forEach(([key, value]) => {
+      if (!value) return;
+
+      if (key === "Country" && Array.isArray(value)) {
+        value.forEach((countryObject) => {
+          Object.entries(countryObject).forEach(([countryName, links]) => {
+            countryCats.push(countryName);
+            (links as JobBoard[]).forEach((link) => {
+              boards.push({ ...link, category: countryName, isCountry: true });
+            });
+          });
+        });
+      } else if (Array.isArray(value)) {
+        stdCats.push(key);
+        (value as JobBoard[]).forEach((link) => {
+          boards.push({ ...link, category: key, isCountry: false });
+        });
+      }
+    });
+
+    return {
+      allBoards: boards.sort((a, b) => a.name.localeCompare(b.name)),
+      standardCategories: stdCats.sort(),
+      countryCategories: countryCats.sort(),
+    };
+  }, []);
+
+  const filteredBoards = useMemo(() => {
+    return allBoards.filter((board) => {
+      const matchesCategory =
+        activeCategories.length === 0 || activeCategories.includes(board.category);
+      const matchesSearch = board.name.toLowerCase().includes(mainSearchQuery.toLowerCase());
+      return matchesCategory && matchesSearch;
+    });
+  }, [allBoards, activeCategories, mainSearchQuery]);
+
+  const visibleIndustries = standardCategories.filter((cat) =>
+    cat.toLowerCase().includes(industrySearch.toLowerCase())
+  );
+  
+  const visibleLocations = countryCategories.filter((cat) =>
+    cat.toLowerCase().includes(locationSearch.toLowerCase())
+  );
+
+  const toggleCategory = (cat: string) => {
+    setActiveCategories((prev) =>
+      prev.includes(cat) ? prev.filter((c) => c !== cat) : [...prev, cat]
+    );
+  };
+
+  const clearIndustries = () => {
+    setActiveCategories((prev) => prev.filter((c) => !standardCategories.includes(c)));
+  };
+
+  const clearLocations = () => {
+    setActiveCategories((prev) => prev.filter((c) => !countryCategories.includes(c)));
+  };
+
+  const activeIndustryCount = activeCategories.filter((c) => standardCategories.includes(c)).length;
+  const activeLocationCount = activeCategories.filter((c) => countryCategories.includes(c)).length;
+
+  return (
+    <div className="min-h-screen bg-[#F8F3E7] font-sans text-gray-900 text-sm flex flex-col">
+      {/* YOUR GLOBAL NAVBAR */}
+      <Navbar />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pb-16 w-full">
+        
+        {/* MATCHING HANGING SIGN HERO SECTION */}
+        <div className="text-center mb-40 relative mt-4">
+          <div className="inline-block relative">
+            <h1 className="text-5xl md:text-6xl font-black text-gray-900 tracking-tighter leading-none relative z-20">
+              JOB
+              <span className="block text-[#FF5A5F] drop-shadow-[3px_3px_0px_rgba(0,0,0,1)]">
+                 BOARDS
+              </span>
+            </h1>
+
+            <div className="absolute -bottom-28 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center w-56">
+               <div className="w-full flex justify-between items-end px-8 z-0">
+                   <div className="w-1.5 h-14 bg-gray-900 border-x border-gray-900"></div>
+                   <div className="w-1.5 h-16 bg-gray-900 border-x border-gray-900"></div>
+               </div>
+
+               <div className="w-full bg-[#FFC700] border-2 border-gray-900 p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -mt-1 rotate-2 hover:rotate-0 transition-transform duration-300 origin-top relative cursor-default">
+                   <div className="absolute -top-2 left-7 w-3 h-3 bg-gray-300 rounded-full border-2 border-gray-900"></div>
+                   <div className="absolute -top-2 right-7 w-3 h-3 bg-gray-300 rounded-full border-2 border-gray-900"></div>
+                   <p className="text-sm font-bold text-gray-900 leading-tight text-center">
+                     Find any Job that you can imagine!
+                   </p>
+               </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col lg:flex-row gap-10">
+          
+          <main className="flex-1 order-2 lg:order-1">
+            <div className="mb-6 flex flex-wrap gap-4 justify-between items-end border-b-2 border-gray-900 pb-4">
+              <h2 className="text-3xl font-black flex items-center gap-3">
+                {activeCategories.length === 0 ? "All Boards" : "Filtered Results"}
+                {activeCategories.length > 0 && (
+                  <button 
+                    onClick={() => setActiveCategories([])}
+                    className="bg-gray-200 hover:bg-[#FF5A5F] hover:cursor-pointer hover:text-white px-3 py-1 rounded-full text-sm font-bold transition-colors flex items-center gap-1"
+                  >
+                    <X size={14} strokeWidth={3} /> Clear All Filters
+                  </button>
+                )}
+              </h2>
+              <span className="font-bold text-white bg-[#FF5A5F] px-4 py-1.5 rounded-md border-2 border-gray-900 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-sm">
+                {filteredBoards.length} Results
+              </span>
+            </div>
+
+            {filteredBoards.length === 0 ? (
+              <div className="w-full p-12 bg-white border-2 border-dashed border-gray-400 rounded-lg text-center">
+                <p className="text-xl font-bold text-gray-500">No job boards found.</p>
+                <button 
+                  onClick={() => { setMainSearchQuery(""); setActiveCategories([]); }}
+                  className="mt-4 text-[#FF5A5F] font-bold hover:underline hover:cursor-pointer"
+                >
+                  Clear search and filters
+                </button>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+                {filteredBoards.map((board, idx) => (
+                  <a
+                    key={idx}
+                    href={board.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group bg-white border-2 border-gray-900 rounded-lg p-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#FF5A5F] hover:border-[#FF5A5F] transition-all duration-200 relative overflow-hidden flex flex-col"
+                  >
+                    <div className="flex justify-between items-start mb-2">
+                      <h3 className="font-black text-lg pr-6 leading-tight group-hover:text-[#FF5A5F] transition-colors">
+                        {board.name}
+                      </h3>
+                      <ExternalLink size={18} className="text-gray-400 group-hover:text-[#FF5A5F] transition-colors shrink-0" strokeWidth={2.5} />
+                    </div>
+                    
+                    {board.description && (
+                      <p className="text-sm font-medium text-gray-600 mb-4 line-clamp-2">
+                        {board.description}
+                      </p>
+                    )}
+                    
+                    <div className="mt-auto pt-3">
+                      <span className="inline-block px-2.5 py-1 bg-[#F8F3E7] border-2 border-gray-900 rounded text-xs font-bold text-gray-900">
+                        {board.category}
+                      </span>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            )}
+          </main>
+
+          {/* RIGHT SIDEBAR: FILTERS */}
+          <aside className="w-full lg:w-80 shrink-0 flex flex-col gap-4 order-1 lg:order-2 lg:sticky lg:top-8 lg:self-start">
+            
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={20} strokeWidth={3} />
+              <input
+                type="text"
+                placeholder="Search specific boards..."
+                value={mainSearchQuery}
+                onChange={(e) => setMainSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-3 bg-white border-2 border-gray-900 rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-bold text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#FF5A5F] focus:shadow-[4px_4px_0px_0px_#FF5A5F] transition-all"
+              />
+            </div>
+
+            <div className="bg-white border-2 border-gray-900 rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col overflow-hidden">
+              <div className="bg-gray-100 border-b-2 border-gray-900 p-3 flex justify-between items-center">
+                <div className="flex items-center gap-2 text-sm font-black text-gray-900 uppercase tracking-wider">
+                  <Briefcase size={16} className="text-[#FF5A5F]" /> 
+                  Industries 
+                  {activeIndustryCount > 0 && <span className="bg-[#FF5A5F] text-white px-2 py-0.5 rounded-full text-[10px]">{activeIndustryCount}</span>}
+                </div>
+                {activeIndustryCount > 0 && (
+                  <button onClick={clearIndustries} className="text-xs font-bold text-gray-500 hover:text-[#FF5A5F] hover:cursor-pointer">Clear</button>
+                )}
+              </div>
+              
+              <div className="p-3">
+                <div className="relative mb-3">
+                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={14} strokeWidth={3} />
+                  <input
+                    type="text"
+                    placeholder="Filter industries..."
+                    value={industrySearch}
+                    onChange={(e) => setIndustrySearch(e.target.value)}
+                    className="w-full pl-8 pr-3 py-1.5 bg-gray-50 border-2 border-gray-200 rounded text-sm font-bold text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-gray-900 transition-colors"
+                  />
+                </div>
+
+                <div className="flex flex-wrap gap-2 max-h-35 overflow-y-auto pr-1 custom-scrollbar">
+                  {visibleIndustries.length > 0 ? visibleIndustries.map((cat) => (
+                    <button
+                      key={cat}
+                      onClick={() => toggleCategory(cat)}
+                      className={`px-2.5 py-1 rounded border-2 font-bold text-xs transition-all ${
+                        activeCategories.includes(cat)
+                          ? "bg-gray-900 border-gray-900 text-white" 
+                          : "bg-white border-gray-200 text-gray-600 hover:border-gray-900 hover:text-gray-900"
+                      }`}
+                    >
+                      {cat}
+                    </button>
+                  )) : <p className="text-xs text-gray-400 font-medium w-full text-center py-2">No industries found.</p>}
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white border-2 border-gray-900 rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col overflow-hidden">
+              <div className="bg-gray-100 border-b-2 border-gray-900 p-3 flex justify-between items-center">
+                <div className="flex items-center gap-2 text-sm font-black text-gray-900 uppercase tracking-wider">
+                  <Globe size={16} className="text-[#FF5A5F]" /> 
+                  Locations
+                  {activeLocationCount > 0 && <span className="bg-[#FF5A5F] text-white px-2 py-0.5 rounded-full text-[10px]">{activeLocationCount}</span>}
+                </div>
+                {activeLocationCount > 0 && (
+                  <button onClick={clearLocations} className="text-xs font-bold text-gray-500 hover:text-[#FF5A5F] hover:cursor-pointer">Clear</button>
+                )}
+              </div>
+              
+              <div className="p-3">
+                <div className="relative mb-3">
+                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={14} strokeWidth={3} />
+                  <input
+                    type="text"
+                    placeholder="Filter locations..."
+                    value={locationSearch}
+                    onChange={(e) => setLocationSearch(e.target.value)}
+                    className="w-full pl-8 pr-3 py-1.5 bg-gray-50 border-2 border-gray-200 rounded text-sm font-bold text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-gray-900 transition-colors"
+                  />
+                </div>
+
+                <div className="flex flex-wrap gap-2 max-h-35 overflow-y-auto pr-1 custom-scrollbar">
+                  {visibleLocations.length > 0 ? visibleLocations.map((cat) => (
+                    <button
+                      key={cat}
+                      onClick={() => toggleCategory(cat)}
+                      className={`px-2.5 py-1 rounded border-2 font-bold text-xs transition-all ${
+                        activeCategories.includes(cat)
+                          ? "bg-[#FF5A5F] border-[#FF5A5F] text-white" 
+                          : "bg-white border-gray-200 text-gray-600 hover:border-gray-900 hover:text-gray-900"
+                      }`}
+                    >
+                      {cat}
+                    </button>
+                  )) : <p className="text-xs text-gray-400 font-medium w-full text-center py-2">No locations found.</p>}
+                </div>
+              </div>
+            </div>
+
+          </aside>
+        </div>
+      </div>
+    </div>
+  );
+}

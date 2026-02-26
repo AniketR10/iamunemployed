@@ -43,15 +43,11 @@
   ],
   "AI": [
     {
-      "name": "AI Jobs",
+      "name": "moAI Jobs",
       "url": "https://www.moaijobs.com/"
     },
     {
-      "name": "AI/ML Jobs",
-      "url": "https://aimljobs.fyi"
-    },
-    {
-      "name": "AI Jobs",
+      "name": "ai-jobs.net",
       "url": "https://ai-jobs.net/"
     },
     {
@@ -1585,6 +1581,8 @@
       "url": "https://qubitsok.com"
     }
   ],
+  "Country": [
+    {
   "USA": [
     {
       "name": "DallasJobs",
@@ -2086,7 +2084,9 @@
       "name": "Jobberman Nigeria",
       "url": "https://jobberman.com"
     }
-  ],
+  ]
+ }
+],
   "Cloud": [
     {
       "name": "Cloud Careers Hub",
