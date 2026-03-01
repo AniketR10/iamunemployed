@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { Search, Globe, Briefcase, ExternalLink, X } from "lucide-react";
-import Navbar from "@/src/components/Navbar"; // IMPORTING YOUR NAVBAR
+import { Search, ExternalLink, X, Filter } from "lucide-react";
+import Navbar from "@/src/components/Navbar"; 
 import rawJobData from "@/src/data/job_boards.json";
 
 interface JobBoard {
@@ -11,48 +11,49 @@ interface JobBoard {
   description?: string;
 }
 
-type CountryNode = Record<string, JobBoard[]>;
-type JobData = {
-  Country?: CountryNode[];
-  [key: string]: JobBoard[] | CountryNode[] | undefined;
-};
+const cardThemes = [
+  "bg-[#FFE4E6] hover:shadow-[6px_6px_0px_0px_#E11D48] hover:border-[#E11D48]", 
+  "bg-[#DBEAFE] hover:shadow-[6px_6px_0px_0px_#2563EB] hover:border-[#2563EB]", 
+  "bg-[#DCFCE7] hover:shadow-[6px_6px_0px_0px_#16A34A] hover:border-[#16A34A]", 
+  "bg-[#FEF9C3] hover:shadow-[6px_6px_0px_0px_#D97706] hover:border-[#D97706]", 
+  "bg-[#F3E8FF] hover:shadow-[6px_6px_0px_0px_#9333EA] hover:border-[#9333EA]", 
+  "bg-[#FFEDD5] hover:shadow-[6px_6px_0px_0px_#EA580C] hover:border-[#EA580C]", 
+];
 
 export default function JobBoardsPage() {
   const [activeCategories, setActiveCategories] = useState<string[]>([]);
   const [mainSearchQuery, setMainSearchQuery] = useState("");
-  const [industrySearch, setIndustrySearch] = useState("");
-  const [locationSearch, setLocationSearch] = useState("");
+  const [categorySearch, setCategorySearch] = useState("");
 
-  const { allBoards, standardCategories, countryCategories } = useMemo(() => {
-    const data = rawJobData as JobData;
-    const boards: (JobBoard & { category: string; isCountry: boolean })[] = [];
-    const stdCats: string[] = [];
-    const countryCats: string[] = [];
+  const { allBoards, allUniqueCategories } = useMemo(() => {
+    const data = rawJobData as any; 
+    
+    const boards: (JobBoard & { category: string })[] = [];
+    const categoriesSet = new Set<string>();
 
     Object.entries(data).forEach(([key, value]) => {
       if (!value) return;
 
       if (key === "Country" && Array.isArray(value)) {
-        value.forEach((countryObject) => {
-          Object.entries(countryObject).forEach(([countryName, links]) => {
-            countryCats.push(countryName);
-            (links as JobBoard[]).forEach((link) => {
-              boards.push({ ...link, category: countryName, isCountry: true });
+        value.forEach((countryObject: Record<string, JobBoard[]>) => {
+          Object.entries(countryObject).forEach(([categoryName, links]) => {
+            categoriesSet.add(categoryName);
+            links.forEach((link) => {
+              boards.push({ ...link, category: categoryName });
             });
           });
         });
       } else if (Array.isArray(value)) {
-        stdCats.push(key);
-        (value as JobBoard[]).forEach((link) => {
-          boards.push({ ...link, category: key, isCountry: false });
+        categoriesSet.add(key);
+        value.forEach((link: JobBoard) => {
+          boards.push({ ...link, category: key });
         });
       }
     });
 
     return {
       allBoards: boards.sort((a, b) => a.name.localeCompare(b.name)),
-      standardCategories: stdCats.sort(),
-      countryCategories: countryCats.sort(),
+      allUniqueCategories: Array.from(categoriesSet).sort(),
     };
   }, []);
 
@@ -65,12 +66,8 @@ export default function JobBoardsPage() {
     });
   }, [allBoards, activeCategories, mainSearchQuery]);
 
-  const visibleIndustries = standardCategories.filter((cat) =>
-    cat.toLowerCase().includes(industrySearch.toLowerCase())
-  );
-  
-  const visibleLocations = countryCategories.filter((cat) =>
-    cat.toLowerCase().includes(locationSearch.toLowerCase())
+  const visibleCategories = allUniqueCategories.filter((cat) =>
+    cat.toLowerCase().includes(categorySearch.toLowerCase())
   );
 
   const toggleCategory = (cat: string) => {
@@ -79,25 +76,12 @@ export default function JobBoardsPage() {
     );
   };
 
-  const clearIndustries = () => {
-    setActiveCategories((prev) => prev.filter((c) => !standardCategories.includes(c)));
-  };
-
-  const clearLocations = () => {
-    setActiveCategories((prev) => prev.filter((c) => !countryCategories.includes(c)));
-  };
-
-  const activeIndustryCount = activeCategories.filter((c) => standardCategories.includes(c)).length;
-  const activeLocationCount = activeCategories.filter((c) => countryCategories.includes(c)).length;
-
   return (
     <div className="min-h-screen bg-[#F8F3E7] font-sans text-gray-900 text-sm flex flex-col">
-      {/* YOUR GLOBAL NAVBAR */}
       <Navbar />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pb-16 w-full">
         
-        {/* MATCHING HANGING SIGN HERO SECTION */}
         <div className="text-center mb-40 relative mt-4">
           <div className="inline-block relative">
             <h1 className="text-5xl md:text-6xl font-black text-gray-900 tracking-tighter leading-none relative z-20">
@@ -155,40 +139,47 @@ export default function JobBoardsPage() {
                 </button>
               </div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
-                {filteredBoards.map((board, idx) => (
-                  <a
-                    key={idx}
-                    href={board.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group bg-white border-2 border-gray-900 rounded-lg p-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#FF5A5F] hover:border-[#FF5A5F] transition-all duration-200 relative overflow-hidden flex flex-col"
-                  >
-                    <div className="flex justify-between items-start mb-2">
-                      <h3 className="font-black text-lg pr-6 leading-tight group-hover:text-[#FF5A5F] transition-colors">
-                        {board.name}
-                      </h3>
-                      <ExternalLink size={18} className="text-gray-400 group-hover:text-[#FF5A5F] transition-colors shrink-0" strokeWidth={2.5} />
-                    </div>
-                    
-                    {board.description && (
-                      <p className="text-sm font-medium text-gray-600 mb-4 line-clamp-2">
-                        {board.description}
-                      </p>
-                    )}
-                    
-                    <div className="mt-auto pt-3">
-                      <span className="inline-block px-2.5 py-1 bg-[#F8F3E7] border-2 border-gray-900 rounded text-xs font-bold text-gray-900">
-                        {board.category}
-                      </span>
-                    </div>
-                  </a>
-                ))}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {filteredBoards.map((board, idx) => {
+                  const themeClass = cardThemes[idx % cardThemes.length];
+                  
+                  return (
+                    <a
+                      key={idx}
+                      href={board.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`group border-2 border-gray-900 rounded-lg p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all duration-200 relative overflow-hidden flex flex-col ${themeClass}`}
+                    >
+                      <div className="flex justify-between items-start mb-4 gap-4">
+                        
+                        <div className="flex items-start gap-2">
+                          <h3 className="font-black text-xl leading-tight text-gray-900 transition-colors">
+                            {board.name}
+                          </h3>
+                          <ExternalLink size={20} className="text-gray-900 group-hover:scale-110 transition-transform shrink-0 relative top-0.5" strokeWidth={2.5} />
+                        </div>
+                        
+                        <div className="shrink-0">
+                          <span className="inline-block px-2.5 py-1 bg-white border-2 border-gray-900 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] rounded-sm text-[10px] font-black uppercase tracking-wider text-gray-900">
+                            {board.category}
+                          </span>
+                        </div>
+
+                      </div>
+                      
+                      {board.description && (
+                        <p className="text-sm font-bold text-gray-800/80 line-clamp-2">
+                          {board.description}
+                        </p>
+                      )}
+                    </a>
+                  );
+                })}
               </div>
             )}
           </main>
 
-          {/* RIGHT SIDEBAR: FILTERS */}
           <aside className="w-full lg:w-80 shrink-0 flex flex-col gap-4 order-1 lg:order-2 lg:sticky lg:top-8 lg:self-start">
             
             <div className="relative">
@@ -205,12 +196,12 @@ export default function JobBoardsPage() {
             <div className="bg-white border-2 border-gray-900 rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col overflow-hidden">
               <div className="bg-gray-100 border-b-2 border-gray-900 p-3 flex justify-between items-center">
                 <div className="flex items-center gap-2 text-sm font-black text-gray-900 uppercase tracking-wider">
-                  <Briefcase size={16} className="text-[#FF5A5F]" /> 
-                  Industries 
-                  {activeIndustryCount > 0 && <span className="bg-[#FF5A5F] text-white px-2 py-0.5 rounded-full text-[10px]">{activeIndustryCount}</span>}
+                  <Filter size={16} className="text-[#FF5A5F]" /> 
+                  Categories 
+                  {activeCategories.length > 0 && <span className="bg-[#FF5A5F] text-white px-2 py-0.5 rounded-full text-[10px]">{activeCategories.length}</span>}
                 </div>
-                {activeIndustryCount > 0 && (
-                  <button onClick={clearIndustries} className="text-xs font-bold text-gray-500 hover:text-[#FF5A5F] hover:cursor-pointer">Clear</button>
+                {activeCategories.length > 0 && (
+                  <button onClick={() => setActiveCategories([])} className="text-xs font-bold text-gray-500 hover:text-[#FF5A5F] hover:cursor-pointer">Clear</button>
                 )}
               </div>
               
@@ -219,15 +210,15 @@ export default function JobBoardsPage() {
                   <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={14} strokeWidth={3} />
                   <input
                     type="text"
-                    placeholder="Filter industries..."
-                    value={industrySearch}
-                    onChange={(e) => setIndustrySearch(e.target.value)}
+                    placeholder="Filter categories..."
+                    value={categorySearch}
+                    onChange={(e) => setCategorySearch(e.target.value)}
                     className="w-full pl-8 pr-3 py-1.5 bg-gray-50 border-2 border-gray-200 rounded text-sm font-bold text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-gray-900 transition-colors"
                   />
                 </div>
 
-                <div className="flex flex-wrap gap-2 max-h-35 overflow-y-auto pr-1 custom-scrollbar">
-                  {visibleIndustries.length > 0 ? visibleIndustries.map((cat) => (
+                <div className="flex flex-wrap gap-2 max-h-64 overflow-y-auto pr-1 custom-scrollbar">
+                  {visibleCategories.length > 0 ? visibleCategories.map((cat) => (
                     <button
                       key={cat}
                       onClick={() => toggleCategory(cat)}
@@ -239,49 +230,7 @@ export default function JobBoardsPage() {
                     >
                       {cat}
                     </button>
-                  )) : <p className="text-xs text-gray-400 font-medium w-full text-center py-2">No industries found.</p>}
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white border-2 border-gray-900 rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col overflow-hidden">
-              <div className="bg-gray-100 border-b-2 border-gray-900 p-3 flex justify-between items-center">
-                <div className="flex items-center gap-2 text-sm font-black text-gray-900 uppercase tracking-wider">
-                  <Globe size={16} className="text-[#FF5A5F]" /> 
-                  Locations
-                  {activeLocationCount > 0 && <span className="bg-[#FF5A5F] text-white px-2 py-0.5 rounded-full text-[10px]">{activeLocationCount}</span>}
-                </div>
-                {activeLocationCount > 0 && (
-                  <button onClick={clearLocations} className="text-xs font-bold text-gray-500 hover:text-[#FF5A5F] hover:cursor-pointer">Clear</button>
-                )}
-              </div>
-              
-              <div className="p-3">
-                <div className="relative mb-3">
-                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={14} strokeWidth={3} />
-                  <input
-                    type="text"
-                    placeholder="Filter locations..."
-                    value={locationSearch}
-                    onChange={(e) => setLocationSearch(e.target.value)}
-                    className="w-full pl-8 pr-3 py-1.5 bg-gray-50 border-2 border-gray-200 rounded text-sm font-bold text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-gray-900 transition-colors"
-                  />
-                </div>
-
-                <div className="flex flex-wrap gap-2 max-h-35 overflow-y-auto pr-1 custom-scrollbar">
-                  {visibleLocations.length > 0 ? visibleLocations.map((cat) => (
-                    <button
-                      key={cat}
-                      onClick={() => toggleCategory(cat)}
-                      className={`px-2.5 py-1 rounded border-2 font-bold text-xs transition-all ${
-                        activeCategories.includes(cat)
-                          ? "bg-[#FF5A5F] border-[#FF5A5F] text-white" 
-                          : "bg-white border-gray-200 text-gray-600 hover:border-gray-900 hover:text-gray-900"
-                      }`}
-                    >
-                      {cat}
-                    </button>
-                  )) : <p className="text-xs text-gray-400 font-medium w-full text-center py-2">No locations found.</p>}
+                  )) : <p className="text-xs text-gray-400 font-medium w-full text-center py-2">No categories found.</p>}
                 </div>
               </div>
             </div>
