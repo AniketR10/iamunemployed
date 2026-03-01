@@ -1,370 +1,439 @@
 {
   "General": [
-    {
-      "name": "LinkedIn",
-      "url": "https://www.linkedin.com/"
-    },
-    {
-      "name": "Indeed",
-      "url": "https://www.indeed.com/"
-    },
-    {
-      "name": "Glassdoor",
-      "url": "https://www.glassdoor.com/"
-    },
-    {
-      "name": "wellfound",
-      "url": "https://wellfound.com/jobs"
-    },
-    {
-      "name": "Levels.fyi",
-      "url": "https://levels.fyi/jobs"
-    },
-    {
-      "name": "X jobs",
-      "url": "https://x.com/jobs"
-    },
-    {
-      "name": "Careerday",
-      "url": "https://careerday.com/"
-    },
-    {
-      "name": "indeed",
-      "url": "https://indeed.com/"
-    },
-    {
-      "name": "glassdoor",
-      "url": "https://glassdoor.com/"
-    },
-    {
-      "name": "naukri",
-      "url": "http://naukri.com/"
-    }
-  ],
+  {
+    "name": "LinkedIn",
+    "url": "https://www.linkedin.com/",
+    "description": "Professional networking platform with a robust job board and recruiter-outreach features."
+  },
+  {
+    "name": "Indeed",
+    "url": "https://www.indeed.com/",
+    "description": "One of the world's largest job aggregators, pulling listings from across the web."
+  },
+  {
+    "name": "Glassdoor",
+    "url": "https://www.glassdoor.com/",
+    "description": "Combines job listings with anonymous company reviews, salary data, and interview insights."
+  },
+  {
+    "name": "Wellfound",
+    "url": "https://wellfound.com/jobs",
+    "description": "Formerly AngelList; the primary hub for jobs at startups and high-growth tech companies."
+  },
+  {
+    "name": "Levels.fyi",
+    "url": "https://levels.fyi/jobs",
+    "description": "Focuses on high-paying tech roles with precise salary transparency and leveling comparisons."
+  },
+  {
+    "name": "X Jobs",
+    "url": "https://x.com/jobs",
+    "description": "A newer platform for discovering job opportunities posted by verified organizations on X."
+  },
+  {
+    "name": "Careerday",
+    "url": "https://careerday.com/",
+    "description": "A curated job board designed to help candidates find modern roles in tech and creative industries."
+  },
+  {
+    "name": "Naukri",
+    "url": "http://naukri.com/",
+    "description": "India's largest employment platform, catering to a wide range of industries and experience levels."
+  }
+],
   "AI": [
     {
       "name": "moAI Jobs",
-      "url": "https://www.moaijobs.com/"
+      "url": "https://www.moaijobs.com/",
+      "description": "Discover the newest AI Engineer, Data Scientist, Machine Learning Engineer, AI Research Scientist, and AI Training jobs at leading AI companies."
     },
     {
       "name": "ai-jobs.net",
-      "url": "https://ai-jobs.net/"
+      "url": "https://ai-jobs.net/",
+      "description": "A 'no-nonsense' source for AI, ML, and Big Data careers that features a global AI salary index and clean, lean listings."
     },
     {
       "name": "AI Tech Suite",
-      "url": "https://www.aitechsuite.com/jobs"
+      "url": "https://www.aitechsuite.com/jobs",
+      "description": "A dual-purpose platform that acts as an aggregator for both AI tools and job listings, featuring over 5,000 active AI roles updated daily."
     },
     {
       "name": "ExploreJobs.ai",
-      "url": "https://explorejobs.ai"
+      "url": "https://explorejobs.ai",
+      "description": "Find engineering, product, and research roles at the top AI startups."
     },
     {
       "name": "AI Jobs",
-      "url": "https://aijobs.app"
+      "url": "https://aijobs.app",
+      "description": "AI Jobs Make the world a smarter place by joining one of the fastest growing artificial intelligence startups."
     },
     {
       "name": "AI/ML Jobs",
-      "url": "https://www.aimljobs.fyi"
+      "url": "https://www.aimljobs.fyi",
+      "description": "A dedicated portal for top AI companies and startups, emphasizing remote-friendly opportunities and daily listing updates."
     },
     {
       "name": "AI Jobster",
-      "url": "https://aijobster.work/"
+      "url": "https://aijobster.work/",
+      "description": "Our platform curates the best opportunities in artificial intelligence, machine learning, and data science, making it easier for you to find your dream job in the AI industry."
     }
   ],
   "Data": [
     {
       "name": "DataJobs.com",
-      "url": "https://datajobs.com/"
+      "url": "https://datajobs.com/",
+      "description": "A niche job board dedicated to careers in data science, analytics, AI, and machine learning across industries."
     },
     {
-      "name": "icrunchdata",
-      "url": "https://icrunchdata.com/"
+      "name": "iCrunchData",
+      "url": "https://icrunchdata.com/",
+      "description": "A data-focused career platform connecting professionals with opportunities in big data, analytics, and AI alongside industry insights."
     },
     {
       "name": "KDnuggets",
-      "url": "https://www.kdnuggets.com/jobs/index.html"
+      "url": "https://www.kdnuggets.com/jobs/index.html",
+      "description": "A well-known data science community platform offering curated job listings in AI, machine learning, and analytics."
     },
     {
       "name": "Data Yoshi",
-      "url": "https://www.datayoshi.com/"
+      "url": "https://www.datayoshi.com/",
+      "description": "A specialized job board focused on data science, machine learning, and AI roles across global companies."
     },
     {
-      "name": "Opendatascience Jobs",
-      "url": "https://jobs.opendatascience.com/"
+      "name": "OpenDataScience Jobs",
+      "url": "https://jobs.opendatascience.com/",
+      "description": "The official job board of the Open Data Science community featuring roles in AI, ML, and data engineering."
     },
     {
-      "name": "AnalyticsVidhya Jobs",
-      "url": "https://jobsnew.analyticsvidhya.com/jobs/all"
+      "name": "Analytics Vidhya Jobs",
+      "url": "https://jobsnew.analyticsvidhya.com/jobs/all",
+      "description": "A job portal from Analytics Vidhya connecting data professionals with roles in AI, analytics, and machine learning."
     },
     {
       "name": "StatsJobs",
-      "url": "https://www.statsjobs.com/"
+      "url": "https://www.statsjobs.com/",
+      "description": "A recruitment platform focused on statistics, data science, and quantitative analytics careers."
     },
     {
       "name": "Big Cloud",
-      "url": "https://bigcloud.global/find-a-job/"
+      "url": "https://bigcloud.global/find-a-job/",
+      "description": "A specialist recruitment firm helping companies hire talent in AI, machine learning, and data science."
     },
     {
       "name": "Data Science Jobs Canada",
-      "url": "https://www.datasciencejobscanada.com/"
+      "url": "https://www.datasciencejobscanada.com/",
+      "description": "A Canada-focused job board for data science, AI, and analytics roles."
     },
     {
       "name": "Data Engineering Jobs",
-      "url": "https://dataengjobs.com/"
+      "url": "https://dataengjobs.com/",
+      "description": "A niche job board dedicated to data engineering roles including platform, pipeline, and infrastructure positions."
     },
     {
       "name": "DataScienceJobs",
-      "url": "https://datasciencejobs.com/"
+      "url": "https://datasciencejobs.com/",
+      "description": "A global job platform focused on careers in data science, analytics, and machine learning."
     },
     {
       "name": "Dataaxy",
-      "url": "https://dataaxy.com/"
+      "url": "https://dataaxy.com/",
+      "description": "A data and AI talent marketplace connecting companies with skilled professionals."
     },
     {
       "name": "Deep Learning Jobs",
-      "url": "https://www.deeplearningjobs.com/"
+      "url": "https://www.deeplearningjobs.com/",
+      "description": "A specialized job board focused on deep learning, AI research, and ML engineering roles."
     },
     {
       "name": "AiJobsTracker",
-      "url": "https://aijobs.18offers.com/"
+      "url": "https://aijobs.18offers.com/",
+      "description": "An aggregated AI job listing platform tracking opportunities across companies and regions."
     }
   ],
   "Blockchain": [
     {
       "name": "Crypto Jobs List",
-      "url": "https://cryptojobslist.com/"
+      "url": "https://cryptojobslist.com/",
+      "description": "A Web3-focused hiring platform launched in 2017 that connects talent with blockchain, crypto, and decentralized technology companies while also serving as a community and career hub."
     },
     {
       "name": "CryptoJobs",
-      "url": "https://crypto.jobs/"
+      "url": "https://crypto.jobs/",
+      "description": "A Web3 recruitment platform built to connect skilled professionals with leading blockchain projects and accelerate the growth of a decentralized world."
     },
     {
       "name": "Blockew",
-      "url": "https://blockew.com/"
+      "url": "https://blockew.com/",
+      "description": "A crypto hiring marketplace where employers post roles and professionals showcase resumes for blockchain and Web3 opportunities."
     },
     {
       "name": "Cryptocurrency Jobs",
-      "url": "https://cryptocurrencyjobs.co/"
+      "url": "https://cryptocurrencyjobs.co/",
+      "description": "A curated job board that aggregates blockchain and crypto roles from startups and enterprises building with blockchain technology."
     },
     {
       "name": "JobsInBlockchain",
-      "url": "https://jobsinblockchain.com/"
+      "url": "https://jobsinblockchain.com/",
+      "description": "A dedicated recruitment platform connecting professionals with opportunities in blockchain, cryptocurrency, and distributed ledger technology companies."
     },
     {
-      "name": "token jobs",
-      "url": "https://tokenjobs.io"
+      "name": "Token Jobs",
+      "url": "https://tokenjobs.io",
+      "description": "A hiring platform built for the Web3 economy that connects talent with companies building token-based and blockchain-powered products."
     },
     {
       "name": "Ethereum Job Board",
-      "url": "https://ethereumjobboard.com/"
+      "url": "https://ethereumjobboard.com/",
+      "description": "A job board focused on roles within the Ethereum ecosystem, helping connect builders with projects developing on Ethereum."
     },
     {
       "name": "Avalanche Jobs",
-      "url": "https://jobs.avax.network/jobs"
+      "url": "https://jobs.avax.network/jobs",
+      "description": "The official Avalanche ecosystem job board showcasing opportunities at organizations building on the Avalanche network."
     },
     {
       "name": "Solana Jobs",
-      "url": "https://jobs.solana.com/jobs"
+      "url": "https://jobs.solana.com/jobs",
+      "description": "The official Solana ecosystem careers portal featuring roles across teams building on and supporting the Solana network."
     },
     {
       "name": "Dragonfly Jobs",
-      "url": "https://jobs.dragonfly.xyz/jobs"
+      "url": "https://jobs.dragonfly.xyz/jobs",
+      "description": "The dedicated career platform for Dragonfly, a leading crypto venture fund, listing high-impact roles across its internal team and extensive portfolio of blockchain startups."
     },
     {
       "name": "Remote3",
-      "url": "https://www.remote3.co/remote-web3-jobs"
+      "url": "https://www.remote3.co/remote-web3-jobs",
+      "description": "A specialized job board focused exclusively on remote opportunities in Web3, crypto, and DeFi, featuring thousands of new listings monthly and real-time Telegram alerts."
     },
     {
       "name": "Jobstash",
-      "url": "https://jobstash.xyz/jobs"
+      "url": "https://jobstash.xyz/jobs",
+      "description": "A 'public good' job aggregator for the crypto ecosystem that indexes thousands of organizations to provide a free, unbiased, and data-complete dataset of industry vacancies."
     },
     {
       "name": "BeInCrypto Jobs",
-      "url": "https://beincrypto.com/jobs/"
+      "url": "https://beincrypto.com/jobs/",
+      "description": "The official recruitment portal of the global crypto news outlet BeInCrypto, offering 100% remote roles across editorial, sales, and technical departments."
     },
     {
       "name": "Sail on Chain",
-      "url": "https://sailonchain.com/"
+      "url": "https://sailonchain.com/",
+      "description": "A comprehensive Web3 career hub featuring over 1,500 blockchain jobs, a salary transparency tool, and detailed directories for top industry companies."
     },
     {
       "name": "Blockchain Works",
-      "url": "https://blockchain.works-hub.com/"
+      "url": "https://blockchain.works-hub.com/",
+      "description": "Part of the WorksHub family, this community-driven platform provides hand-curated job listings, in-depth company tech stacks, and educational articles for blockchain professionals."
     },
     {
       "name": "Web3 Jobs",
-      "url": "https://web3.career"
+      "url": "https://web3.career",
+      "description": "A leading aggregator for the decentralized web, hosting a massive database of both technical and non-technical roles alongside salary insights and an API for job data."
     },
     {
       "name": "Remote Web3 Jobs",
-      "url": "https://www.remote3.co/"
+      "url": "https://www.remote3.co/",
+      "description": "A comprehensive job board dedicated to remote-first opportunities in the Web3, crypto, and blockchain sectors, indexing thousands of roles across technical and non-technical disciplines."
     },
     {
       "name": "My Web3 Jobs",
-      "url": "https://myweb3jobs.com"
+      "url": "https://myweb3jobs.com",
+      "description": "A niche career platform that categorizes blockchain roles by specific industry tags such as 'tokenomics,' 'DeFi,' and 'mobile,' featuring a curated newsletter for active job seekers."
     },
     {
-      "name": "Woody3",
-      "url": "https://www.woodyjobs.com"
+      "name": "Woody",
+      "url": "https://www.woodyjobs.com",
+      "description": "A specialized marketplace focusing on product and design talent within high-impact startups, particularly emphasizing UI/UX, product management, and AI-native design roles."
     },
     {
       "name": "Jobs In Blockchain",
-      "url": "https://jobsinblockchain.com"
+      "url": "https://jobsinblockchain.com",
+      "description": "A community-driven job board founded by engineers to bridge the gap between blockchain talent and innovative companies, offering streamlined hiring solutions and automated multi-platform promotion."
     },
     {
       "name": "DeFi Jobs",
-      "url": "https://www.defi.jobs/"
+      "url": "https://www.defi.jobs/",
+      "description": "A dedicated portal focused exclusively on the Decentralized Finance ecosystem, listing specialized roles in smart contract engineering, quantitative research, and crypto-native operations."
     },
     {
       "name": "SHE256 Job Board",
-      "url": "https://jobs.she256.org/jobs"
+      "url": "https://jobs.she256.org/jobs",
+      "description": "A diversity-centric career hub aimed at increasing the representation of women and non-binary individuals in blockchain through a vetted job board and a collaborative community network."
     },
     {
       "name": "WEB3board.io",
-      "url": "https://web3board.io/"
+      "url": "https://web3board.io/",
+      "description": "A dedicated Web3 job board designed to connect talent with decentralized web opportunities, offering streamlined listings across both technical and non-technical roles in the crypto ecosystem."
     },
     {
       "name": "Pomp Crypto Jobs",
-      "url": "https://pompcryptojobs.com/"
+      "url": "https://pompcryptojobs.com/",
+      "description": "Founded by prominent industry figure Anthony Pompliano, this platform acts as a premier talent marketplace connecting job seekers directly with top-tier crypto, Bitcoin, and blockchain companies."
     },
     {
       "name": "Remote3.co",
-      "url": "https://remote3.co/"
+      "url": "https://remote3.co/",
+      "description": "A massive hub specializing in remote Web3 work with over 22,000 active listings. It adds thousands of new DeFi, NFT, and blockchain positions monthly and offers real-time job alerts via Telegram."
     },
     {
       "name": "Indeed",
-      "url": "https://www.indeed.com/q-Web3-l-Remote-jobs.html?vjk=252a26e67661e2c7"
+      "url": "https://www.indeed.com/q-Web3-l-Remote-jobs.html?vjk=252a26e67661e2c7",
+      "description": "A highly specific, pre-filtered search portal on the world's largest job aggregator, continuously indexing the web to surface remote Web3 roles across various industries."
     },
     {
       "name": "Dynamite Jobs",
-      "url": "https://dynamitejobs.com/skill/remote-web3-jobs"
+      "url": "https://dynamitejobs.com/skill/remote-web3-jobs",
+      "description": "A curated remote work platform that meticulously vets its Web3 job listings to ensure every posted role is 100% remote, legitimate, and paid, catering to professionals seeking ultimate flexibility."
     },
     {
       "name": "Wellfound",
-      "url": "https://wellfound.com/web3"
+      "url": "https://wellfound.com/web3",
+      "description": "A startup-centric hub hosting over 1,500 Web3 companies—from early-stage ventures to giants like OpenSea—allowing candidates to apply with one click and get pitched by founders directly."
     },
     {
       "name": "Jobs3.io",
-      "url": "https://jobs3.io/"
+      "url": "https://jobs3.io/",
+      "description": "A career portal that emphasizes the unique paradigms of the decentralized web, guiding candidates through roles that frequently offer token-based compensation, equity, and autonomous work structures."
     },
     {
       "name": "RemoteOK",
-      "url": "https://remoteok.com/remote-web3-jobs"
+      "url": "https://remoteok.com/remote-web3-jobs",
+      "description": "A heavily trafficked job board tailored for digital nomads, featuring advanced tags for Web3 roles that highlight unique perks like 'pay in crypto,' 'async work,' and 'no whiteboard interviews.'"
     },
     {
       "name": "ConsenSys Jobs",
-      "url": "https://consensys.net/careers/"
+      "url": "https://consensys.net/careers/",
+      "description": "The official careers portal for the leading Ethereum software company, offering roles to build foundational Web3 infrastructure and products like MetaMask and Infura within a globally distributed team."
     },
     {
       "name": "Blockchain Headhunter",
-      "url": "https://www.blockchainheadhunter.com/jobs"
+      "url": "https://www.blockchainheadhunter.com/jobs",
+      "description": "An exclusive recruitment firm and job board focused on high-impact and specialized crypto-native roles, connecting elite talent with Layer-1 blockchains, major exchanges, and cutting-edge DeFi startups."
     }
   ],
   "Design": [
     {
       "name": "AIGA",
-      "url": "https://designjobs.aiga.org/"
+      "url": "https://designjobs.aiga.org/",
+      "description": "The official job board of the Professional Association for Design, featuring opportunities ranging from internships to senior creative director roles, primarily across the United States."
     },
     {
       "name": "Authentic Jobs",
-      "url": "https://www.authenticjobs.com/"
+      "url": "https://www.authenticjobs.com/",
+      "description": "A premier, highly curated job board tailored specifically for designers, developers, and creative professionals, trusted by leading tech companies and design agencies."
     },
     {
       "name": "Behance",
-      "url": "https://www.behance.net/joblist"
+      "url": "https://www.behance.net/joblist",
+      "description": "Adobe’s expansive creative network job board, allowing companies to recruit top talent directly from a vast pool of active, visually rich design portfolios."
     },
     {
       "name": "Coroflot",
-      "url": "https://www.coroflot.com/design-jobs"
+      "url": "https://www.coroflot.com/design-jobs",
+      "description": "A career and portfolio platform created by designers for designers, connecting talented individuals across industrial, graphic, and 3D design with top design-driven companies."
     },
     {
       "name": "IXDA",
-      "url": "http://ixda.org/jobs/"
+      "url": "http://ixda.org/jobs/",
+      "description": "The official job board of the Interaction Design Association, focusing specifically on careers in interaction design, UX, and human-computer interaction."
     },
     {
-      "name": "Dribble",
-      "url": "https://dribbble.com/jobs"
+      "name": "Dribbble",
+      "url": "https://dribbble.com/jobs",
+      "description": "A highly visual job board integrated directly with the Dribbble platform, allowing companies to discover and hire elite UI/UX designers, graphic designers, and illustrators."
     },
     {
       "name": "Krop",
-      "url": "https://www.krop.com/creative-jobs/"
+      "url": "https://www.krop.com/creative-jobs/",
+      "description": "A combined portfolio hosting service and industry-focused job board that connects creatives across all disciplines with top-tier brands and agencies."
     },
     {
       "name": "Open Source Design Jobs",
-      "url": "https://opensourcedesign.net/jobs/"
+      "url": "https://opensourcedesign.net/jobs/",
+      "description": "A niche, community-driven job board dedicated to connecting designers with open-source software projects, offering both paid and volunteer design opportunities."
     },
     {
       "name": "UX Jobs Board",
-      "url": "https://www.uxjobsboard.com"
+      "url": "https://www.uxjobsboard.com",
+      "description": "A dedicated global hub for user experience and user interface professionals, featuring opportunities in UX research, product design, and digital strategy."
     },
     {
       "name": "Designer Jobs",
-      "url": "https://designerjobs.co/jobs"
+      "url": "https://designerjobs.co/jobs",
+      "description": "A clean, curated job board focusing strictly on remote and on-site roles for product designers, graphic designers, and UI/UX specialists in the tech industry."
     },
     {
       "name": "Design Jobs Board",
-      "url": "https://www.designjobsboard.com/"
+      "url": "https://www.designjobsboard.com/",
+      "description": "A highly regarded UK-based platform connecting creative professionals with roles in graphic design, art direction, and digital design at top agencies and studios."
     },
     {
       "name": "Design Week Jobs",
-      "url": "https://www.designweek.co.uk/jobs/"
+      "url": "https://www.designweek.co.uk/jobs/",
+      "description": "The official career portal for Design Week magazine, featuring a wide array of roles across all design disciplines, with a strong focus on the UK market."
     },
     {
       "name": "If You Could Jobs",
-      "url": "https://ifyoucouldjobs.com/jobs"
+      "url": "https://ifyoucouldjobs.com/jobs",
+      "description": "A straightforward creative job board born out of the creative platform 'It's Nice That', providing a curated list of design roles primarily based in London and the UK."
     },
     {
       "name": "CreativeMornings",
-      "url": "https://creativemornings.com/jobs"
+      "url": "https://creativemornings.com/jobs",
+      "description": "A community-driven job board from the global CreativeMornings network, highlighting roles at companies that value creativity, community, and culture."
     },
     {
       "name": "CreativeFuego Jobs",
-      "url": "https://creativefuego.com/jobs"
+      "url": "https://creativefuego.com/jobs",
+      "description": "A specialized job platform geared toward connecting diverse, underrepresented creative professionals with inclusive companies and design agencies."
     },
     {
       "name": "Creativepool",
-      "url": "https://creativepool.com/jobs/"
+      "url": "https://creativepool.com/jobs/",
+      "description": "A comprehensive professional network for the creative industry, blending portfolio showcases with a robust job board for global creative, marketing, and design roles."
     },
     {
       "name": "UI & UX Designer Jobs",
-      "url": "https://uiuxdesignerjobs.com/"
+      "url": "https://uiuxdesignerjobs.com/",
+      "description": "A focused job portal delivering hand-picked UI, UX, and product design jobs, often sent directly to subscribers and listed on a clean, accessible board."
     },
     {
       "name": "UI/UX Jobs Board",
-      "url": "https://uiuxjobsboard.com"
-    },
-    {
-      "name": "Authentic Jobs",
-      "url": "https://authenticjobs.com/"
-    },
-    {
-      "name": "UI/UX Jobs Board",
-      "url": "https://uiuxjobsboard.com/"
+      "url": "https://uiuxjobsboard.com",
+      "description": "A straightforward, specialized directory exclusively listing user interface and user experience design roles for tech startups and corporate enterprises."
     }
   ],
   "InfoSec": [
     {
       "name": "NinjaJobs",
-      "url": "https://ninjajobs.org/"
+      "url": "https://ninjajobs.org/",
+      "description": "A highly specialized cybersecurity executive search and recruiting firm matching organizations with top-tier InfoSec talent, from technical specialists to C-level executives."
     },
     {
       "name": "infosec-jobs",
-      "url": "https://infosec-jobs.com/"
+      "url": "https://infosec-jobs.com/",
+      "description": "A niche job board focused entirely on information security, featuring a wide array of global opportunities spanning penetration testing, security engineering, and data privacy."
     },
     {
       "name": "CyberSecurityJobsite",
-      "url": "https://www.cybersecurityjobsite.com/jobs/"
+      "url": "https://www.cybersecurityjobsite.com/jobs/",
+      "description": "A prominent, UK-centric job board dedicated to cyber security and IT security roles, offering extensive listings for both permanent and contract positions across multiple industries."
     },
     {
       "name": "CareersInfoSecurity",
-      "url": "https://www.careersinfosecurity.com/jobs/"
+      "url": "https://www.careersinfosecurity.com/jobs/",
+      "description": "Operated by the Information Security Media Group (ISMG), this platform combines industry news, research, and a targeted job board for cybersecurity, fraud, and risk management professionals."
     },
     {
       "name": "CyberSecurityJobs",
-      "url": "https://www.cybersecurityjobs.net/"
+      "url": "https://www.cybersecurityjobs.net/",
+      "description": "A comprehensive job portal connecting employers with cyber security talent, featuring roles ranging from entry-level positions to experienced architects and CISOs."
     },
     {
       "name": "YesWeHack",
-      "url": "https://jobs.yeswehack.com/en/"
+      "url": "https://jobs.yeswehack.com/en/",
+      "description": "The careers and bug bounty portal for YesWeHack, a leading global crowdsourced security platform connecting organizations with a vast community of vetted ethical hackers."
     }
   ],
   "Programming": [

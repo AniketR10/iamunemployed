@@ -3,12 +3,14 @@
 import { useState, useMemo } from "react";
 import { Search, ExternalLink, X, Filter } from "lucide-react";
 import Navbar from "@/src/components/Navbar"; 
+import Footer from "@/src/components/Footer";
+import AuthGuard from "@/src/components/AuthGuard";
 import rawJobData from "@/src/data/job_boards.json";
 
 interface JobBoard {
   name: string;
   url: string;
-  description?: string;
+  description?: string; 
 }
 
 const cardThemes = [
@@ -80,7 +82,7 @@ export default function JobBoardsPage() {
     <div className="min-h-screen bg-[#F8F3E7] font-sans text-gray-900 text-sm flex flex-col">
       <Navbar />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pb-16 w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 pb-16 w-full">
         
         <div className="text-center mb-40 relative mt-4">
           <div className="inline-block relative">
@@ -144,20 +146,20 @@ export default function JobBoardsPage() {
                   const themeClass = cardThemes[idx % cardThemes.length];
                   
                   return (
+                    <AuthGuard key={idx}>
                     <a
-                      key={idx}
                       href={board.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`group border-2 border-gray-900 rounded-lg p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all duration-200 relative overflow-hidden flex flex-col ${themeClass}`}
                     >
-                      <div className="flex justify-between items-start mb-4 gap-4">
+                      <div className="flex justify-between items-start mb-3 gap-4">
                         
                         <div className="flex items-start gap-2">
                           <h3 className="font-black text-xl leading-tight text-gray-900 transition-colors">
                             {board.name}
                           </h3>
-                          <ExternalLink size={20} className="text-gray-900 group-hover:scale-110 transition-transform shrink-0 relative top-0.5" strokeWidth={2.5} />
+                          <ExternalLink size={20} className="text-blue-500 group-hover:scale-110 transition-transform shrink-0 relative top-0.5" strokeWidth={2.5} />
                         </div>
                         
                         <div className="shrink-0">
@@ -165,21 +167,22 @@ export default function JobBoardsPage() {
                             {board.category}
                           </span>
                         </div>
-
                       </div>
                       
                       {board.description && (
-                        <p className="text-sm font-bold text-gray-800/80 line-clamp-2">
+                        <p className="text-sm font-bold text-gray-900/80 mt-1 line-clamp-4">
                           {board.description}
                         </p>
                       )}
                     </a>
+                    </AuthGuard>
                   );
                 })}
               </div>
             )}
           </main>
 
+          {/* RIGHT SIDEBAR: UNIFIED FILTERS */}
           <aside className="w-full lg:w-80 shrink-0 flex flex-col gap-4 order-1 lg:order-2 lg:sticky lg:top-8 lg:self-start">
             
             <div className="relative">
@@ -238,6 +241,7 @@ export default function JobBoardsPage() {
           </aside>
         </div>
       </div>
+    <Footer/>
     </div>
   );
 }
