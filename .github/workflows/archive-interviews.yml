@@ -1,0 +1,39 @@
+name: weekly data archiver
+
+on:
+    schedule:
+        - cron: '0 0 * * 0'
+    workflow_dispatch:
+
+jobs:
+    archive-data:
+        runs-on: ubuntu-latest
+
+        permissions:
+            contents: write
+
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v4
+
+            - name: Setup Python
+              uses: actions/setup-python@v4
+              with:
+                python-version: '3.9'
+
+            - name: Install Dependencies
+              run: pip install supabase python-dotenv
+
+            - name: Configure Git User
+                
+              run: |
+                git config --global user.name "github-actions[bot]"
+                git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+            - name: Run Archiver Script
+              env:
+                NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+                SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+
+              run: python scripts/cron/archive_interviews.py
+
