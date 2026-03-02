@@ -78,4 +78,4 @@ def archive_old_interviews():
         print(f"archiver pipeline failed: {e}")
 
 if __name__ == "__main__":
-    archive_old_data()
+    archive_old_interviews()
