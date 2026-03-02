@@ -4,6 +4,7 @@ import dotenv from 'dotenv'
 import path, { resolve } from "path";
 import { supabaseAdmin } from "./supabaseAdmin";
 import { fillData } from "./fillUrl";
+import { fillInterviewData } from "./fillInterview";
 
 
 dotenv.config({path: path.resolve(__dirname, '../../.env')});
@@ -18,6 +19,7 @@ const scraper_list = [
   "twitter.py",
   "entrackr.py",
   "techmeme.py",
+  "lc_interview.py",
 ]
 
 function cleanTitle(title: string) {
@@ -65,27 +67,48 @@ async function runScripts(scriptName: string) {
             console.log(`recieved ${articles.length} articles.`)
 
             if (articles.length > 0){
-                const {error} = await supabaseAdmin
-                .from('startups')
-                .upsert(articles.map((a: any) => ({
-                    name: cleanTitle(a.title),
-                    source_url: a.link,
-                    announced_date: a.date,
-                    source: a.source
-                })),
-                {
-                    onConflict: 'source_url',
-                    ignoreDuplicates: true,
-                });
+                if(scriptName === "lc_interview.py") {
+                    const {error} = await supabaseAdmin
+                    .from('latest_interviews')
+                    .upsert(articles.map((a: any) => ({
+                        title: a.title,
+                        url: a.url,
+                        post_date: a.post_date,
+                    })),
+                    {
+                        onConflict: 'url',
+                        ignoreDuplicates: true,
+                    });
 
-                if (error) {
-                    console.error(" supabase upload error: ", error.message)
+                if(error) {
+                   console.error(" Supabase upload error (interview exp): ", error.message)
                 } else {
-                    console.log("saved to startups table!")
+                    console.log("Saved to latest_interviews table!")
+                  }
+                  
+                } else {    
+                    const {error} = await supabaseAdmin
+                    .from('startups')
+                    .upsert(articles.map((a: any) => ({
+                        name: cleanTitle(a.title),
+                        source_url: a.link,
+                        announced_date: a.date,
+                        source: a.source
+                    })),
+                    {
+                        onConflict: 'source_url',
+                        ignoreDuplicates: true,
+                    });
+
+                    if (error) {
+                        console.error(" supabase upload error: ", error.message)
+                    } else {
+                        console.log("saved to startups table!")
+                    }
+                 }
+                } else {
+                    console.log("no new articles to save");
                 }
-            } else {
-                console.log("no new articles to save");
-            }
         } catch(e) {
             console.error("json parser error: ", e)
         }
@@ -102,7 +125,10 @@ async function runScripts(scriptName: string) {
     for (const script of scraper_list){
         await runScripts(script);
     }
-    console.log("\n Scrapers finished. Now ai will fil the remaining details...");
+    console.log("\n scrapers finished. Now ai will fill the remaining details...");
+
     await fillData();
+    await fillInterviewData();
+
     console.log("pipeline completed!")
 })();
