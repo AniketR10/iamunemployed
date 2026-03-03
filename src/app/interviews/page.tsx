@@ -71,8 +71,8 @@ export default function LatestInterviewsPage() {
                 <div className="absolute -bottom-28 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center w-50">
                    
                    <div className="w-full flex justify-between items-end px-8 z-0">
-                       <div className="w-1.5 h-10 bg-gray-900 border-x border-gray-900"></div>
-                       <div className="w-1.5 h-10 bg-gray-900 border-x border-gray-900"></div>
+                       <div className="w-1.5 h-16 bg-gray-900 border-x border-gray-900"></div>
+                       <div className="w-1.5 h-16 bg-gray-900 border-x border-gray-900"></div>
                    </div>
     
                    <div className="w-full bg-[#FFC700] border-2 border-gray-900 p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -mt-1 rotate-2 hover:rotate-0 transition-transform duration-300 origin-top relative">
@@ -105,7 +105,7 @@ export default function LatestInterviewsPage() {
             )}
           </div>
 
-          <div className="lg:col-span-4 sticky top-20">
+          <div className="lg:col-span-4 lg:sticky top-20">
             <div className="p-5 border-2 border-gray-900 rounded-lg bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
               
               <div className="flex items-center gap-2 mb-5 pb-3 border-b-2 border-gray-900">

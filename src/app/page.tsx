@@ -49,7 +49,7 @@ export default async function Home() {
             <br />
            "Sir, please give me Job!" 
           <br />
-          Track YC Founders, find real-time jobs posts and discover remote-first companies.
+         Learn from real Interview Experiences, Track YC Founders, find real-time Job posts from Reddit and discover remote-first companies.
         </p>
 
         <div className="mb-24 relative inline-block">

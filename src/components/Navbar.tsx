@@ -15,6 +15,8 @@ export default function Navbar() {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileInterviewsOpen, setIsMobileInterviewsOpen] = useState(false);
+  const [isMobileRemoteOpen, setIsMobileRemoteOpen] = useState(false);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -47,7 +49,7 @@ export default function Navbar() {
     href="https://github.com/AniketR10/iamunemployed" 
     target="_blank"
     rel='noopener noreferrer'
-    className="w-full md:w-auto flex items-center justify-center gap-2 bg-gray-900 text-white px-5 py-2 rounded font-bold text-xs tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] hover:cursor-pointer transition-all"
+    className="w-full md:w-auto flex sm:hidden xl:flex items-center justify-center gap-2 bg-gray-900 text-white px-5 py-2 rounded font-bold text-xs tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] hover:cursor-pointer transition-all"
     >
         <Github size={16} />
         Star Project
@@ -59,7 +61,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16">
           
-          <Link href="/" className="flex items-center space-x-1 text-xl font-black tracking-tighter group">
+          <Link href="/" className="flex sm:hidden xl:flex items-center space-x-1 text-xl font-black tracking-tighter group">
             <span className='text-gray-900'>IAM<span className='text-[#FF5A5F]'>UNEMPLOYED</span></span>
           </Link>
           
@@ -78,7 +80,7 @@ export default function Navbar() {
             </Link>
            <div className="relative group">
             <button className="flex items-center gap-1 hover:text-[#FF5A5F] hover:cursor-pointer transition-colors py-2 font-bold">
-              Interview Experiences
+              Interview Experience
               <ChevronDown size={16} className="transition-transform duration-200 group-hover:rotate-180" strokeWidth={3} />
             </button>
             <div className="absolute left-0 top-full mt-2 w-48 bg-white border-2 border-gray-900 rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50 overflow-hidden">
@@ -178,12 +180,42 @@ export default function Navbar() {
           <div className="flex flex-col p-4 space-y-4">
             
             <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className={`font-bold ${isActive('/')}`}>Home</Link>
-            <Link href="/startups" onClick={() => setIsMobileMenuOpen(false)} className={`font-bold ${isActive('/startups')}`}>Startups DB</Link>
             <Link href="/yc" onClick={() => setIsMobileMenuOpen(false)} className={`font-bold ${isActive('/yc')}`}>YC Directory</Link>
             <Link href="/reddit" onClick={() => setIsMobileMenuOpen(false)} className={`font-bold ${isActive('/reddit')} flex items-center gap-2`}>
                 Reddit Live <Zap size={14} className="text-red-500 fill-current" />
             </Link>
-            <Link href="/companies" className={`font-bold ${isActive('/companies')}`}>Remote</Link>  
+            <Link href="/startups" onClick={() => setIsMobileMenuOpen(false)} className={`font-bold ${isActive('/startups')}`}>Startups DB</Link>
+            <div className="flex flex-col">
+              <button 
+                onClick={() => setIsMobileInterviewsOpen(!isMobileInterviewsOpen)}
+                className="flex items-center justify-between font-bold text-gray-800 w-full text-left"
+              >
+                <span>Interview Experiences</span>
+                <ChevronDown size={18} className={`transition-transform duration-200 ${isMobileInterviewsOpen ? 'rotate-180' : ''}`} strokeWidth={3} />
+              </button>
+              {isMobileInterviewsOpen && (
+                <div className="flex flex-col pl-4 mt-3 border-l-2 border-gray-900 space-y-3">
+                  <Link href="/interviews" onClick={() => setIsMobileMenuOpen(false)} className={`font-bold ${isActive('/interviews')}`}>Latest</Link>
+                  <Link href="/archives" onClick={() => setIsMobileMenuOpen(false)} className={`font-bold ${isActive('/archives')}`}>Archive</Link>
+                </div>
+              )}
+            </div>
+
+            <div className="flex flex-col">
+              <button 
+                onClick={() => setIsMobileRemoteOpen(!isMobileRemoteOpen)}
+                className="flex items-center justify-between font-bold text-gray-800 w-full text-left"
+              >
+                <span>Remote</span>
+                <ChevronDown size={18} className={`transition-transform duration-200 ${isMobileRemoteOpen ? 'rotate-180' : ''}`} strokeWidth={3} />
+              </button>
+              {isMobileRemoteOpen && (
+                <div className="flex flex-col pl-4 mt-3 border-l-2 border-gray-900 space-y-3">
+                  <Link href="/companies" onClick={() => setIsMobileMenuOpen(false)} className={`font-bold ${isActive('/companies')}`}>Remote Companies</Link>
+                  <Link href="/jobs" onClick={() => setIsMobileMenuOpen(false)} className={`font-bold ${isActive('/jobs')}`}>Jobs</Link>
+                </div>
+              )}
+            </div>
             <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className={`font-bold ${isActive('/contact')}`}>Contact Us</Link>
 
             <hr className="border-gray-200" />
