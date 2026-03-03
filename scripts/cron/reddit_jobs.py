@@ -17,7 +17,7 @@ SUPABASE_URL = os.getenv("NEXT_PUBLIC_SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_KEY")
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
-subreddits = ["jobs", "forhire", "RemoteJobs", "startup", "Entrepreneur", "WebDeveloperJobs", "DeveloperJobs", "StartupIndia", "MLjobs","Indiajobs", "IndiaJobsOpenings"]
+subreddits = ["DevsForHire","jobs","FreelanceIndia", "forhire", "RemoteJobs", "startup", "Entrepreneur", "WebDeveloperJobs", "DeveloperJobs", "StartupIndia", "MLjobs","Indiajobs", "IndiaJobsOpenings"]
 keywords = ["hiring", "internship", "opening", "remote", "job alert"]
 exclude = {
     "hiring": ["for hire", "looking for work", "is anyone", "feels"],
