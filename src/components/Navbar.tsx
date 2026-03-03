@@ -93,7 +93,7 @@ export default function Navbar() {
                   href="/archives" 
                   className="px-4 py-3 font-bold text-sm text-gray-700 hover:bg-[#F8F3E7] hover:text-[#FF5A5F] hover:pl-5 transition-all duration-200"
                 >
-                  Companywise
+                  Archive
                 </Link>
               </div>
             </div>

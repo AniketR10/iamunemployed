@@ -6,6 +6,7 @@ import Footer from '@/src/components/Footer';
 import InterviewCard, { InterviewPost } from '@/src/components/InterviewCard';
 import { Filter, Loader2 } from 'lucide-react';
 import { supabase } from '@/src/lib/supabase';
+import ArchiveBook from '@/src/components/ArchiveBook';
 
 export default function LatestInterviewsPage() {
   const [interviews, setInterviews] = useState<InterviewPost[]>([]);
@@ -54,7 +55,9 @@ export default function LatestInterviewsPage() {
   return (
     <div className="min-h-screen bg-[#F8F3E7] font-sans text-gray-900 text-sm flex flex-col">
             <Navbar/>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pb-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pb-16 relative w-full">
+            
+            <ArchiveBook />
             
             <div className="text-center mb-40 relative">
               <div className="inline-block relative">
