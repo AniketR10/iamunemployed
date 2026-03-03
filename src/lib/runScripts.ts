@@ -74,6 +74,7 @@ async function runScripts(scriptName: string) {
                         title: a.title,
                         url: a.url,
                         post_date: a.post_date,
+                        summary: a.summary,
                     })),
                     {
                         onConflict: 'url',

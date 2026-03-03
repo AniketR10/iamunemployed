@@ -7,7 +7,7 @@ def fetch_and_print_leetcode_posts(fetch_limit):
 
     include_words = ["interview", "interview experience", "experience", "swe", "sde"]
 
-    exclude_words = ["help", "shortlisted", "upcoming","scheduled", "not", "chances", "looking"]
+    exclude_words = ["help", "shortlisted", "upcoming","scheduled", "not", "chances", "looking", "advice", "need"]
 
     query = """
     query discussPostItems($orderBy: ArticleOrderByEnum, $keywords: [String]!, $tagSlugs: [String!], $skip: Int, $first: Int) {
@@ -26,6 +26,7 @@ def fetch_and_print_leetcode_posts(fetch_limit):
           node {
             title
             slug
+            summary
             createdAt
             topicId
           }
@@ -79,6 +80,7 @@ def fetch_and_print_leetcode_posts(fetch_limit):
             node = edge.get("node", {})
             title = node.get("title", "")
             title_lower = title.lower()
+            summary = node.get("summary", "")
             
             if any(bad_word in title_lower for bad_word in exclude_words):
                 continue
@@ -89,7 +91,8 @@ def fetch_and_print_leetcode_posts(fetch_limit):
             matched_posts.append({
                 "title": title,
                 "url": f"https://leetcode.com/discuss/post/{node.get('topicId')}/{node.get('slug')}/",
-                "post_date": node.get("createdAt")
+                "post_date": node.get("createdAt"),
+                "summary": summary
             })
             
         print(f"found {len(matched_posts)} matches!", file=sys.stderr)

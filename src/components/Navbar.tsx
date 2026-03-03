@@ -78,6 +78,28 @@ export default function Navbar() {
             </Link>
            <div className="relative group">
             <button className="flex items-center gap-1 hover:text-[#FF5A5F] hover:cursor-pointer transition-colors py-2 font-bold">
+              Interview Experiences
+              <ChevronDown size={16} className="transition-transform duration-200 group-hover:rotate-180" strokeWidth={3} />
+            </button>
+            <div className="absolute left-0 top-full mt-2 w-48 bg-white border-2 border-gray-900 rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50 overflow-hidden">
+              <div className="flex flex-col">
+                <Link 
+                  href="/interviews" 
+                  className="px-4 py-3 font-bold text-sm text-gray-700 border-b-2 border-gray-100 hover:bg-[#F8F3E7] hover:text-[#FF5A5F] hover:pl-5 transition-all duration-200"
+                >
+                  Latest
+                </Link>
+                <Link 
+                  href="/archives" 
+                  className="px-4 py-3 font-bold text-sm text-gray-700 hover:bg-[#F8F3E7] hover:text-[#FF5A5F] hover:pl-5 transition-all duration-200"
+                >
+                  Companywise
+                </Link>
+              </div>
+            </div>
+          </div>
+           <div className="relative group">
+            <button className="flex items-center gap-1 hover:text-[#FF5A5F] hover:cursor-pointer transition-colors py-2 font-bold">
               Remote
               <ChevronDown size={16} className="transition-transform duration-200 group-hover:rotate-180" strokeWidth={3} />
             </button>
