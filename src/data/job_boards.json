@@ -438,28 +438,34 @@
   ],
   "Programming": [
     {
-      "name": "Ruby on Rails Jobs",
-      "url": "https://www.ruby-on-rails-jobs.com/"
+    "name": "Ruby on Rails Jobs",
+    "url": "https://www.ruby-on-rails-jobs.com/",
+    "description": "Niche job board for remote, on-site, and freelance Ruby on Rails developer roles."
     },
     {
       "name": "ClojureJobboard",
-      "url": "https://ClojureJobboard.com/"
+      "url": "https://ClojureJobboard.com/",
+      "description": "Dedicated platform for finding global Clojure and ClojureScript developer jobs."
     },
     {
       "name": "iOS Dev Jobs",
-      "url": "https://iosdevjobs.com/"
+      "url": "https://iosdevjobs.com/",
+      "description": "Inactive website; no longer operating as a job board."
     },
     {
       "name": "Elixir Radar",
-      "url": "https://elixir-radar.com/jobs"
+      "url": "https://elixir-radar.com/jobs",
+      "description": "Job board for Elixir engineers, operated by the Elixir Radar community."
     },
     {
       "name": "Elixir Jobs",
-      "url": "https://elixirjobs.net/"
+      "url": "https://elixirjobs.net/",
+      "description": "Focused platform connecting developers with Elixir and Erlang opportunities."
     },
     {
       "name": "findatechjob",
-      "url": "https://findatechjob.dev/"
+      "url": "https://findatechjob.dev/",
+      "description": "Curated job board featuring high-quality software engineering roles at top-tier tech companies."
     },
     {
       "name": "Full-Stack Developer Jobs",

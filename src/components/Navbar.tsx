@@ -67,7 +67,6 @@ export default function Navbar() {
           
           <div className="hidden md:flex space-x-6 font-bold text-gray-800 text-sm items-center">
             <Link href="/" className={isActive('/')}>Home</Link>
-            <Link href="/startups" className={isActive('/startups')}>Startups DB</Link>
             <Link href="/yc" className={isActive('/yc')}>YC Directory</Link>
             <Link href="/reddit" className={isActive('/reddit')}>
                <span className="flex items-center gap-2">
@@ -78,6 +77,7 @@ export default function Navbar() {
                  </span>
                </span>
             </Link>
+            <Link href="/startups" className={isActive('/startups')}>Startups DB</Link>
            <div className="relative group">
             <button className="flex items-center gap-1 hover:text-[#FF5A5F] hover:cursor-pointer transition-colors py-2 font-bold">
               Interview Experience
