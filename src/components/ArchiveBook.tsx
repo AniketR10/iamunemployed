@@ -5,7 +5,7 @@ export default function ArchiveBook() {
   return (
     <div className="flex justify-center md:absolute top-0 right-4 lg:right-0 z-30 mb-12 md:mb-0">
       <Link
-        href="/interviews/archive"
+        href="/archives"
         className="group relative block w-64 transition-all duration-300 hover:-translate-y-2 md:rotate-2 md:hover:rotate-4 cursor-pointer"
       >
         <div className="absolute -right-1.5 top-2 h-[92%] w-3 bg-linear-to-b from-[#f5f1e6] to-[#e8e1d3] border border-gray-400 rounded-sm shadow-sm"></div>
