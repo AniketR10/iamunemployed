@@ -50,7 +50,7 @@ export default function InterviewCard({ post }: { post: InterviewPost }) {
           
           <div className="flex items-center gap-3 flex-wrap">
             <h3 className="text-xl font-black tracking-tight uppercase">
-              {post.company || "UNKNOWN COMPANY"}
+              {post.company || "¯\\\_(ツ)_/¯"}
             </h3>
             
             {post.role && (
