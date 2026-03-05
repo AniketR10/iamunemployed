@@ -7,7 +7,7 @@ def fetch_and_print_leetcode_posts(fetch_limit):
 
     include_words = ["interview", "interview experience", "experience", "swe", "sde"]
 
-    exclude_words = ["help", "shortlisted", "upcoming","scheduled","expectation","expect" "not", "chances", "looking", "advice", "need"]
+    exclude_words = ["help","has","anyone","guidance","needed", "guide", "shortlisted", "upcoming","scheduled","expectation","expect", "chances", "looking", "advice", "need"]
 
     query = """
     query discussPostItems($orderBy: ArticleOrderByEnum, $keywords: [String]!, $tagSlugs: [String!], $skip: Int, $first: Int) {

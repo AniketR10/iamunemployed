@@ -48,8 +48,9 @@ async function extractInterviewDetails(title: string) {
 export async function fillInterviewData(){
     console.log("\nstarting AI data extraction for LeetCode Interviews...");
 
-    const today = new Date();
-    const dateString = today.toISOString().split('T')[0];
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() - 2);
+    const dateString = targetDate.toISOString().split('T')[0];
 
     const { data: rows, error } = await supabaseAdmin
         .from('latest_interviews')

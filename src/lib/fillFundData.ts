@@ -97,7 +97,7 @@ export async function fillFunding() {
             console.log(`   - Round:  ${details.funding_round || 'N/A'}`);
         }
 
-        await new Promise(resolve => setTimeout(resolve, 5000));
+        await new Promise(resolve => setTimeout(resolve, 10000));
     }
     
     console.log("\nFunding data generation complete.");

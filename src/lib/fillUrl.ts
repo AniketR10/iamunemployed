@@ -137,7 +137,7 @@ export async function fillData(){
         } else {
             console.log(`   ✅ Success! New Unique Startup Added: ${cleanWebsite}, now filling funding info`);
         }
-        await new Promise(resolve => setTimeout(resolve, 5000));    
+        await new Promise(resolve => setTimeout(resolve, 10000));    
     }
     console.log("webiste links filled now filling founders data...")
     await fillFounders();

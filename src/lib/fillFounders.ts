@@ -101,7 +101,7 @@ export async function fillFounders() {
             });
         }
 
-        await new Promise(resolve => setTimeout(resolve, 5000));
+        await new Promise(resolve => setTimeout(resolve, 10000));
     }
     
     console.log("\n Filling founder data is complete. Now filling the Funding amount and round.");
