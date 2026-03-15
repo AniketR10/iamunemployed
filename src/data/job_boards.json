@@ -469,59 +469,73 @@
     },
     {
       "name": "Full-Stack Developer Jobs",
-      "url": "https://fullstackjob.com/"
+      "url": "https://fullstackjob.com/",
+      "description": "A niche job board dedicated to full-stack developer and software engineer roles, offering advanced filtering for skills, location, and remote work."
     },
     {
       "name": "Golangprojects",
-      "url": "https://www.golangprojects.com/"
+      "url": "https://www.golangprojects.com/",
+      "description": "A specialized job board that exclusively lists curated, high-quality Go/Golang developer and DevOps positions."
     },
     {
       "name": "we love golang",
-      "url": "https://www.welovegolang.com/"
+      "url": "https://www.welovegolang.com/",
+      "description": "A focused job portal designed specifically to connect Go developers, programmers, and engineers with relevant employers."
     },
     {
       "name": "Golang Forum Jobs",
-      "url": "https://forum.golangbridge.org/c/jobs"
+      "url": "https://forum.golangbridge.org/c/jobs",
+      "description": "A community-driven job board hosted on the official Go Forum, allowing members to post and discover Go-related employment and freelance opportunities."
     },
     {
       "name": "Golang Job Board",
-      "url": "https://golangjob.xyz/"
+      "url": "https://golangjob.xyz/",
+      "description": "An aggregator and job board for remote and on-site Golang roles, tightly integrated with the @golangch social media community."
     },
     {
       "name": "Golang Cafe",
-      "url": "https://golang.cafe/"
+      "url": "https://golang.cafe/",
+      "description": "A comprehensive hiring platform for Golang talent, offering remote and on-site job listings, recruitment services, and a vetted talent network."
     },
     {
       "name": "Angular Jobs",
-      "url": "https://angularjobs.com/"
+      "url": "https://angularjobs.com/",
+      "description": "A specialized employment site and community connecting tech companies with developers specifically skilled in Angular and AngularJS frameworks."
     },
     {
       "name": "Angular Work",
-      "url": "https://angular.work/"
+      "url": "https://angular.work/",
+      "description": "A dedicated job board connecting employers with frontend developers specializing in the Angular framework."
     },
     {
       "name": "Vue.js Jobs",
-      "url": "https://vuejobs.com/"
+      "url": "https://vuejobs.com/",
+      "description": "A popular job portal focused specifically on roles requiring Vue.js, Nuxt.js, and related frontend ecosystem skills."
     },
     {
       "name": "Made with Vue.js Jobs",
-      "url": "https://madewithvuejs.com/jobs"
+      "url": "https://madewithvuejs.com/jobs",
+      "description": "A job directory hosted by the 'Made with Vue.js' showcase community for finding Vue-specific employment opportunities."
     },
     {
       "name": "React Job Board",
-      "url": "https://www.reactjobboard.com/"
+      "url": "https://www.reactjobboard.com/",
+      "description": "A niche platform for finding remote and on-site software engineering jobs focused on React and React Native."
     },
     {
       "name": "React JS Jobs",
-      "url": "https://reactjsjob.com/"
+      "url": "https://reactjsjob.com/",
+      "description": "A specialized job board aimed at React.js engineers, offering curated frontend development roles."
     },
     {
       "name": "We Work Meteor",
-      "url": "https://www.weworkmeteor.com/"
+      "url": "https://www.weworkmeteor.com/",
+      "description": "A community-driven job board for developers working with the Meteor.js full-stack JavaScript framework."
     },
     {
       "name": "Drupal Jobs",
-      "url": "https://jobs.drupal.org/"
+      "url": "https://jobs.drupal.org/",
+      "description": "The official job board maintained by the Drupal Association for finding Drupal development, design, and CMS administration roles."
     },
     {
       "name": "WordPress Jobs",
