@@ -1,6 +1,44 @@
 import requests
 import json
 import sys
+import os
+import time
+from dotenv import load_dotenv
+from groq import Groq
+
+load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '../../.env'))
+groq_client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
+
+def ai_filter(title,summary):
+    """Passes the title and summary to Groq solely to validate if it's a real experience."""
+    prompt = f"""
+        You are a data validation assistant analyzing LeetCode posts.
+        TITLE: "{title}"
+        SUMMARY: "{summary or 'No summary provided.'}"
+
+        ### YOUR TASK:
+        Determine if this post is a GENUINE interview experience (sharing questions, timelines, offers, or rejections). 
+        If the user is just asking a question (e.g., "Has anyone heard back?", "How to prepare?", "What is the OA like?", "Need advice"), set "is_valid_experience" to false. Otherwise, set it to true.
+
+        Return strictly in JSON format:
+        {{
+            "is_valid_experience": boolean
+        }}
+    """
+    try:
+        chat_completion = groq_client.chat.completions.create(
+            model=os.environ.get("LLM_MODEL", "moonshotai/kimi-k2-instruct-0905"),
+            messages=[{"role": "system", "content": prompt}],
+            stream=False,
+            response_format={"type": "json_object"}
+        )
+
+        raw_data = chat_completion.choices[0].message.content
+        return json.loads(raw_data)
+        
+    except Exception as e:
+        print(f"Groq API error for '{title}': {e}", file=sys.stderr)
+        return None
 
 def fetch_and_print_leetcode_posts(fetch_limit):
     url = "https://leetcode.com/graphql"
@@ -87,6 +125,20 @@ def fetch_and_print_leetcode_posts(fetch_limit):
                 
             if include_words and not any(good_word in title_lower for good_word in include_words):
                     continue
+            
+            print(f"analyzing with AI: {title}", file=sys.stderr)
+
+            ai_data = ai_filter(title, summary)
+
+            if not ai_data:
+                continue
+
+            if ai_data.get("is_valid_experience") is False:
+                print(" -> AI flagged as invalid/not interview experience post. Skipping.", file=sys.stderr)
+                time.sleep(1)
+                continue
+
+            print(" -> ✅ valid experience!", file=sys.stderr)
 
             matched_posts.append({
                 "title": title,
@@ -94,6 +146,8 @@ def fetch_and_print_leetcode_posts(fetch_limit):
                 "post_date": node.get("createdAt"),
                 "summary": summary
             })
+
+            time.sleep(1)
             
         print(f"found {len(matched_posts)} matches!", file=sys.stderr)
 
