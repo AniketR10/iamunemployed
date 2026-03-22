@@ -26,7 +26,7 @@ jobs:
 
              - name: Install Python Dependencies
                run: |
-                 pip install feedparser beautifulsoup4 python-dotenv requests supabase praw
+                 pip install feedparser beautifulsoup4 python-dotenv requests supabase praw groq
 
              - name: Install Node Dependencies
                run: npm ci
