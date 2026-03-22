@@ -539,123 +539,153 @@
     },
     {
       "name": "WordPress Jobs",
-      "url": "https://jobs.wordpress.net/"
+      "url": "https://jobs.wordpress.net/",
+      "description": "The official job board for the WordPress community, connecting employers with professionals for full-time, part-time, and project-based roles specifically focused on WordPress development, design, and site maintenance."
     },
     {
       "name": "LaraJobs",
-      "url": "https://larajobs.com/"
+      "url": "https://larajobs.com/",
+      "description": "The official Laravel job board since 2014. It is highly curated for PHP and Laravel developers, automatically syndicating its job listings to the massive Laravel News audience and newsletter."
     },
     {
       "name": "pyJobs",
-      "url": "https://www.pyjobs.com/"
+      "url": "https://www.pyjobs.com/",
+      "description": "A dedicated Python job board featuring remote, hybrid, and on-site roles. It emphasizes transparency by making salary ranges mandatory for all company job postings."
     },
     {
       "name": "Python Job Board",
-      "url": "https://www.python.org/jobs/"
+      "url": "https://www.python.org/jobs/",
+      "description": "The official job board run by the Python Software Foundation (PSF). It is a free, volunteer-moderated platform that lists global, paid programming opportunities directly to the core Python community."
     },
     {
       "name": "Python Jobs",
-      "url": "https://pythonjob.xyz/"
+      "url": "https://pythonjob.xyz/",
+      "description": "A straightforward, niche aggregator and job board that curates both remote and on-site Python roles, allowing developers to filter opportunities by specific skill sets and tech hub locations."
     },
     {
       "name": "Pycoder's Jobs",
-      "url": "https://www.pythonjobshq.com/"
+      "url": "https://www.pythonjobshq.com/",
+      "description": "Created by the team behind the PyCoder’s Weekly newsletter, this premium board directly reaches over 100,000 Python enthusiasts and data scientists via email syndication."
     },
     {
       "name": "Django gigs",
-      "url": "https://djangogigs.com/"
+      "url": "https://djangogigs.com/",
+      "description": "Historically a premier job board that connected Django and Python developers with innovative companies since 2008, though it has recently sunsetted its operations after 17 years of service."
     },
     {
       "name": "Django Jobs",
-      "url": "https://djangojobs.net/jobs/"
+      "url": "https://djangojobs.net/jobs/",
+      "description": "A dedicated, premium job board focusing exclusively on the Django framework, featuring robust profiles and specific tags for roles like computer vision, AI, and full-stack development."
     },
     {
       "name": "Rust Programming Language Jobs",
-      "url": "http://rust-jobs.com/"
+      "url": "http://rust-jobs.com/",
+      "description": "A highly specialized job board curating lucrative, often remote opportunities across Web3, systems engineering, and AI edge computing specifically for Rust developers."
     },
     {
       "name": "JavaScript Jobs",
-      "url": "https://jobs.date-fns.org/"
+      "url": "https://jobs.date-fns.org/",
+      "description": "A streamlined job board hosted by the creators of the popular date-fns library, offering curated JavaScript roles delivered via a biweekly newsletter to its developer community."
     },
     {
       "name": "Jobs in JS",
-      "url": "https://jobsinjs.com/"
+      "url": "https://jobsinjs.com/",
+      "description": "A developer-founded platform designed to surface top-tier JavaScript and TypeScript roles, covering front-end, back-end, React, Next.js, and Node.js opportunities globally."
     },
     {
       "name": "TypeScriptJobs",
-      "url": "https://typescriptjobs.net/"
+      "url": "https://typescriptjobs.net/",
+      "description": "A comprehensive directory tracking thousands of active remote and on-site roles exclusively for TypeScript engineers, ranging from new graduates to staff-level positions with salary transparency."
     },
     {
       "name": "R-users",
-      "url": "https://www.r-users.com/"
+      "url": "https://www.r-users.com/",
+      "description": "A specialized job board dedicated to connecting companies with R programmers, data scientists, statisticians, and quantitative analysts for freelance, part-time, and full-time roles."
     },
     {
       "name": "Jobbsy",
-      "url": "https://jobbsy.dev/"
+      "url": "https://jobbsy.dev/",
+      "description": "An open-source job board specifically tailored for Symfony and PHP developers, connecting specialized talent with companies utilizing high-performance PHP frameworks."
     },
     {
       "name": "Scala Jobs",
-      "url": "https://scalajobs.com/"
+      "url": "https://scalajobs.com/",
+      "description": "A dedicated hiring platform and talent network focused exclusively on Scala developer roles, offering verified candidates for data engineering, backend, and distributed systems positions."
     },
     {
       "name": "QA Jobs",
-      "url": "https://www.qajobs.co/"
+      "url": "https://www.qajobs.co/",
+      "description": "A targeted career platform built exclusively for Quality Assurance professionals, listing specialized remote and on-site opportunities in manual software testing, automated QA, and test engineering."
     },
     {
       "name": "androidDev.careers",
-      "url": "https://androiddev.careers"
+      "url": "https://androiddev.careers",
+      "description": "A curated job board strictly dedicated to Android developers, aggregating thousands of remote, hybrid, and on-site Android engineering opportunities complete with salary details and tech stack tags."
     },
     {
       "name": "GrepJob",
-      "url": "https://grepjob.com/"
+      "url": "https://grepjob.com/",
+      "description": "An AI-powered job aggregator that scrapes verified software engineering roles directly from company career pages, offering advanced filtering by tech stack, level, and visa sponsorship."
     },
     {
       "name": "Software Tech Jobs",
-      "url": "https://softwaretechjobs.com/"
+      "url": "https://softwaretechjobs.com/",
+      "description": "A comprehensive tech job portal primarily focusing on US and Canada opportunities, covering a wide range of software disciplines including front-end, DevOps, AI/ML, and Web3 roles."
     },
     {
       "name": "EmbeddedJobs",
-      "url": "https://embedded.jobs/"
+      "url": "https://embedded.jobs/",
+      "description": "A specialized job board created by and for embedded systems, hardware, and firmware engineers. It curates opportunities focused on C/C++, RTOS, FPGA, and microcontrollers across industries like semiconductors, automotive, aerospace, and robotics."
     },
     {
       "name": "React Native Jobs",
-      "url": "https://reactnative-jobs.com/"
+      "url": "https://reactnative-jobs.com/",
+      "description": "A dedicated, niche job board focused exclusively on connecting developers with React Native roles, streamlining the search for cross-platform mobile app engineering positions."
     },
     {
       "name": "Levels.fyi",
-      "url": "https://www.levels.fyi/jobs"
+      "url": "https://www.levels.fyi/jobs",
+      "description": "A job board integrated directly with the popular tech compensation data platform. It allows job seekers to filter open roles by verified total compensation, specific career levels, and locations, providing unparalleled salary transparency before applying."
     },
     {
       "name": "FunctionalJobs.dev",
-      "url": "https://functionaljobs.dev/"
+      "url": "https://functionaljobs.dev/",
+      "description": "A highly active, specialized job board curated specifically for functional programming enthusiasts looking for roles using languages like Haskell, Clojure, OCaml, and Scala."
     },
     {
       "name": "Functional Works",
-      "url": "https://functional.works-hub.com/"
+      "url": "https://functional.works-hub.com/",
+      "description": "Part of the WorksHub network, this platform connects developers with functional programming jobs (Scala, Clojure, Elixir, etc.). It notably features an innovative model where candidates can get paid to solve open-source issues as a way to prove their skills directly to hiring companies."
     },
     {
       "name": "Golang Forum Jobs",
-      "url": "https://forum.golangbridge.org/c/jobs/8"
+      "url": "https://forum.golangbridge.org/c/jobs/8",
+      "description": "The dedicated jobs category within the community-driven Go Forum (Golang Bridge). It functions as a specialized, informal discussion board where companies post Go backend/infrastructure roles, and developers can directly pitch their resumes and services."
     },
     {
       "name": "Golang Developer Jobs",
-      "url": "https://golangjob.xyz"
+      "url": "https://golangjob.xyz",
+      "description": "A streamlined job board and aggregator curating remote and on-site Golang opportunities, designed to help backend and systems engineers quickly find Go-specific roles."
     },
     {
       "name": "Golang Works",
-      "url": "https://golang.works-hub.com/"
+      "url": "https://golang.works-hub.com/",
+      "description": "Part of the WorksHub network, this specialized platform combines a dedicated Golang job board with community-driven technical articles, company profiles, and talent matching for Go developers."
     },
     {
       "name": "JavaScript Developer Board",
-      "url": "https://javascriptjob.xyz/"
+      "url": "https://javascriptjob.xyz/",
+      "description": "A straightforward, niche job aggregator focused entirely on JavaScript roles, making it easy for developers to filter through front-end, back-end, and full-stack JS positions."
     },
     {
       "name": "Svelte Jobs",
-      "url": "https://sveltejobs.com/"
+      "url": "https://sveltejobs.com/",
+      "description": "Created by and for Svelte enthusiasts, this platform is the premier destination for Svelte and SvelteKit jobs, featuring curated job listings, a developer talent directory, and a community newsletter."
     },
     {
       "name": "Javascript Works",
-      "url": "https://javascript.works-hub.com/"
+      "url": "https://javascript.works-hub.com/",
+      "description": "A comprehensive career hub from the WorksHub ecosystem tailored for JavaScript and TypeScript developers, featuring job listings, technical resources, and open-source engagement opportunities."
     },
     {
       "name": "JSJobbs",

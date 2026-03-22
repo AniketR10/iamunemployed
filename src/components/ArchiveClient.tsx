@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Filter, Search } from 'lucide-react';
+import AuthGuard from './AuthGuard';
 
 export default function ArchiveClient({ companiesList }: { companiesList: any[] }) {
   const [searchQuery, setSearchQuery] = useState('');
@@ -29,8 +30,8 @@ export default function ArchiveClient({ companiesList }: { companiesList: any[] 
               const folderBgColor = folderColors[index % folderColors.length];
 
               return (
+              <AuthGuard key={company.name}>
                 <Link 
-                  key={company.name} 
                   href={`/archives/${encodeURIComponent(company.name)}`}
                   className="group block relative cursor-pointer"
                 >
@@ -59,6 +60,7 @@ export default function ArchiveClient({ companiesList }: { companiesList: any[] 
                     </div>
                   </div>
                 </Link>
+              </AuthGuard>
               );
             })}
           </div>
