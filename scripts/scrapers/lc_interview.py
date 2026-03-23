@@ -126,7 +126,7 @@ def fetch_and_print_leetcode_posts(fetch_limit):
             if include_words and not any(good_word in title_lower for good_word in include_words):
                     continue
             
-            print(f"analyzing with AI: {title}", file=sys.stderr)
+            print(f"analyzing with AI: {title}")
 
             ai_data = ai_filter(title, summary)
 
@@ -134,11 +134,11 @@ def fetch_and_print_leetcode_posts(fetch_limit):
                 continue
 
             if ai_data.get("is_valid_experience") is False:
-                print(" -> AI flagged as invalid/not interview experience post. Skipping.", file=sys.stderr)
+                print(" -> AI flagged as invalid/not interview experience post. Skipping.")
                 time.sleep(1)
                 continue
 
-            print(" -> ✅ valid experience!", file=sys.stderr)
+            print(" -> ✅ valid experience!")
 
             matched_posts.append({
                 "title": title,
@@ -149,7 +149,7 @@ def fetch_and_print_leetcode_posts(fetch_limit):
 
             time.sleep(1)
             
-        print(f"found {len(matched_posts)} matches!", file=sys.stderr)
+        print(f"found {len(matched_posts)} matches!")
 
         final_json = json.dumps(matched_posts)
         print(f"__DATA_START__{final_json}__DATA_END__")

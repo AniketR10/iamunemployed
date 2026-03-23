@@ -689,59 +689,73 @@
     },
     {
       "name": "JSJobbs",
-      "url": "https://jsjobbs.com/"
+      "url": "https://jsjobbs.com/",
+      "description": "A dedicated career platform focusing exclusively on the JavaScript ecosystem, connecting developers with global and remote opportunities in React, Node.js, TypeScript, Next.js, and Vue.js."
     },
     {
       "name": "androiddev.careers",
-      "url": "https://androiddev.careers/"
+      "url": "https://androiddev.careers/",
+      "description": "A curated job board strictly dedicated to Android developers, aggregating thousands of remote, hybrid, and on-site Android engineering opportunities complete with salary details and tech stack tags."
     },
     {
       "name": "Mobile Career",
-      "url": "https://mobile.career/"
+      "url": "https://mobile.career/",
+      "description": "A premier job board built specifically for the mobile developer community, offering targeted roles across iOS, Android, Flutter, and React Native, alongside weekly digests and a developer search feature."
     },
     {
       "name": "The Perl Job Site",
-      "url": "https://jobs.perl.org/"
+      "url": "https://jobs.perl.org/",
+      "description": "The official, community-run job board for Perl programmers. It offers a free platform for employers to post genuine Perl development roles, featuring RSS syndication and dedicated filters for telecommute opportunities."
     },
     {
       "name": "Jobbsy",
-      "url": "https://jobbsy.dev"
+      "url": "https://jobbsy.dev",
+      "description": "An open-source job board specifically tailored for Symfony and PHP developers, connecting specialized talent with companies utilizing high-performance PHP frameworks."
     },
     {
       "name": "PyJobs",
-      "url": "https://www.pyjobs.com"
+      "url": "https://www.pyjobs.com",
+      "description": "A dedicated Python job board featuring remote, hybrid, and on-site roles. It emphasizes transparency by making salary ranges mandatory for all company job postings."
     },
     {
       "name": "Python Developer Jobs",
-      "url": "https://pythonjob.xyz"
+      "url": "https://pythonjob.xyz",
+      "description": "A straightforward, niche aggregator and job board that curates both remote and on-site Python roles, allowing developers to filter opportunities by specific skill sets and tech hub locations."
     },
     {
       "name": "RubyOnRemote",
-      "url": "https://rubyonremote.com"
+      "url": "https://rubyonremote.com",
+      "description": "A highly curated platform specifically for remote Ruby and Ruby on Rails roles, featuring extensive global filtering options and a weekly newsletter serving over 13,000 Rubyists."
     },
     {
       "name": "Rust Jobs",
-      "url": "https://www.rustjobs.com"
+      "url": "https://www.rustjobs.com",
+      "description": "A focused, streamlined job board dedicated solely to the Rust programming language, highlighting high-paying opportunities across AI, Web3, and systems engineering with daily email alerts."
     },
     {
       "name": "Rust Jobs",
-      "url": "https://rustjobs.dev"
+      "url": "https://rustjobs.dev",
+      "description": "An exclusive Rust hiring platform and talent network that strictly prohibits scraped listings and third-party recruiters, connecting vetted systems and infrastructure engineers directly with top-tier companies."
     },
     {
       "name": "Scala Jobs",
-      "url": "https://scalajobs.com"
+      "url": "https://scalajobs.com",
+      "description": "A dedicated hiring platform and talent network focused exclusively on Scala developer roles, providing access to remote, hybrid, and on-site positions across data engineering, backend, and distributed systems."
     },
     {
       "name": "workwithgo",
-      "url": "https://workwithgo.com"
+      "url": "https://workwithgo.com",
+      "description": "An upcoming, specialized career hub aimed at connecting Golang developers and enthusiasts with high-quality, Go-centric job opportunities and employers."
     },
     {
       "name": "workfeed",
-      "url": "http://workfeed.dev"
+      "url": "http://workfeed.dev",
+      "description": "A currently inactive, experimental job board MVP originally designed to offer a more personal approach to tech hiring by featuring open roles at companies recommended by their existing employees."
     },
     {
       "name": "EuroPython 2020",
-      "url": "https://ep2020.europython.eu/sponsor/job-board/"
+      "url": "https://ep2020.europython.eu/sponsor/job-board/",
+      "description": "The official, historical job board for the EuroPython 2020 Online conference, featuring Python-focused career opportunities directly from major recruiting sponsors like Bloomberg, Google, and Optiver."
     }
   ],
   "Remote": [
