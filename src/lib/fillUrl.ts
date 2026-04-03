@@ -6,6 +6,7 @@ import OpenAI from "openai";
 import Groq from "groq-sdk"
 import { fillFounders } from "./fillFounders";
 import {getDomain} from 'tldts';
+import { fillFunding } from "./fillFundData";
 
 dotenv.config({path: path.resolve(__dirname, '../../.env')});
 
@@ -140,6 +141,6 @@ export async function fillData(){
         await new Promise(resolve => setTimeout(resolve, 10000));    
     }
     console.log("webiste links filled now filling founders data...")
-    await fillFounders();
+    await fillFunding();
 
 }
