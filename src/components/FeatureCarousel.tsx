@@ -71,21 +71,21 @@ export default function FeatureCarousel() {
   };
 
   return (
-    <div className="w-full max-w-350 mx-auto py-12 px-4 relative">
+    <div className="w-full max-w-350 mx-auto py-12 px-2 sm:px-4 relative">
       
-      <div className="absolute top-1/2 -translate-y-1/2 left-0 md:left-8 z-40">
-        <button onClick={prevSlide} className="p-4 bg-white border-2 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-px hover:translate-y-px hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all rounded-full">
-          <ChevronLeft size={32} strokeWidth={3} className="text-gray-900" />
+      <div className="absolute top-1/2 -translate-y-1/2 left-0 sm:left-2 md:left-8 z-40">
+        <button onClick={prevSlide} className="p-2 sm:p-4 bg-white border-2 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-px hover:translate-y-px hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all rounded-full">
+          <ChevronLeft className="w-6 h-6 md:w-8 md:h-8 text-gray-900" strokeWidth={3} />
         </button>
       </div>
       
-      <div className="absolute top-1/2 -translate-y-1/2 right-0 md:right-8 z-40">
-        <button onClick={nextSlide} className="p-4 bg-white border-2 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-px hover:translate-y-px hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all rounded-full">
-          <ChevronRight size={32} strokeWidth={3} className="text-gray-900" />
+      <div className="absolute top-1/2 -translate-y-1/2 right-0 sm:right-2 md:right-8 z-40">
+        <button onClick={nextSlide} className="p-2 sm:p-4 bg-white border-2 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-px hover:translate-y-px hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all rounded-full">
+          <ChevronRight className="w-6 h-6 md:w-8 md:h-8 text-gray-900" strokeWidth={3} />
         </button>
       </div>
 
-      <div className="relative h-125 md:h-162.5 w-full flex justify-center items-center overflow-hidden">
+      <div className="relative h-105 sm:h-125 md:h-162.5 w-full flex justify-center items-center overflow-hidden">
         {features.map((feature, index) => {
           let diff = index - activeIndex;
           
@@ -119,7 +119,7 @@ export default function FeatureCarousel() {
           return (
             <div
               key={feature.id}
-              className={`absolute w-[320px] md:w-125 transition-all duration-500 ease-in-out ${transformStyle} ${opacityStyle} ${zIndex}`}
+              className={`absolute w-65 sm:w-[320px] md:w-125 transition-all duration-500 ease-in-out ${transformStyle} ${opacityStyle} ${zIndex}`}
             >
             <AuthGuard key={feature.id}>
               <Link 
@@ -132,7 +132,8 @@ export default function FeatureCarousel() {
                 className={`block group border-2 border-gray-900 rounded-2xl bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden transition-all ${diff === 0 ? 'cursor-pointer hover:translate-x-1 hover:translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]' : 'cursor-default'}`}
                 tabIndex={diff === 0 ? 0 : -1}
               >
-                <div className="relative w-full h-56 md:h-80 border-b-2 border-gray-900 bg-gray-100 overflow-hidden">
+                {/* Top Image Section - ✨ 3 Responsive heights added */}
+                <div className="relative w-full h-40 sm:h-56 md:h-80 border-b-2 border-gray-900 bg-gray-100 overflow-hidden">
                   <div className="absolute inset-0 bg-[radial-gradient(#CBD5E1_1px,transparent_1px)] bg-size-[16px_16px] opacity-50"></div>
                   
                   <Image 
@@ -146,13 +147,13 @@ export default function FeatureCarousel() {
                   />
                 </div>
 
-                <div className="p-6 md:p-8 bg-white relative">
-                  <div className={`absolute -top-8 right-8 w-16 h-16 ${feature.color} border-2 border-gray-900 rounded-xl flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-colors ${feature.hoverColor}`}>
-                    <Icon size={32} className={`text-gray-900 ${feature.id === 'companies' ? 'text-white' : ''}`} />
+                <div className="p-4 sm:p-6 md:p-8 bg-white relative">
+                  <div className={`absolute -top-6 sm:-top-8 right-4 sm:right-8 w-12 h-12 sm:w-16 sm:h-16 ${feature.color} border-2 border-gray-900 rounded-xl flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-colors ${feature.hoverColor}`}>
+                    <Icon className={`w-6 h-6 sm:w-8 sm:h-8 text-gray-900 ${feature.id === 'companies' ? 'text-white' : ''}`} />
                   </div>
                   
-                  <h3 className="text-2xl md:text-3xl font-black mb-3 uppercase tracking-tight text-gray-900 mt-2">{feature.title}</h3>
-                  <p className="text-base md:text-lg font-bold text-gray-600 leading-relaxed">{feature.desc}</p>
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-black mb-2 sm:mb-3 uppercase tracking-tight text-gray-900 mt-2">{feature.title}</h3>
+                  <p className="text-sm sm:text-base md:text-lg font-bold text-gray-600 leading-relaxed">{feature.desc}</p>
                 </div>
               </Link>
             </AuthGuard>
