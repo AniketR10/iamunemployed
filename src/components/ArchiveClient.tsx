@@ -25,50 +25,56 @@ export default function ArchiveClient({ companiesList }: { companiesList: any[] 
       
       <div className="lg:col-span-8 xl:col-span-9 w-full">
         {filteredCompanies.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {filteredCompanies.map((company, index) => {
-              const folderBgColor = folderColors[index % folderColors.length];
+              const tagBgColor = folderColors[index % folderColors.length];
 
               return (
-              <AuthGuard key={company.name}>
-                <Link 
-                  href={`/archives/${encodeURIComponent(company.name)}`}
-                  className="group block relative cursor-pointer"
-                >
-                  <div className={`relative z-10 transition-all duration-300 group-hover:translate-x-0.5 group-hover:translate-y-0.5 drop-shadow-[4px_4px_0px_rgba(0,0,0,1)] group-hover:drop-shadow-[2px_2px_0px_rgba(0,0,0,1)]`}>
-                    
-                    <div className="flex items-end relative z-10">
-                      <div className={`${folderBgColor} h-7 w-5/12 border-2 border-gray-900 border-b-0 rounded-t-lg`}></div>
-                      <div className="w-7/12 border-b-2 border-gray-900"></div>
-                    </div>
-                    
-                    <div className={`${folderBgColor} border-x-2 border-b-2 border-gray-900 rounded-b-xl p-5 min-h-42.5 flex flex-col justify-between -mt-px relative z-0`}>
+                <AuthGuard key={company.name}>
+                  <Link 
+                    href={`/archives/${encodeURIComponent(company.name)}`}
+                    prefetch={false} 
+                    className="block group relative h-full"
+                  >
+                    <div className="h-full min-h-45 flex flex-col bg-white border-2 border-gray-900 p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all group-hover:translate-x-1 group-hover:translate-y-1 group-hover:shadow-[2px_2px_0px_0px_#FF5A5F] rounded-sm">
                       
-                      <div className="flex items-start justify-between gap-3">
-                        <h3 className="text-xl font-black tracking-tight uppercase truncate text-gray-900">
+                      <div className="flex flex-col justify-between items-start mb-16 gap-3">
+                        <h2 className="text-2xl font-black text-gray-900 tracking-tight leading-tight uppercase wrap-break-words">
                           {company.name}
-                        </h3>
-                        <span className="bg-white border-2 border-gray-900 px-2 py-0.5 text-xs font-black rounded text-gray-900 shrink-0">
+                        </h2>
+                        <span className={`shrink-0 ml-2 px-2 py-1 text-[10px] sm:text-xs font-black border-2 border-gray-900 uppercase tracking-widest shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] ${tagBgColor} text-gray-900`}>
                           {company.count} POST{company.count !== 1 ? 'S' : ''}
                         </span>
                       </div>
-                      
-                      <div className="mt-6 flex items-center gap-1 text-xs font-bold text-gray-800 uppercase group-hover:text-gray-900 transition-colors">
-                        Open Folder <ArrowRight size={14} strokeWidth={3} className="group-hover:translate-x-1 transition-transform" />
+
+                      <div className="mt-auto">
+                        <div className="pt-4 border-t-2 border-gray-900 flex justify-end">
+                          <span className="font-black text-sm text-gray-900 group-hover:text-[#FF5A5F] group-hover:underline decoration-2 underline-offset-2 flex items-center gap-1 transition-colors">
+                            OPEN FOLDER <span className="text-xl leading-none">→</span>
+                          </span>
+                        </div>
                       </div>
 
                     </div>
-                  </div>
-                </Link>
-              </AuthGuard>
+                  </Link>
+                </AuthGuard>
               );
             })}
           </div>
         ) : (
-          <div className="p-10 bg-white border-2 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] text-center w-full">
-            <p className="text-xl font-black uppercase text-gray-900">
-              {companiesList.length === 0 ? "The Archive is currently empty! Come back later" : "No companies match your search."}
+          <div className="col-span-full flex flex-col items-center justify-center py-20 border-2 border-gray-900 bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] text-center w-full">
+            <p className="text-4xl mb-4">🤷‍♂️</p>
+            <p className="text-xl font-black text-gray-900 uppercase text-center">
+              {companiesList.length === 0 ? "The Archive is currently empty!" : "No companies match your search."}
             </p>
+            {searchQuery && (
+              <button 
+                onClick={() => setSearchQuery('')} 
+                className="mt-4 text-sm font-bold underline text-[#FF5A5F] cursor-pointer"
+              >
+                Clear all filters
+              </button>
+            )}
           </div>
         )}
       </div>
