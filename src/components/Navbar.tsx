@@ -122,7 +122,7 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-            <Link href="/contact" className={isActive('/contact')}>Contact Us</Link>
+            <Link href="/resources" className={isActive('/resources')}>Resources</Link>
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
@@ -216,7 +216,7 @@ export default function Navbar() {
                 </div>
               )}
             </div>
-            <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className={`font-bold ${isActive('/contact')}`}>Contact Us</Link>
+            <Link href="/resources" onClick={() => setIsMobileMenuOpen(false)} className={`font-bold ${isActive('/resources')}`}>Resources</Link>
 
             <hr className="border-gray-200" />
             
