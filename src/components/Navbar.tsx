@@ -6,6 +6,7 @@ import { Bell, LogOut, User, Menu, X, Database, Zap, Globe, Github, ChevronDown 
 import { supabase } from '@/src/lib/supabase';
 import { useEffect, useState, useRef } from 'react';
 import { useAuth } from '../context/AuthContext';
+import NavbarSearch from './NavbarSearch';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -126,6 +127,7 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
+            <NavbarSearch />
             <StarButton />
 
             {user ? (
