@@ -71,7 +71,7 @@ export default function FeatureCarousel() {
   };
 
   return (
-    <div className="w-full max-w-350 mx-auto py-12 px-2 sm:px-4 relative">
+    <div className="w-full max-w-350 mx-auto py-6 px-2 sm:px-4 relative">
       
       <div className="absolute top-1/2 -translate-y-1/2 left-0 sm:left-2 md:left-8 z-40">
         <button onClick={prevSlide} className="p-2 sm:p-4 bg-white border-2 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-px hover:translate-y-px hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all rounded-full">

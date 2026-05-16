@@ -84,6 +84,22 @@ export default async function Home() {
 
        <div className="w-full max-w-7xl mx-auto mt-2">
           <FeatureCarousel />
+          <div className="mt-8 mb-16 flex justify-center px-4">
+          <a
+            href="https://scaleengineer.com?utm_source=iamunemployed"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex flex-wrap items-center justify-center gap-2 sm:gap-3 px-6 py-3 bg-white border-2 border-gray-900 rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] transition-all text-center"
+          >
+            <span className="font-black text-gray-900 text-lg">
+              scaleengineer <span className="text-[#FF5A5F] inline-block transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
+            </span>
+            <span className="hidden sm:inline text-gray-400 font-black">|</span>
+            <span className="font-bold text-gray-600 text-sm sm:text-base">
+              Learn software through visuals and practice. Read by 75,000+ users.
+            </span>
+          </a>
+        </div>
         </div>
       </main>
       <Footer/>
