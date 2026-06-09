@@ -761,155 +761,193 @@
   "Remote": [
     {
       "name": "TheRemoteWork",
-      "url": "https://theremotework.co/"
+      "url": "https://theremotework.co/",
+      "description": "A remote job aggregator that compiles work-from-home opportunities from various sources across the web, offering intuitive filters to help professionals easily navigate the remote job landscape."
     },
     {
       "name": "hiring.lat",
-      "url": "https://hiring.lat"
+      "url": "https://hiring.lat",
+      "description": "A specialized job board connecting highly skilled talent in Latin America (LATAM) with global companies offering remote work or relocation opportunities, particularly in engineering, tech, and operations."
     },
     {
       "name": "Real Work From Anywhere",
-      "url": "https://www.realworkfromanywhere.com/"
+      "url": "https://www.realworkfromanywhere.com/",
+      "description": "A global job board curating fully remote positions across software development, design, marketing, and finance. It notably features unique categories like '4 Day Work Week' roles for professionals seeking high flexibility."
     },
     {
       "name": "Career Vault",
-      "url": "https://careervault.io/"
+      "url": "https://careervault.io/",
+      "description": "A massive remote job aggregator that uses custom automation to scrape and index active job listings directly from the career pages of over 6,000 remote-friendly companies, pulling in hundreds of new roles daily across 70+ fields."
     },
     {
       "name": "Jobspresso",
-      "url": "https://jobspresso.co/remote-work/"
+      "url": "https://jobspresso.co/remote-work/",
+      "description": "A highly curated job board where every remote position is manually reviewed and vetted by humans. It focuses on delivering high-quality, scam-free remote listings from legitimate companies across tech, marketing, and customer support."
     },
     {
       "name": "We Work Remotely",
-      "url": "https://weworkremotely.com/"
+      "url": "https://weworkremotely.com/",
+      "description": "One of the oldest and largest remote work communities in the world. It operates a premium, highly active job board trusted by millions of monthly visitors and top tech companies, featuring roles across programming, design, and management."
     },
     {
       "name": "Workaline",
-      "url": "https://workaline.com/"
+      "url": "https://workaline.com/",
+      "description": "Formerly a platform for finding remote tech and startup jobs, Workaline officially ceased operations and was shut down in early 2023."
     },
     {
       "name": "RemoteYeah",
-      "url": "https://remoteyeah.com/"
+      "url": "https://remoteyeah.com/",
+      "description": "A niche, streamlined job board focused specifically on software engineering. It curates high-quality remote roles across front-end, back-end, DevOps, and QA without the noise of general job aggregators."
     },
     {
       "name": "Remotive",
-      "url": "https://remotive.com/"
+      "url": "https://remotive.com/",
+      "description": "A highly active, community-driven remote job board that hand-curates opportunities in software development, customer service, and marketing, particularly at high-growth startups and fully distributed teams."
     },
     {
       "name": "Remote",
-      "url": "https://remote.com/jobs/all"
+      "url": "https://remote.com/jobs/all",
+      "description": "The dedicated career portal built by the global HR and payroll giant Remote.com. It allows job seekers to create detailed profiles, use quick-apply tools, and filter for verified remote roles with upfront salary and location eligibility details."
     },
     {
       "name": "remote | OK",
-      "url": "https://remoteok.io/"
+      "url": "https://remoteok.io/",
+      "description": "One of the most heavily trafficked remote job boards globally, heavily favored by digital nomads. It features advanced tagging for specific work benefits like 'async work,' 'four-day work week,' and 'paid in crypto.'"
     },
     {
       "name": "JustRemote",
-      "url": "https://justremote.co/"
+      "url": "https://justremote.co/",
+      "description": "A remote work platform designed to uncover fully and partially remote jobs, including 'hidden' or unadvertised roles that don't appear on major job boards, featuring opportunities from development to HR."
     },
     {
       "name": "SkipTheDrive",
-      "url": "https://www.skipthedrive.com/"
+      "url": "https://www.skipthedrive.com/",
+      "description": "A free, no-registration-required hub for telecommuting and remote jobs. It categorizes a large database of opportunities across tech, finance, and customer service, allowing users to easily filter and set up alerts."
     },
     {
       "name": "remote.co",
-      "url": "https://remote.co/remote-jobs/"
+      "url": "https://remote.co/remote-jobs/",
+      "description": "A comprehensive and highly trusted resource for remote work, offering job listings from entry-level to executive, alongside an extensive library of Q&As and best practices from fully distributed companies."
     },
     {
       "name": "remote4me.com",
-      "url": "https://remote4me.com/"
+      "url": "https://remote4me.com/",
+      "description": "A streamlined aggregator that pulls 100% remote jobs from over 20 different job boards into a single feed, focusing heavily on tech stacks, developers, designers, and marketers."
     },
     {
       "name": "Working Nomads",
-      "url": "https://www.workingnomads.com/jobs"
+      "url": "https://www.workingnomads.com/jobs",
+      "description": "Curating genuine remote jobs since 2014, this platform filters out the noise to deliver high-quality, location-independent roles directly to digital nomads and remote professionals via personalized email alerts."
     },
     {
       "name": "AwesomeJobs",
-      "url": "https://www.awesomejobs.io/"
+      "url": "https://www.awesomejobs.io/",
+      "description": "A streamlined job board specializing in tech and remote opportunities, connecting developers and global professionals with verified companies offering flexible work arrangements."
     },
     {
       "name": "Remote Python",
-      "url": "https://www.remotepython.com/"
+      "url": "https://www.remotepython.com/",
+      "description": "A dedicated job board and aggregator focused entirely on remote Python developer roles, featuring a built-in directory where developers can publish their profiles for employers to discover."
     },
     {
       "name": "Ruby On Remote",
-      "url": "https://rubyonremote.com/"
+      "url": "https://rubyonremote.com/",
+      "description": "A highly curated platform specifically for remote Ruby and Ruby on Rails roles, featuring extensive global filtering options and a weekly newsletter serving a community of over 13,000 Rubyists."
     },
     {
       "name": "Remote JavaScript Jobs",
-      "url": "https://javascript.jobs/remote"
+      "url": "https://javascript.jobs/remote",
+      "description": "A targeted career portal curating hundreds of legitimate, 100% remote JavaScript roles—including front-end, back-end, React, and Node.js positions—complete with salary transparency and specific skill tagging."
     },
     {
       "name": "letsworkremotely",
-      "url": "https://www.letsworkremotely.com/remote-jobs/"
+      "url": "https://www.letsworkremotely.com/remote-jobs/",
+      "description": "A versatile remote job platform that spans across various categories like software development, customer service, marketing, and design, aimed at connecting digital nomads and remote talent with global employers."
     },
     {
       "name": "Workew",
-      "url": "https://workew.com/remote-jobs/"
+      "url": "https://workew.com/remote-jobs/",
+      "description": "A dedicated job board and hiring platform on a mission to connect global companies with talented professionals seeking long-term, location-independent remote careers."
     },
     {
       "name": "wellpaid.io",
-      "url": "https://wellpaid.io/"
+      "url": "https://wellpaid.io/",
+      "description": "A niche job marketplace curated specifically for senior developers and designers, focusing exclusively on high-paying, remote contract and freelance opportunities."
     },
     {
       "name": "NODESK Remote Jobs",
-      "url": "https://nodesk.co/remote-jobs/"
+      "url": "https://nodesk.co/remote-jobs/",
+      "description": "A highly curated, aesthetically clean job board that connects digital nomads with hundreds of remote opportunities at top startups across engineering, design, sales, and marketing."
     },
     {
       "name": "FlexJobs",
-      "url": "https://www.flexjobs.com/"
+      "url": "https://www.flexjobs.com/",
+      "description": "The leading premium, subscription-based job board that manually screens every single listing to guarantee 100% scam-free, legitimate remote and flexible roles across 50+ career categories."
     },
     {
       "name": "remotify",
-      "url": "https://remotify.me/"
+      "url": "https://remotify.me/",
+      "description": "A streamlined remote hiring platform and aggregator that delivers fresh, clutter-free remote job opportunities directly to professionals seeking flexible work arrangements."
     },
     {
       "name": "Remoters",
-      "url": "https://remoters.net/jobs/"
+      "url": "https://remoters.net/jobs/",
+      "description": "Part of a broader resource hub for digital nomads, this job board features a wide array of remote positions with a particularly strong emphasis on tech, SEO, digital marketing, and virtual assistance."
     },
     {
       "name": "Jobmote",
-      "url": "https://jobmote.com/"
+      "url": "https://jobmote.com/",
+      "description": "A streamlined remote job aggregator that pulls together location-independent opportunities across various tech and non-tech disciplines, helping professionals find work-from-home roles easily."
     },
     {
       "name": "DailyRemote",
-      "url": "https://dailyremote.com/"
+      "url": "https://dailyremote.com/",
+      "description": "A highly active job board offering a vast database of remote jobs in software development, design, support, sales, and writing, complete with advanced filtering options for salary and experience levels."
     },
     {
       "name": "Remote Developer Jobs",
-      "url": "https://www.remote-developer-jobs.com/"
+      "url": "https://www.remote-developer-jobs.com/",
+      "description": "Powered by JustRemote, this niche portal is dedicated specifically to remote software engineering and developer roles, highlighting opportunities that are often unadvertised on larger mainstream job boards."
     },
     {
       "name": "Meerkad",
-      "url": "https://meerkad.com/"
+      "url": "https://meerkad.com/",
+      "description": "A community-driven remote job board created by a web developer, designed to connect companies with remote-seeking professionals globally, categorizing roles by whether they are 100% remote or continent-specific."
     },
     {
       "name": "Pangian",
-      "url": "https://pangian.com/remote/job-board/"
+      "url": "https://pangian.com/remote/job-board/",
+      "description": "Historically a mission-driven global remote work community and talent network aimed at closing the opportunity gap for international workers. (Note: The platform is currently undergoing a major transition and its job board operations are paused)."
     },
     {
       "name": "DynamiteJobs",
-      "url": "https://www.dynamitejobs.com/"
+      "url": "https://www.dynamitejobs.com/",
+      "description": "One of the most trusted remote job platforms, born from a community of location-independent entrepreneurs. It features a high volume of hand-curated, verified remote roles spanning tech, operations, and marketing."
     },
     {
       "name": "FlatWorld",
-      "url": "https://flatworld.co/jobs/"
+      "url": "https://flatworld.co/jobs/",
+      "description": "A remote hiring platform that simplifies recruiting by acting as a single point of contact to an aggregated global network of crowdsourced recruiters, delivering vetted remote candidates for tech, sales, and product roles."
     },
     {
       "name": "Remote Index",
-      "url": "https://remoteindex.co/"
+      "url": "https://remoteindex.co/",
+      "description": "A curated remote job board built by a software engineer, compiling thousands of fresh tech and IT job offers weekly to help developers easily discover location-independent opportunities."
     },
     {
       "name": "Remote Jobs",
-      "url": "https://backendremotejobs.com/"
+      "url": "https://backendremotejobs.com/",
+      "description": "A specialized job aggregator focused exclusively on remote back-end developer positions, curating high-quality roles across tech stacks like Python, Java, and Node.js for global engineering talent."
     },
     {
       "name": "Devremote",
-      "url": "https://devremote.io/"
+      "url": "https://devremote.io/",
+      "description": "A niche remote job platform specifically tailored for junior developers and early-career professionals, aggregating entry-level tech jobs and software engineering internships from over 1,500 companies."
     },
     {
       "name": "I love remote",
-      "url": "https://iloveremote.io"
+      "url": "https://iloveremote.io",
+      "description": "A straightforward global job board dedicated to connecting job seekers with high-paying, remote-first positions worldwide, catering to tech enthusiasts and professionals seeking flexible work."
     },
     {
       "name": "RemoteFR",
