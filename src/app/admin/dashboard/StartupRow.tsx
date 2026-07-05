@@ -66,20 +66,9 @@ export default function StartupRow({ startup }: { startup: any }) {
     }`}>
       
       <td className="p-2 border-r border-gray-200">
-        <textarea 
+        <input
           form={`form-${startup.id}`}
-          name="website" 
-          value={data.website || ''}
-          onChange={(e) => handleChange('website', e.target.value)}
-          className="w-full bg-transparent text-blue-600 font-medium outline-none resize-none text-sm break-all" 
-          rows={2} 
-        />
-      </td>
-
-      <td className="p-2 border-r border-gray-200">
-        <input 
-          form={`form-${startup.id}`}
-          name="funding_amount" 
+          name="funding_amount"
           value={data.funding_amount || ''}
           onChange={(e) => handleChange('funding_amount', e.target.value)}
           className="w-full bg-transparent text-gray-900 outline-none" 

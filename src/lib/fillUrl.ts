@@ -5,7 +5,6 @@ import { supabaseAdmin } from "./supabaseAdmin";
 import OpenAI from "openai";
 import Groq from "groq-sdk"
 import { fillFounders } from "./fillFounders";
-import {getDomain} from 'tldts';
 import { fillFunding } from "./fillFundData";
 
 dotenv.config({path: path.resolve(__dirname, '../../.env')});
@@ -37,12 +36,10 @@ async function extractDetails(title: string, url: string) {
 
                             ### EXTRACT THE FOLLOWING DETAILS ABOUT THAT STARTUP FROM THE URL:
                             1. **Target Entity**: Identify the name of the startup receiving funding.
-                            2. **Website**: Predict the official domain (e.g. "Stripe" -> "https://stripe.com").
 
                             Return JSON format:
                             {
                             "company_name": "string"
-                            "website": "string or null",
                             }`,
                     }
                 ],
@@ -69,7 +66,7 @@ export async function fillData(){
     const {data: rows, error} = await supabaseAdmin
         .from('startups')
         .select('*')
-        .is('website', null)
+        .is('company_name', null)
         .gte('created_at', dateString)
         .order('created_at', {ascending: false});
 
@@ -90,10 +87,9 @@ export async function fillData(){
         if(!row.source_url) continue;
 
         const details = await extractDetails(row.name, row.source_url);
-        const cleanWebsite = getDomain(details?.website);
 
-        if(!details || !cleanWebsite){
-            console.log("-> ai could not find a valid website, skipping...");
+        if(!details || !details.company_name){
+            console.log("-> ai could not find a company name, skipping...");
             continue;
         }
 
@@ -101,46 +97,17 @@ export async function fillData(){
             .from('startups')
             .update({
                 company_name: details.company_name,
-                website: cleanWebsite,
             })
             .eq('id', row.id);
 
         if(updateError){
-           
-            if (updateError.code === '23505') {
-                console.warn(` Duplicate detected:`);
-                
-                const { data: existingRow } = await supabaseAdmin
-                    .from('startups')
-                    .select('id')
-                    .eq('website', cleanWebsite)
-                    .maybeSingle();
-
-                if (existingRow) {
-                    console.log(` Clearing old funding info and merging duplicate`);
-            
-                    await supabaseAdmin
-                        .from('startups')
-                        .update({
-                            funding_amount: null,
-                            funding_round: null,
-                            created_at: new Date().toISOString(), 
-                        })
-                        .eq('id', existingRow.id);
-                }
-
-                await supabaseAdmin.from('startups').delete().eq('id', row.id);
-                console.log(` Temporary row deleted.`);
-
-            } else {
-                console.error(" Update Failed:", updateError.message);
-            }
+            console.error(" Update Failed:", updateError.message);
         } else {
-            console.log(`   ✅ Success! New Unique Startup Added: ${cleanWebsite}, now filling funding info`);
+            console.log(`   ✅ Success! Company name filled: ${details.company_name}, now filling funding info`);
         }
-        await new Promise(resolve => setTimeout(resolve, 10000));    
+        await new Promise(resolve => setTimeout(resolve, 10000));
     }
-    console.log("webiste links filled now filling founders data...")
+    console.log("company names filled now filling founders data...")
     await fillFunding();
 
 }

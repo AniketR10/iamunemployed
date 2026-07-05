@@ -20,19 +20,6 @@ export default function StartupsPage() {
 
   const [availableRounds, setAvailableRounds] = useState<string[]>([]);
 
-  const getHost = (url: string) => {
-    try {
-      return new URL(url).hostname;
-    } catch(e) {
-      return url;
-    }
-  }
-
-  const getAbsoulteUrl = (url: string) => {
-    if(!url) return '#';
-    return url.startsWith('http') ? url : `https://${url}`;
-  }
-
   const formatDate = (dateString: string) => {
     if (!dateString) return '';
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -164,13 +151,8 @@ export default function StartupsPage() {
                   <div className="flex justify-between items-start mb-3">
                     <div className="space-y-1.5">
                       <h3 className="text-xl font-black tracking-tight">{startup.company_name}</h3>
-                      
+
                       <div className="flex flex-col gap-1.5">
-                       <AuthGuard>
-                        <a href={getAbsoulteUrl(startup.website)} target="_blank" className="text-sm font-bold text-blue-600 hover:underline flex items-center gap-1.5 w-fit">
-                          {startup.website ? getHost(startup.website) : 'No Website'} <ExternalLink size={12} />
-                        </a>
-                       </AuthGuard>
                         <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 font-bold">
                           {startup.announced_date && (
                             <div className="flex items-center gap-1.5 text-gray-500">
@@ -210,7 +192,7 @@ export default function StartupsPage() {
                           className="inline-flex align-baseline ml-2 text-gray-400 hover:text-blue-600 hover:scale-110 transition-all"
                           title="Read Source Article"
                         >
-                          <ExternalLink size={16} strokeWidth={2.5} />
+                          <ExternalLink size={18} strokeWidth={2.5} className='text-blue-500'/>
                         </a>
                         </AuthGuard>
                       )}

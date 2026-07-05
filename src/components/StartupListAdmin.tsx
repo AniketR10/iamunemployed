@@ -29,7 +29,6 @@ export default function StartupList({ initialData }: { initialData: any[] }) {
         <table className="w-full text-sm text-left">
           <thead className="bg-gray-100 text-xs uppercase font-black border-b-2 border-gray-900 text-gray-900">
             <tr>
-              <th className="px-4 py-3 border-r-2 border-gray-900">Website</th>
               <th className="px-4 py-3 border-r-2 border-gray-900 w-24">Amount</th>
               <th className="px-4 py-3 border-r-2 border-gray-900">Round</th>
               <th className="px-4 py-3 border-r-2 border-gray-900">Date</th>
