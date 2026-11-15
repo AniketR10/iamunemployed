@@ -148,6 +148,11 @@
       "name": "AiJobsTracker",
       "url": "https://aijobs.18offers.com/",
       "description": "An aggregated AI job listing platform tracking opportunities across companies and regions."
+    },
+    {
+      "name": "Get Data Engineering Jobs",
+      "url": "https://getdataengineeringjobs.com/",
+      "description": "Niche board for data engineering roles, aggregated from job boards, career pages and HN, deduplicated and filterable by stack, seniority and remote."
     }
   ],
   "Blockchain": [
